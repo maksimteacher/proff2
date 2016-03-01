@@ -59,7 +59,8 @@ public class Base {
 
 	public static User[] usersFromFile(String fileName) {
 		List<User> list = new ArrayList<>();
-		try (FileReader fr = new FileReader(fileName); Scanner scan = new Scanner(fr);) {
+		try (FileReader fr = new FileReader(fileName); 
+				Scanner scan = new Scanner(fr);) {
 			while (scan.hasNextLine()) {
 				User user = User.fromFileStream(scan.nextLine());
 				if (user != null)
@@ -67,9 +68,9 @@ public class Base {
 			}
 		} catch (Exception e) {
 		}
-		// return (User[]) list.toArray();
+		 //return (User[]) list.toArray();
 		
-		return list.toArray(new User[0]);
+		return list.toArray(new User[list.size()]);
 
 	}
 
@@ -79,7 +80,7 @@ public class Base {
 	}
 
 	public void printAllUsers() {
-		// users.forEach(user->System.out.print(user+"\n"));
+		//users.forEach(user->{System.out.print(user+"\n");});
 		if (users != null && users.size()>0) {
 			System.out.println("Список пользователей:");
 			users.forEach(new Consumer<User>() {

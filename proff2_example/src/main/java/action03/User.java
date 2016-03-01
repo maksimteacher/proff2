@@ -7,7 +7,7 @@ public class User {
 	private final static String separator = ";";
 	
 	public String toFileStream() {
-		return login + separator + pass + separator + countDays + separator + "\n";
+		return login + separator + pass + separator + countDays +  "\n";
 	}
 	public static User fromFileStream(String str) {
 		String[] arr = str.split(separator);
