@@ -32,14 +32,14 @@ import java.util.TreeMap;
 		  Set<Map.Entry<ProductShop, String>> set = market.entrySet();
 	
 		 
-		  List list = new ArrayList(market.entrySet());
-		 Collection.sort (list, new Comparator<Map.Entry<ProductShop,String>>(){
+		 /* List list = new ArrayList(market.entrySet());
+		 Collection.sort(list, new Comparator<Map.Entry<ProductShop,String>>(){
 			 @Override
 			 public int compare(Entry e1, Entry e2) {
 				    return ((Enum<TypeOfProducts>) e1.getValue()).compareTo((TypeOfProducts) e2.getValue());
 				  }
-				 
-				});
+				 */
+				//});
 		 }
 			  
 		  //}
