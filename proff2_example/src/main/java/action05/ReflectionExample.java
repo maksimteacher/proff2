@@ -19,9 +19,6 @@ public class ReflectionExample {
 		Class[] arr = new Integer(4).getClass().getInterfaces();
 		for(Class cl:arr){
 			System.out.println(cl.getName());
-		}
-		
-		
-		
+		}		
 	}
 }
