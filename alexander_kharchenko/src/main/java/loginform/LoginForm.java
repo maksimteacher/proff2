@@ -19,20 +19,22 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class LoginForm extends Application {
-	
+	private int i;
 	public static void main(String[] args) {
 		launch(args);
 	}
 
 	@Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("JavaFX Welcome");
+        primaryStage.setTitle("Login form");
         
         GridPane grid = new GridPane();
+        
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
         grid.setVgap(10);
-        grid.setPadding(new Insets(25, 25, 25, 25));
+        grid.setPadding(new Insets(10, 10, 10, 10));
+       
          
         Text scenetitle = new Text("Welcome");
         scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
@@ -69,13 +71,16 @@ public class LoginForm extends Application {
         	 
             @Override
             public void handle(ActionEvent e) {
-                txt.setText(txt.getText() + userTextField.getText() + " | " + pwBox.getText() + ";\n" );
+            	
+                txt.setText(txt.getText() + i++ + ": " + userTextField.getText() + ", " + pwBox.getText() + ";\n" );
+                userTextField.setText("");
+                pwBox.setText("");
             }
         });
         
         Scene scene = new Scene(grid, 300, 400);
         primaryStage.setScene(scene);
-        
+//        grid.setGridLinesVisible(true);
         primaryStage.show();
     }
 
