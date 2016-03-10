@@ -8,7 +8,7 @@ import com.mysql.fabric.xmlrpc.base.Array;
 
 //Рефлексия. Задача1: Вывести все методы класса String
 
-public class Task1 {
+public class ReflectionTask1 {
 	public static void main(String[] args) {
 		String obj = "fghjkl";
 		Class cl = obj.getClass();
