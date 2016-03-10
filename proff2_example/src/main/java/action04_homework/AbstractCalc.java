@@ -6,7 +6,7 @@ public abstract class AbstractCalc implements Calculator{
 	private char operation='0';
 	@Override
 	public String printResult(){
-		System.out.println("Result = " + result+", temp="+temp);
+		System.out.println("Result = " + result);
 		return getResult();
 	}
 	public String getResult(){
