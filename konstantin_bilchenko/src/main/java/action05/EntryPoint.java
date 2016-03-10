@@ -35,8 +35,7 @@ public class EntryPoint {
 		List<String> list = new LinkedList<>();
 		Class objClass = obj.getClass();
 		while (objClass != null) {
-			list.add(0, "'" + objClass.getSimpleName() + "'" 
-					+ " >> Interfaces: " + Arrays.toString(objClass.getInterfaces()));
+			list.add(0, objClass.getSimpleName() + " >> Interfaces: " + Arrays.toString(objClass.getInterfaces()));
 			objClass = objClass.getSuperclass();
 		}
 		return list;
@@ -44,21 +43,23 @@ public class EntryPoint {
 
 	public static void main(String[] args) {
 
-		// task1
-		/*
-		 * Class strClass = new String().getClass(); Method[] strMethods =
-		 * strClass.getDeclaredMethods(); for (Method method : strMethods) {
-		 * System.out.println(method.toString()); }
-		 */
+		System.out.println("Task1");
 
-		// task2
-		/*
-		 * List<String> strList = ReflectionTask1Example(new TestClassD()); for
-		 * (String str : strList) { System.out.println(str); }
-		 */
+		Class strClass = new String().getClass();
+		Method[] strMethods = strClass.getDeclaredMethods();
+		for (Method method : strMethods) {
+			System.out.println(method.toString());
+		}
 
-		// task3
-		List<String> strList = ReflectionTask2Example(new ArrayList());
+		System.out.println("\nTask2");
+
+		List<String> strList = ReflectionTask1Example(new TestClassD());
+		for (String str : strList) {
+			System.out.println(str);
+		}
+
+		System.out.println("\nTask3");
+		strList = ReflectionTask2Example(new ArrayList());
 		for (String str : strList) {
 			System.out.println(str);
 		}
