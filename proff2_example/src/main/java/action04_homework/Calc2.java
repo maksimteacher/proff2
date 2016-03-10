@@ -1,8 +1,7 @@
 package action04_homework;
 
-public class Calc1 extends AbstractCalc {
-	@Override
+public class Calc2 extends AbstractCalc {
 	public void inChar(char p) {		
 	}
-}	
 
+}
