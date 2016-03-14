@@ -3,9 +3,10 @@ package AndreyKukuruza.Homework2.Task3;
 public class MyHashMap<K, V> {
     private Entry<K, V>[] backets;
     private int size = 0;
+    private final int START_COUNT_BUCKET = 16;
 
     public MyHashMap() {
-        backets = (Entry<K, V>[]) new Entry[10];
+        backets = (Entry<K, V>[]) new Entry[START_COUNT_BUCKET];
     }
 
     public void add(K k, V v) {
@@ -23,7 +24,7 @@ public class MyHashMap<K, V> {
                 node = node.next;
             }
         }
-        int bucketNumber = ((k.hashCode() > 0) ? k.hashCode() : -k.hashCode()) % 10;
+        int bucketNumber = ((k.hashCode() > 0) ? k.hashCode() : -k.hashCode()) % START_COUNT_BUCKET;
         Entry<K, V> node = backets[bucketNumber];
         Entry<K, V> nextNode;
         if (node == null) {
