@@ -1,27 +1,37 @@
 package AndreyKukuruza.Homework2.Task3;
 
 public class MyHashMap<K, V> {
-    private Node<K>[] backets;
+    private Entry<K, V>[] backets;
     private int size = 0;
 
     public MyHashMap() {
-        backets = (Node<K>[]) new Node[10];
+        backets = (Entry<K, V>[]) new Entry[10];
     }
 
-    public void add(K k) {
-        if (this.contains(k)) return;
+    public void add(K k, V v) {
+        for (Entry<K, V> backet : backets) {
+            Entry<K, V> node = backet;
+            if (node == null) continue;
+            while (node != null) {
+                if (backet.key.equals(k)) {
+                    backet.value = v;
+                    break;
+                }
+                node = node.next;
+            }
+        }
         int bucketNumber = ((k.hashCode() > 0) ? k.hashCode() : -k.hashCode()) % 10;
-        Node<K> node = backets[bucketNumber];
-        Node<K> nextNode;
+        Entry<K, V> node = backets[bucketNumber];
+        Entry<K, V> nextNode;
         if (node == null) {
-            backets[bucketNumber] = new Node<>(k);
+            backets[bucketNumber] = new Entry<>(k, v);
             size++;
             return;
         }
         while (true) {
             nextNode = node.next;
             if (nextNode == null) {
-                node.next = new Node<>(k);
+                node.next = new Entry<>(k, v);
                 size++;
                 return;
             }
@@ -30,28 +40,42 @@ public class MyHashMap<K, V> {
     }
 
     public boolean contains(K k) {
-        for (Node<K> backet : backets) {
-            Node<K> node = backet;
+        for (Entry<K, V> backet : backets) {
+            Entry<K, V> node = backet;
             if (node == null) continue;
             while (node != null) {
-                if (backet.value.equals(k)) return true;
+                if (backet.key.equals(k)) return true;
                 node = node.next;
             }
         }
         return false;
     }
 
+    public V get(K k) {
+        for (Entry<K, V> backet : backets) {
+            Entry<K, V> node = backet;
+            if (node == null) continue;
+            while (node != null) {
+                if (backet.key.equals(k)) return backet.value;
+                node = node.next;
+            }
+        }
+        return null;
+    }
+
     public int size() {
         return size;
     }
 
-    private class Node<T> {
 
-        Node(T value) {
+    private class Entry<K, V> {
+        public Entry(K key, V value) {
+            this.key = key;
             this.value = value;
         }
 
-        Node<T> next;
-        T value;
+        K key;
+        V value;
+        Entry<K, V> next;
     }
 }
