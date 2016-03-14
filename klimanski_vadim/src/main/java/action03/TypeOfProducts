@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.TreeMap;
+
+ /*public class Product{
+		 public Product(String name, TypeProduct type, int price) {
+			}
+		 		 }*/
+
+ enum TypeOfProducts{
+	 Bread, Yogurt, Milk;
+	
+	public static void main(String[] args) {
+	  class ProductShop {
+		Map<ProductShop,String> market = new HashMap<ProductShop,String>();
+		 public ProductShop(String string, TypeProduct bread, int i){
+		  market.put(new ProductShop("Bread White",TypeProduct.Bread, 10),"Firma 3");
+		  market.put(new ProductShop("Super Yogurt",TypeProduct.Yogurt, 10),"Firma 3");
+		  market.put(new ProductShop("Milk with Shokolate",TypeProduct.Milk, 14),"Firma 1");
+		  market.put(new ProductShop("Bread a half",TypeProduct.Bread, 20), "Bread & Sons");
+		  market.put(new ProductShop("Cow Milk", TypeProduct.Milk, 8), "Milk reaver");
+		  market.put(new ProductShop("Yogurt of Hell", TypeProduct.Yogurt, 26), "Roda break");
+		  
+		  Set<Map.Entry<ProductShop, String>> set = market.entrySet();
+	
+		 
+		  List list = new ArrayList(market.entrySet());
+		 Collection.sort(list, new Comparator<Map.Entry<ProductShop,String>>(){
+			 @Override
+			 public int compare(Entry e1, Entry e2) {
+				    return ((Enum<TypeOfProducts>) e1.getValue()).compareTo((TypeOfProducts) e2.getValue());
+				  }
+				 
+				});
+		 }
+			  
+		  //}
+ 		  
+		 }
+	}}
