@@ -16,28 +16,25 @@ public abstract class AbstractCalc implements Calculator {
         return result;
     }
 
-    public AbstractCalc setResult(String result) {
-        this.result = result;
-        return this;
-    }
 
     public int getTemp() {
         return temp;
     }
 
-    public AbstractCalc setTemp(int temp) {
-        this.temp = temp;
-        return this;
-    }
 
     public char getOperation() {
         return operation;
     }
 
-    public AbstractCalc setOperation(char operation) {
-        this.operation = operation;
-        return this;
+    public void setResult(String result) {
+        this.result = result;
     }
 
+    public void setTemp(int temp) {
+        this.temp = temp;
+    }
 
+    public void setOperation(char operation) {
+        this.operation = operation;
+    }
 }
