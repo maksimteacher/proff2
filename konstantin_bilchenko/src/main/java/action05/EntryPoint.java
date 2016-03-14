@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.function.Consumer;
 
 class TestClassA {
 };
@@ -35,7 +36,7 @@ public class EntryPoint {
 		List<String> list = new LinkedList<>();
 		Class objClass = obj.getClass();
 		while (objClass != null) {
-			list.add(0, objClass.getSimpleName() + " >> Interfaces: " + Arrays.toString(objClass.getInterfaces()));
+			list.add(0, objClass.getSimpleName() + " >> " + Arrays.toString(objClass.getInterfaces()));
 			objClass = objClass.getSuperclass();
 		}
 		return list;
@@ -43,6 +44,7 @@ public class EntryPoint {
 
 	public static void main(String[] args) {
 
+/*		
 		System.out.println("Task1");
 
 		Class strClass = new String().getClass();
@@ -63,7 +65,15 @@ public class EntryPoint {
 		for (String str : strList) {
 			System.out.println(str);
 		}
+*/
+		
+		Server s1 = Server.getInstance();
+		Server s2 = Server.getInstance();
 
+		if (s1 != s2) System.out.println("The same");
+	
+
+		
 	}
 
 }
