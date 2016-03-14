@@ -3,6 +3,9 @@ package AndreyKukuruza.Homework2.Task1;
 public class Calc extends AbstractCalc {
     String input;
 
+    public Calc() {
+    }
+
     public void setInput(String input) {
         this.input = input;
     }
