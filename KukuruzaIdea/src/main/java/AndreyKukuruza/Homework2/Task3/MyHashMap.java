@@ -9,13 +9,16 @@ public class MyHashMap<K, V> {
     }
 
     public void add(K k, V v) {
+        if (k == null) {
+            throw new NullPointerException("Key not may be null!");
+        }
         for (Entry<K, V> backet : backets) {
             Entry<K, V> node = backet;
             if (node == null) continue;
             while (node != null) {
-                if (backet.key.equals(k)) {
-                    backet.value = v;
-                    break;
+                if (node.key.equals(k)) {
+                    node.value = v;
+                    return;
                 }
                 node = node.next;
             }
@@ -39,12 +42,26 @@ public class MyHashMap<K, V> {
         }
     }
 
+    public void remove(K k) {
+//        for (Entry<K, V> backet : backets) {
+//            Entry<K, V> node = backet;
+//            if (node == null) continue;
+//            while (node != null) {
+//                if (backet.key.equals(k)) {
+//                    backet.value = v;
+//                    return;
+//                }
+//                node = node.next;
+//            }
+//        }
+    }
+
     public boolean contains(K k) {
         for (Entry<K, V> backet : backets) {
             Entry<K, V> node = backet;
             if (node == null) continue;
             while (node != null) {
-                if (backet.key.equals(k)) return true;
+                if (node.key.equals(k)) return true;
                 node = node.next;
             }
         }
@@ -56,7 +73,7 @@ public class MyHashMap<K, V> {
             Entry<K, V> node = backet;
             if (node == null) continue;
             while (node != null) {
-                if (backet.key.equals(k)) return backet.value;
+                if (node.key.equals(k)) return node.value;
                 node = node.next;
             }
         }
