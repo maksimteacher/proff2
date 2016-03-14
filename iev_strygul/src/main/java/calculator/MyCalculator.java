@@ -26,8 +26,7 @@ public class MyCalculator {
 		}
 	}
 	
-	public void inString(String str) {
-		
+	public void inString(String str) {	
 		if(operationInString == byZero) {
 			operationInString = "";
 		}
@@ -41,7 +40,7 @@ public class MyCalculator {
 			executeOperation();
 			lastOperation = str.charAt(0);
 			if(operationInString != byZero) {
-				operationInString += " " + str;
+				operationInString += " " + str + " ";
 			} else {
 				reset();
 			}
@@ -49,28 +48,33 @@ public class MyCalculator {
 			numberInString = "";
 			executeOperation();
 			lastOperation = str.charAt(0);
-			if(operationInString != byZero) operationInString = "" + result;
+			if(operationInString != byZero) {
+				operationInString = "" + result;
+			}
+		} else if(str.compareTo("c") == 0) {
+			reset();
 		}
 	}
-
+	
 	private void executeOperation() {
-		if(lastOperation == '+') {
-			result += number;
-		} else if(lastOperation == '-') {
-			result -= number;
-		} else if(lastOperation == '*') {
-			result *= number;
-		} else if(lastOperation == '/') {
+		switch(lastOperation) {
+		case '+': result += number; break;
+		case '-': result -= number; break;
+		case '*': result *= number; break;
+		case '/': {
 			if(number != 0) {
 				result /= number;	
 			} else {
 				operationInString = byZero;
 				reset();
 			}
-		} else if(lastOperation == 'z'){
-			result = number;
+		} break;
+		case 'z': result = number; break;
 		}
-		
+	}
+
+	public int getResult() {
+		return result;
 	}
 
 	private void parseLastNumberInString() {
