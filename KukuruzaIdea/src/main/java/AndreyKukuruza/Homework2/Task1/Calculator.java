@@ -1,7 +1,7 @@
 package AndreyKukuruza.Homework2.Task1;
 
 public interface Calculator {
-    String ByZero = "Error";
+    String BY_ZERO = "Error";
 
     String printResult();
 

@@ -1,6 +1,24 @@
-package action04_homework;
+package AndreyKukuruza.Homework2.Task2;
 
 public class Calc1 extends AbstractCalc {
+	String input;
+
+	public void setInput(String input) {
+		this.input = input;
+	}
+
+	public Calc1(String input) {
+		this.input = input;
+		calculate();
+	}
+
+	public void calculate() {
+		for (char p : input.toCharArray()) {
+			System.out.println("Input " + p);
+			inChar(p);
+		}
+	}
+
 	@Override
 	public void inChar(char p){
 		if(p=='='){
