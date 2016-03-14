@@ -10,10 +10,9 @@ public class CrazyCalcTest {
 
     @Test
     public void positiveValueTest() {
-        crazyCalc.operation(5);
-        assertEquals(5, crazyCalc.get());
-        crazyCalc.operation(15);
-        assertEquals(15, crazyCalc.get());
+        int num = (int) (1 + 1000 * Math.random());
+        crazyCalc.operation(num);
+        assertEquals(num, crazyCalc.get());
     }
 
     @Test
@@ -26,7 +25,6 @@ public class CrazyCalcTest {
     public void negativeValueTest() {
         crazyCalc.operation(-5);
         crazyCalc.get();
-        crazyCalc.operation(-15);
-        crazyCalc.get();
+
     }
 }
