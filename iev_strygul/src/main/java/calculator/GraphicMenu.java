@@ -1,6 +1,7 @@
 package calculator;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -50,15 +51,10 @@ public class GraphicMenu extends Application {
 		new Button("9"), new Button("6"), new Button("3"), new Button("="),
 		new Button("+"), new Button("-"),new Button("/"), new Button("*")};
 		
-		for(int i = 0; i < arrayOfButtons.length; i++) {
-			int j = i/4;
-			
-			Button bttn = arrayOfButtons[i];
-			
-			bttn.setMinSize(40, 40);
-			bttn.setStyle("-fx-margin:20px");
-			bttn.setOnAction(keyEvent -> {
-				str = keyEvent.toString();
+		final EventHandler<ActionEvent> actionHandler = new EventHandler<ActionEvent>(){
+			@Override
+			final public void handle(ActionEvent actionEvent) {
+				str = actionEvent.toString();
 				char ch = str.charAt(str.length() - 3);
 				str = "" + ch;
 				if(str.compareTo("C") == 0) {
@@ -68,8 +64,17 @@ public class GraphicMenu extends Application {
 					myCalc.inString(str);
 					text.setText(myCalc.getOperationInString());
 				}
-				
-				});
+			}
+		};
+		
+		for(int i = 0; i < arrayOfButtons.length; i++) {
+			int j = i/4;
+			
+			Button bttn = arrayOfButtons[i];
+			
+			bttn.setMinSize(40, 40);
+			bttn.setStyle("-fx-margin:20px");
+			bttn.setOnAction(actionHandler);
 			
 			if(i >= 11) bttn.setStyle("-fx-text-fill: blue");
 			if(i == 3) bttn.setStyle("-fx-text-fill: red");
@@ -86,20 +91,22 @@ public class GraphicMenu extends Application {
 			@Override
 			public void handle(final KeyEvent keyEvent) {
 				str = keyEvent.getCharacter();
+				System.out.println(str);
 				if(str.compareTo("c") == 0) { 
 					text.setText("0");
+					myCalc.reset();
 				} else {
-					text.setText(myCalc.getOperationInString());
+					myCalc.inString(str);
 					if(myCalc.getOperationInString().compareTo(myCalc.byZero) == 0) {
 						text.clear();
+					} else {
+						text.setText(myCalc.getOperationInString());
 					}
 				}
-				myCalc.inString(str);
 			}
 		};
 		
 		text.setOnKeyTyped(keyEventHandler);
-		functionsPanel.setOnKeyTyped(keyEventHandler);
 		rootNode.getChildren().addAll(resultBox, functionsPanel);
 		resultBox.getChildren().add(text);
 		

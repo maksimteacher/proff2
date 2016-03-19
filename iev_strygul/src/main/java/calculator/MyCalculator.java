@@ -8,7 +8,7 @@ public class MyCalculator {
 	private String operationInString;
 	private int number;
 	private int result;
-	public final String byZero = "Error! Cannot devide by zero!";
+	public final String byZero = "Error!";
 	
 	public MyCalculator() {
 		numberInString = "";
