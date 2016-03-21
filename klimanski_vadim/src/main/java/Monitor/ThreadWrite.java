@@ -14,11 +14,11 @@ public class ThreadWrite extends Monitor{
 
 	public synchronized void write() {
 
-		try {
+		/*try {
 			wait();
 			FileReader fr = new FileReader(file1);
 			FileWriter fw = new FileWriter(file2);
 			Scanner scn = new Scanner(fr);
-		}
-}
+		*/}
+
 }
