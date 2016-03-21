@@ -1,78 +1,88 @@
 package action4;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import java.util.TreeMap;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
- /*public class Product{
-		 public Product(String name, TypeProduct type, int price) {
-			}
-		 		 }*/
+public enum Milkiway{
+ Bread, Yogurt, Milk;
 
- enum TypeOfProducts{
-	 Bread, Yogurt, Milk;
-	
-	public static void main(String[] args) {
-	  class ProductShop {
-		Map<ProductShop,String> market = new HashMap<ProductShop,String>();
-		 public ProductShop(String string, TypeProduct bread, int i){
-		  market.put(new ProductShop("Bread White",TypeProduct.Bread, 10),"Firma 3");
-		  market.put(new ProductShop("Super Yogurt",TypeProduct.Yogurt, 10),"Firma 3");
-		  market.put(new ProductShop("Milk with Shokolate",TypeProduct.Milk, 14),"Firma 1");
-		  market.put(new ProductShop("Bread a half",TypeProduct.Bread, 20), "Bread & Sons");
-		  market.put(new ProductShop("Cow Milk", TypeProduct.Milk, 8), "Milk reaver");
-		  market.put(new ProductShop("Yogurt of Hell", TypeProduct.Yogurt, 26), "Roda break");
-		  
-		  Set<Map.Entry<ProductShop, String>> set = market.entrySet();
-	
-		 
-		 /* List list = new ArrayList(market.entrySet());
-		 Collection.sort(list, new Comparator<Map.Entry<ProductShop,String>>(){
-			 @Override
-			 public int compare(Entry e1, Entry e2) {
-				    return ((Enum<TypeOfProducts>) e1.getValue()).compareTo((TypeOfProducts) e2.getValue());
-				  }
-				 */
-				//});
-		 }
-			  
-		  //}
- 		  
-		 }
-	}}
+
+ static class Product{
+	/* private String name;
+	 private TypeProduct type;
+	 private int party;*/
+	 
+	 
+	public Product(String string, TypeProduct bread, int i) {
 		
-	  
- // for(Map.Entry<ProductShop, String> entry : set){
- // System.out.println(entry.getKey());}
-	  
-		/* private static Map<Product, String> LinkedHashMap(){
-			return market;}
-		 */
+	
+	/*}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public TypeProduct getType() {
+		return type;
+	}
+	public void setType(TypeProduct type) {
+		this.type = type;
+	}
+	public int getParty() {
+		return party;
+	}
+	public void setParty(int party) {
+		this.party = party;
+	}
+	 
+	 
+	}
+	 */
+	}
+	  public static class TypeofProducts {
+		  public static void main(String[] args) {
+			  
+		 Map<Product,String> contructors = new HashMap<Product,String>();
 		 
-				/*Set<Map.Entry<Product, String>> set = market.entrySet();
-				for(Map.Entry<Product,String> entry : set){
-					System.out.println("["+entry.getKey() +","+entry.getValue()+"]");*/
-
-/*Map<Integer, Integer> map = new HashMap<>();
-List list = new ArrayList(market.entrySet());
-Collections.sortlist, new Comparator<Map.Entry<Integer, Integer>>() {
-    public int compare(Map.Entry<Integer, Integer> a, Map.Entry<Integer, Integer> b) {
-        return a.getKey() - b.getValue();
-    }
-};
-
-* market = new TreeMap<ProductShop,String>(market);
-		  System.out.println(market);
-		  Map<ProductShop,String> market_2 = new TreeMap<ProductShop,String>();
-*
-*/
-	
-	 
-	 
-	
+		 
+		  contructors.put(new Product("Bread White",TypeProduct.Bread, 10),"airma a");
+		  contructors.put(new Product("Super Yogurt",TypeProduct.Yogurt, 10),"birma b");
+		  contructors.put(new Product("Bread Grey",TypeProduct.Bread, 12),"cirma c");
+		  contructors.put(new Product("Yogurt for Java Developers",TypeProduct.Yogurt, 12),"dirma d");
+		  contructors.put(new Product("Milk with Chokolate",TypeProduct.Milk, 14),"Firma 1");
+		  contructors.put(new Product("Simple Yogurt",TypeProduct.Yogurt, 14),"Firma 1");
+		  contructors.put(new Product("Bread Grey",TypeProduct.Bread, 16),"Firma 1");
+		  contructors.put(new Product("Yogurt for Java Developers",TypeProduct.Yogurt, 16),"Firma 1");
+		  contructors.put(new Product("Milk with Chokolate",TypeProduct.Milk, 14),"Firma 1");
+		  contructors.put(new Product("Simple Yogurt",TypeProduct.Yogurt, 14),"Firma 1");
+		  contructors.put(new Product("Bread Grey",TypeProduct.Bread, 16),"Firma 1");
+		  contructors.put(new Product("Bread Grey",TypeProduct.Bread, 18),"Firma 1");
+		  contructors.put(new Product("Bread White",TypeProduct.Bread, 20),"Firma 2");
+		  contructors.put(new Product("Super Yogurt",TypeProduct.Yogurt, 20),"Firma 2");
+		  contructors.put(new Product("Bread Grey",TypeProduct.Bread, 20),"Firma 2");
+		  contructors.put(new Product("Yogurt for Java Developers",TypeProduct.Yogurt, 20),"Firma 2");
+		  
+		  Collection<String> firmas = contructors.values();
+		  Set<String> firmsSet = new TreeSet<>();
+		  for(String s:firmas){
+			  firmsSet.add(s);
+		  }
+		//  System.out.println(firmsSet);
+	  }
+	  }
+ }
+}
+		  
+		//Set<Map.Entry<Product, String>> set = contructors.entrySet();
+		
