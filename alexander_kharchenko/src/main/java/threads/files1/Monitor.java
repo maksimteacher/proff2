@@ -29,46 +29,22 @@ public class Monitor {
 
 	}
 
-	public void scan() {
-
-		@SuppressWarnings("resource")
-		Scanner scn = new Scanner(System.in);
-
-		boolean stop = false;
-		boolean copy = false;
-		while (!stop) {
-			String read = scn.nextLine();
-			if (read.toLowerCase().equals("exit") || read.toLowerCase().equals("stop")) {
-				stop = true;
-			} else {
-				write(read, copy);
-				if (!copy) {
-					copy = true;
-				}
-				System.out.println("!!!");
-
-			}
-			System.out.println("Creator STOPED!!!");
-
-		}
-	}
-
 	public void write(String str, boolean copy) {
 		synchronized (sync) {
 
 			StringBuffer sb = new StringBuffer();
-			try {
+			try (FileReader fr = new FileReader(file1)) {
 				if (copy) {
-				FileReader fr = new FileReader(file1);
-				@SuppressWarnings("resource")
-				Scanner scn = new Scanner(fr);
 
-				while (scn.hasNext()) {
-					sb.append(scn.nextLine()).append(System.lineSeparator());
-				}
+					@SuppressWarnings("resource")
+					Scanner scn = new Scanner(fr);
+
+					while (scn.hasNext()) {
+						sb.append(scn.nextLine()).append(System.lineSeparator());
+					}
 				}
 				sb.append(str);
-			} catch (FileNotFoundException e1) {
+			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
