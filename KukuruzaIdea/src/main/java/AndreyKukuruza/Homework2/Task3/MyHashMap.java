@@ -44,17 +44,23 @@ public class MyHashMap<K, V> {
     }
 
     public void remove(K k) {
-//        for (Entry<K, V> backet : backets) {
-//            Entry<K, V> node = backet;
-//            if (node == null) continue;
-//            while (node != null) {
-//                if (backet.key.equals(k)) {
-//                    backet.value = v;
-//                    return;
-//                }
-//                node = node.next;
-//            }
-//        }
+        for (int i = 0, backetsLength = backets.length; i < backetsLength; i++) {
+            Entry<K, V> node = backets[i];
+            Entry<K, V> prev = null;
+            if (node == null) continue;
+            while (node != null) {
+                if (node.key.equals(k)) {
+                    if (prev == null) backets[i] = node.next;
+                    else {
+                        prev.next = node.next;
+                    }
+                    size--;
+                    return;
+                }
+                prev = node;
+                node = node.next;
+            }
+        }
     }
 
     public boolean contains(K k) {
