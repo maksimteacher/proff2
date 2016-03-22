@@ -2,6 +2,7 @@ package action03;
 
 import java.util.Scanner;
 
+@SuppressWarnings("resource")
 public class MainBase {
 	public static String[] menu1 = new String[]{"Инициализация из набора данных", "Инициализация из файла"};
 	public static String[] menu2 = new String[]{"Добавить нового пользователя", "Отобразить список пользователей"
