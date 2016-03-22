@@ -9,7 +9,7 @@ public class Monitor {
     public Monitor(String nameFile1, String nameFile2) {
         this.nameFile1 = nameFile1;
         this.nameFile2 = nameFile2;
-        threadCreator =
+       // threadCreator =
     }
 
 }
