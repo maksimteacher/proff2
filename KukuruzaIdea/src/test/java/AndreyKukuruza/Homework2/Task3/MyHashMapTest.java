@@ -45,4 +45,31 @@ public class MyHashMapTest {
         stringStringMyHashMap.add("key100", "ololo");
         assertEquals("get", "ololo", stringStringMyHashMap.get("key100"));
     }
+
+    @Test
+    public void testRemove() throws Exception {
+        System.out.println(stringStringMyHashMap.size());
+        stringStringMyHashMap.remove("key255");
+        stringStringMyHashMap.remove("key555");
+        System.out.println(stringStringMyHashMap.size());
+        for (int i = 0; i < 10000; i++) {
+            if (i == 255 || i == 555) assertNull(stringStringMyHashMap.get("key255"));
+            else
+                assertEquals("value" + i, stringStringMyHashMap.get("key" + i));
+        }
+    }
+
+    @Test
+    public void testRemove2() throws Exception {
+        for (int i = 0; i < 10000; i++) {
+            if (i % 2 == 0) {
+                stringStringMyHashMap.remove("key" + i);
+            }
+        }
+        for (int i = 0; i < 10000; i++) {
+            if (i % 2 == 0) assertNull(i + "", stringStringMyHashMap.get("key" + i));
+            else
+                assertEquals("value" + i, stringStringMyHashMap.get("key" + i));
+        }
+    }
 }
