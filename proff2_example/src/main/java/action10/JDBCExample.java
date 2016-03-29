@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class JDBCExample {
 	private static String nameDriver = "com.mysql.jdbc.Driver";
-	private static String url = "jdbc:mysql://localhost:3306/proff1";
+	private static String url = "jdbc:mysql://localhost:3306/proff2";
 	private static String login = "root";
 	private static String pass = "root";
 
