@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ServerMultiClient {
+public class ServerMultiClient /* extends Thread */{
 	public void run() throws IOException{
 		ServerSocket srvSocket = new ServerSocket(3150);
         while (true) {
