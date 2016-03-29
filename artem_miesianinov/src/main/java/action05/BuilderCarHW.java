@@ -58,6 +58,8 @@ public class BuilderCarHW {
 	
 	public String toString() {
 		return "Car [ " + engine + ", " + body + ", " + computer + "]";
+		
+	
 	}
 	}
 }
