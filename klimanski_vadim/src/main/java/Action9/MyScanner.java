@@ -16,7 +16,7 @@ public class MyScanner {
 	
 	}
 	
-	
+	/*
 	public boolean hasNextInt(){
 		return false;
 	}
@@ -29,7 +29,7 @@ public class MyScanner {
 	public double nextDouble(){
 		return 0;
 	}
-	
+	*/
 	public static String ReadLine(BufferedReader read) throws IOException{
 		String str = read.readLine();
 		System.out.println(str);
