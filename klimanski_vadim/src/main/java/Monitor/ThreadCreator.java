@@ -1,37 +1,58 @@
 package Monitor;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class ThreadCreator extends Monitor {
+public class ThreadCreator implements Runnable {
+	ThreadWriter threadWriter;
+	String str1;
+	// FileWriter fw;
+	Thread thread = null;
 
-	private static File file1;
-
-	public ThreadCreator(File file1) {
-		this.file1 = file1;
+	public ThreadCreator(String str1) throws IOException {
+		thread = new Thread(this);
+		this.str1 = str1;
+		// this.fw=new FileWriter(str1);
 	}
 
-	Scanner scan = new Scanner(System.in);
+	public void setThreadWriter(ThreadWriter threadWriter) {
+		this.threadWriter = threadWriter;
+	}
 
+	synchronized public void notif() {
+		this.notify();
+	}
+
+	@Override
 	public void run() {
-		try (FileWriter file = new FileWriter(file1)) {
-			boolean isInterrupted = false;
-			while (!isInterrupted) {
-				String read = scan.nextLine();
-				if (read.equals("exit") || read.equals("quit")) {
-					isInterrupted = true;
-				} else {
-					file.write(read + System.lineSeparator());
-					file.flush();
-				}
-			}
-			notify();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 
+		Scanner scan = new Scanner(System.in);
+		while (true) {
+			if (isInterrupted())
+				break;
+			System.out.println("Ввод для первого потока");
+			String str = scan.nextLine();
+			// Тут делаем все что хотим .........
+			threadWriter.notif(); // будим второй поток
+			if (str.equals("exit") || str.equals("quit")) {
+				interrupt();
+			}
+		}
+		System.out.println("Поток 1 остановлен");
+		thread.stop();
+
+	}
+
+	public boolean isInterrupted() {
+		return thread.isInterrupted();
+	}
+
+	public void start() {
+		thread.start();
+	}
+
+	public void interrupt() {
+		thread.interrupt();
 	}
 
 }

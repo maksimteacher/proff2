@@ -77,7 +77,8 @@ public enum Milkiway{
 		  Set<String> firmsSet = new TreeSet<>();
 		  for(String s:firmas){
 			  firmsSet.add(s);
-		  }
+			  System.out.println(firmsSet);	  
+			  }
 		//  System.out.println(firmsSet);
 	  }
 	  }

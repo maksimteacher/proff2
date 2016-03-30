@@ -1,33 +1,22 @@
 package Monitor;
 
+import java.io.IOException;
 import java.util.Scanner;
 
-class Monitor implements Runnable {
+public class Monitor {
 
-	Thread obj = null;
+	public static void main(String[] args) throws IOException {
+		String str1 = "file.txt";
+		String str2 = "file2.txt";
 
-	public Monitor() {
-		obj = new Thread(this);
+		ThreadCreator threadCreator = new ThreadCreator(str1);
+		ThreadWriter threadWriter = new ThreadWriter(str1, str2);
+		threadCreator.setThreadWriter(threadWriter);
+		threadWriter.setThreadCreator(threadCreator);
+		threadCreator.start();
+		threadWriter.start();
+
 	}
 
-	@Override
-	public void run() {
-		while (true) {
-			if (isInterrupted())
-				break;
-		}
-		System.out.println("done");
-	}
-
-	public boolean isInterrupted() {
-		return obj.isInterrupted();
-	}
-
-	public void start() {
-		obj.start();
-	}
-
-	public void interrupt() {
-		obj.interrupt();
-	}
 }
+
