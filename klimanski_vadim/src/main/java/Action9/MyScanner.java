@@ -13,24 +13,8 @@ public class MyScanner {
 		BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
 		String str = read.readLine();
 		System.out.println(str);
-	
-	}
-	
-	
-	public boolean hasNextInt(){
-		return false;
-	}
-	public boolean hasNextDouble(){
-		return false;
-	}
-	public int nextInt(){
-		return 0;
-	}
-	public double nextDouble(){
-		return 0;
-	}
-	
-	public static String ReadLine(BufferedReader read) throws IOException{
+		}
+		public static String ReadLine(BufferedReader read) throws IOException{
 		String str = read.readLine();
 		System.out.println(str);
 		return str;
@@ -51,6 +35,22 @@ public class MyScanner {
 		int in = read.read();
 		return 0;
 			}
+	
+	/*
+	public boolean hasNextInt(){
+		return false;
+	}
+	public boolean hasNextDouble(){
+		return false;
+	}
+	public int nextInt(){
+		return 0;
+	}
+	public double nextDouble(){
+		return 0;
+	}
+	*/
+	
 	
 	//next(), nextLine(), hasNext(), hasNextLine()
 	
