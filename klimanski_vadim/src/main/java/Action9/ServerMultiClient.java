@@ -21,5 +21,6 @@ public class ServerMultiClient /* extends Thread */{
 	}
 	public void sendToOtherThread(Socket socket){
 		// send socket to new Thread
+		
 	}
 }
