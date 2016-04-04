@@ -11,6 +11,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
 import domain.Contructor;
+import util.HibernateUtil;
 
 public class HibernateSimpleExampleContructorsInsert {
 	private static Logger log = Logger.getLogger(HibernateSimpleExampleContructorsInsert.class);
@@ -18,11 +19,7 @@ public class HibernateSimpleExampleContructorsInsert {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.ENGLISH);
 
-		Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
-		StandardServiceRegistryBuilder sb = new StandardServiceRegistryBuilder();
-		sb.applySettings(cfg.getProperties());
-		StandardServiceRegistry standardServiceRegistry = sb.build();
-		SessionFactory factory = cfg.buildSessionFactory(standardServiceRegistry);
+		SessionFactory factory = HibernateUtil.getSessionFactory();
 		log.info("Reference to SessionFactory " + factory);
 
 		Session session = null;
@@ -31,7 +28,7 @@ public class HibernateSimpleExampleContructorsInsert {
 			log.info("session opened!");
 			session.beginTransaction();
 
-			Contructor contructor = new Contructor("Поставщик О.A.О.");
+			Contructor contructor = new Contructor("Заказчикс");
 			session.save(contructor);
 
 			session.getTransaction().commit();
@@ -47,6 +44,6 @@ public class HibernateSimpleExampleContructorsInsert {
 				factory.close();
 			}
 		}
-		log.info(session);
+		log.info("session = " + session);
 	}
 }
