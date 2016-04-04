@@ -5,22 +5,35 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Server extends Thread {
-	ServerSocket server;
-	public static final int PORT = 4444;
 	
+	private ServerSocket server;
+	public static final int PORT = 4444;
+	private ServerWriter writer;
+	private boolean stop = false;
+
 	@Override
 	public void run() {
 		try {
 			server = new ServerSocket(PORT);
-			Socket client = server.accept();
-			
-			ClientWorker worker = new ClientWorker(client);
-			
+
+			while (!stop) {
+				Socket client = server.accept();
+				writerBuilder(client);
+				ServerReader reader = new ServerReader(client, writer);
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
+	}
+
+	private void writerBuilder(Socket client) {
+		if(writer == null) {
+			writer = new ServerWriter(client);
+		} else {
+			writer.acceptClient(client);
+		}
 		
 	}
-	
+
 }
