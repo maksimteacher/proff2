@@ -7,7 +7,7 @@ import java.net.Socket;
 public class Server extends Thread {
 	
 	private ServerSocket server;
-	public static final int PORT = 4444;
+	public static final int PORT = 3021;
 	private ServerWriter writer;
 	private boolean stop = false;
 
@@ -15,9 +15,10 @@ public class Server extends Thread {
 	public void run() {
 		try {
 			server = new ServerSocket(PORT);
-
+			System.out.println("ServerSocketCreated");
 			while (!stop) {
 				Socket client = server.accept();
+				System.out.println("accepted client");
 				writerBuilder(client);
 				ServerReader reader = new ServerReader(client, writer);
 			}
