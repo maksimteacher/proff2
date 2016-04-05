@@ -10,4 +10,5 @@ public interface ContructorDao {
 	void update(Contructor contructor);
 	void delete(Contructor contructor);
 	List<Contructor> findAll();
+
 }

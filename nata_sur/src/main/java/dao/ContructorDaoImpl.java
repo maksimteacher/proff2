@@ -12,11 +12,11 @@ import domain.Contructor;
 
 public class ContructorDaoImpl implements ContructorDao {
 	private static Logger log = Logger.getLogger(ContructorDaoImpl.class);
-	private SessionFactory factory;
+    private SessionFactory factory;
 
-	public ContructorDaoImpl(SessionFactory factory) {
-		this.factory = factory;
-	}
+    public ContructorDaoImpl(SessionFactory factory) {
+        this.factory = factory;
+    }
 
 	@Override
 	public Long create(Contructor contructor) {
@@ -92,4 +92,5 @@ public class ContructorDaoImpl implements ContructorDao {
 			session.close();
 		}
 	}
+
 }
