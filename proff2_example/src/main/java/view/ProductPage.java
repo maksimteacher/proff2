@@ -113,7 +113,18 @@ public class ProductPage implements TemplatePage{
 	}
 	@Override
 	public void add(TextField[] arr) {
-		
+		String name = "";
+		int code = 0;
+		try{
+			name = arr[0].getText();
+			code = Integer.parseInt(arr[1].getText());
+			Product newProduct = new Product(name, code);
+			servisProduct.addNewProduct(newProduct);
+			products.add(new ProductViewer(newProduct));
+			
+		}catch(Exception e){
+			
+		}
 	}
 	@Override
 	public void help() {
