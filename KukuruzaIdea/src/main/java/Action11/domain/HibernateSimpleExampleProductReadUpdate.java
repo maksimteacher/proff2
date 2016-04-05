@@ -10,9 +10,8 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-
-public class HibernateSimpleExampleContructorsInsert {
-    private static Logger log = Logger.getLogger(HibernateSimpleExampleContructorsInsert.class);
+public class HibernateSimpleExampleProductReadUpdate {
+    private static Logger log = Logger.getLogger(HibernateSimpleExampleProductReadUpdate.class);
 
     public static void main(String[] args) {
         Locale.setDefault(Locale.ENGLISH);
@@ -30,12 +29,13 @@ public class HibernateSimpleExampleContructorsInsert {
             log.info("session opened!");
             session.beginTransaction();
 
-            Product product = new Product("YOgurt", "bar1");
-            Product product2 = new Product("YOgurt", "bar1");
-            Product product3 = new Product("YOgurt", "bar1");
-            session.save(product);
-            session.save(product2);
-            session.save(product3);
+            Product product = (Product) session.get(Product.class, 3);
+            System.out.println("getProduct_by_id=1: " + product);
+            product.setName("bulka");
+            System.out.println("change name: " + product);
+            session.update(product);
+
+           // session.delete(product);
 
             session.getTransaction().commit();
 
