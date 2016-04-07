@@ -35,6 +35,7 @@ public class Client extends Thread {
 		StringBuilder sb = new StringBuilder();
 		while((line = buffRead.readLine()) != null) {
 			sb.append(line);
+			sb.append("\n");
 		}
 		buffRead.close();
 		return sb.toString();
