@@ -7,7 +7,7 @@ import java.net.Socket;
 public class Server extends Thread {
 	
 	private ServerSocket server;
-	public static final int PORT = 3021;
+	public static final int PORT = 3043;
 	private ServerWriter writer;
 	private boolean stop = false;
 

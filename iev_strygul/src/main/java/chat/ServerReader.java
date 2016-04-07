@@ -27,6 +27,7 @@ public class ServerReader implements Runnable {
 			try {
 				in = new DataInputStream(client.getInputStream());
 				String s = in.readUTF();
+				System.out.println("Сообщение " + s + " считывается");
 				writeDestination(s);
 			} catch (IOException e) {
 				e.printStackTrace();

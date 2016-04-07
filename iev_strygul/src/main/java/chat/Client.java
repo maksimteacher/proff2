@@ -1,27 +1,43 @@
 package chat;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 
 public class Client extends Thread {
-	public final int PORT = 3021;
+	public final int PORT = 3043;
 	private Socket sock;
-	private ServerWriter writer;
 	private boolean stop = false;
-	
-	
+	private ClientReader reader;
+	private ClientWriter writer;
+	private File file;
+	private BufferedReader buffRead;
+
 	@Override
 	public void run() {
 		try {
 			sock = new Socket("localhost", PORT);
 			System.out.println("Created new client");
-			ClientReader reader = new ClientReader(sock);
-			ClientWriter writer = new ClientWriter(sock);
+			file = new File("history.txt");
+			reader = new ClientReader(sock, file);
+			writer = new ClientWriter(sock);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public void sendNewMessage(String s) {
+		writer.sendNewMessage(s);
+	}
+
+	public String getHistory() throws IOException {
+		String line;
+		buffRead = new BufferedReader(new FileReader(file));
+		StringBuilder sb = new StringBuilder();
+		while((line = buffRead.readLine()) != null) {
+			sb.append(line);
+		}
+		buffRead.close();
+		return sb.toString();
 	}
 
 }
