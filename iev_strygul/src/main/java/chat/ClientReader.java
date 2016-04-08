@@ -11,6 +11,7 @@ public class ClientReader implements Runnable {
 	private boolean stop = false;
 	private PrintWriter writeToFile;
 	private File file;
+	private MyTextArea textArea;
 	
 	public ClientReader(Socket client, File file) {
 		this.client = client;
@@ -33,12 +34,20 @@ public class ClientReader implements Runnable {
 				message = in.readUTF();
 				writeToFile.println(message);
 				writeToFile.flush();
+				if(textArea != null) {
+					textArea.notifyAboutNewMessage();
+				}
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
 			writeToFile.close();
 		}
+		
+	}
+
+	public void passTextArea(MyTextArea previousTexts) {
+		textArea = previousTexts;
 		
 	}
 }

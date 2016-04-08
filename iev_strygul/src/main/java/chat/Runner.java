@@ -2,9 +2,12 @@ package chat;
 
 public class Runner {
 	public static void main(String[] args) {
-		Server server = new Server();
-		server.start();
-		Client client = new Client();
-		client.start();
+		Window app1 = new Window();
+		try {
+			app1.s
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

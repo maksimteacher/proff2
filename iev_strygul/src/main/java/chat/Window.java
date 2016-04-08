@@ -34,10 +34,12 @@ public class Window extends Application {
 		VBox chat = new VBox();
 		chat.setAlignment(Pos.CENTER);
 		
-		TextArea previousTexts = new TextArea();
+		MyTextArea previousTexts = new MyTextArea(client.getFile());
+		client.passTextArea(previousTexts);
 		previousTexts.setEditable(false);
 		previousTexts.setWrapText(true);
 		previousTexts.setId("previousText");
+		previousTexts.loadHistory(); 
 		
 		TextArea enterText = new TextArea();
 		enterText.setMaxHeight(40);
@@ -48,14 +50,9 @@ public class Window extends Application {
 		button.setOnAction((e) -> {
 			String s = enterText.getText();
 			client.sendNewMessage(s);
-			enterText.clear();
-			try {
-				previousTexts.setText(client.getHistory());
-			} catch (Exception e1) {
-				e1.printStackTrace();
-			}
-			
+			enterText.clear();		
 		});
+		
 		
 		chat.getChildren().addAll(previousTexts, enterText, button);
 		Scene scene = new Scene(chat, 150, 200);
