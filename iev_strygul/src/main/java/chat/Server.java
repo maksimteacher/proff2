@@ -9,10 +9,12 @@ public class Server extends Thread {
 	private ServerSocket server;
 	public static final int PORT = 3043;
 	private ServerWriter writer;
+	private ServerReader reader;
 	private boolean stop = false;
 
 	@Override
 	public void run() {
+		
 		try {
 			server = new ServerSocket(PORT);
 			System.out.println("ServerSocketCreated");
@@ -20,12 +22,11 @@ public class Server extends Thread {
 				Socket client = server.accept();
 				System.out.println("accepted client");
 				writerBuilder(client);
-				ServerReader reader = new ServerReader(client, writer);
+				reader = new ServerReader(client, writer);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	private void writerBuilder(Socket client) {
@@ -35,6 +36,13 @@ public class Server extends Thread {
 			writer.acceptClient(client);
 		}
 		
+	}
+
+	public void shutDownDaemons() {
+		writer.shutDown();
+		reader.shutDown();
+		stop = true;
+		System.out.println(Thread.currentThread().getName());
 	}
 
 }

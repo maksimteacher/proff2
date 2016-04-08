@@ -51,4 +51,9 @@ public class ClientWriter implements Runnable {
 
 	}
 	
+	public void shutDown() {
+		stop = true;
+		System.out.println("ClientWriter daemons closed");
+	}
+	
 }

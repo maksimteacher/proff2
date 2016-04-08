@@ -6,7 +6,6 @@ import java.net.Socket;
 public class Client extends Thread {
 	public final int PORT = 3043;
 	private Socket sock;
-	private boolean stop = false;
 	private ClientReader reader;
 	private ClientWriter writer;
 	private File file;
@@ -14,6 +13,7 @@ public class Client extends Thread {
 
 	@Override
 	public void run() {
+		
 		try {
 			sock = new Socket("localhost", PORT);
 			System.out.println("Created new client");
@@ -52,6 +52,11 @@ public class Client extends Thread {
 	public void passTextArea(MyTextArea previousTexts) {
 		reader.passTextArea(previousTexts);
 		
+	}
+	
+	public void shutDownDaemons() {
+		reader.shutDown();
+		writer.shutDown();
 	}
 
 }

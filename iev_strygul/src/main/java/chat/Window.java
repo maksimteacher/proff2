@@ -14,10 +14,11 @@ import javafx.stage.Stage;
 public class Window extends Application {
 	
 	Client client;
+	Server server;
 	
 	@Override
 	public void init() {
-		Server server = new Server();
+		server = new Server();
 		server.start();
 		client = new Client();
 		client.start();
@@ -28,6 +29,11 @@ public class Window extends Application {
 		primaryStage.setTitle("My Chat");
 		primaryStage.setScene(createScene());
 		primaryStage.show();
+		primaryStage.setOnCloseRequest(wc -> {
+			client.shutDownDaemons();
+			server.shutDownDaemons();
+			System.out.println(Thread.activeCount());
+		});
 	}
 
 	private Scene createScene() {

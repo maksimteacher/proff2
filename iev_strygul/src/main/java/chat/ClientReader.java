@@ -45,6 +45,11 @@ public class ClientReader implements Runnable {
 		}
 		
 	}
+	
+	public void shutDown() {
+		stop = true;
+		System.out.println("ClientReader daemons closed");
+	}
 
 	public void passTextArea(MyTextArea previousTexts) {
 		textArea = previousTexts;
