@@ -18,7 +18,7 @@ public class Window extends Application {
 	
 	@Override
 	public void init() {
-		server = new Server();
+		server = Server.builder();
 		server.start();
 		client = new Client();
 		client.start();

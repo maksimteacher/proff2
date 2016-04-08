@@ -5,12 +5,19 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Server extends Thread {
-	
 	private ServerSocket server;
 	public static final int PORT = 3043;
 	private ServerWriter writer;
 	private ServerReader reader;
 	private boolean stop = false;
+	
+	private Server() {
+		
+	}
+	
+	public static Server builder() {
+		return new Server();
+	}
 
 	@Override
 	public void run() {
