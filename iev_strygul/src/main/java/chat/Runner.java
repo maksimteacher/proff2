@@ -6,5 +6,7 @@ public class Runner {
 		server.start();
 		Client client = new Client();
 		client.start();
+		Client client2 = new Client();
+		client2.start();
 	}
 }

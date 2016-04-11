@@ -15,7 +15,7 @@ public class ServerReader implements Runnable {
 	public ServerReader(Socket c, ServerWriter w) {
 		client = c;
 		writer = w;
-		thrd = new Thread(this);
+		thrd = new Thread(this, "ServerReader");
 		thrd.setDaemon(true);
 		thrd.start();
 	}
@@ -27,6 +27,7 @@ public class ServerReader implements Runnable {
 			try {
 				in = new DataInputStream(client.getInputStream());
 				String s = in.readUTF();
+				System.out.println("Сообщение " + s + " считывается");
 				writeDestination(s);
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -40,6 +41,12 @@ public class ServerReader implements Runnable {
 	
 	public void writeDestination(String message) {
 		writer.getMessage(message);
+	}
+
+
+	public void shutDown() {
+		stop = true;
+		System.out.println("ServerReader daemons closed");
 	}
 
 }
