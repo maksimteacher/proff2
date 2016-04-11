@@ -1,7 +1,5 @@
-package Action11.domain;
+package resourses;
 
-
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
@@ -12,14 +10,15 @@ public class Product {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "id",unique=true, nullable = false)
-    @Id
+    @Column(name = "id", unique = true, nullable = false)
+
     private Integer id;
     @Column(name = "name")
     String name;
     @Column(name = "barcode")
     String barcode;
 
+    @Id
     public Integer getId() {
         return id;
     }
@@ -48,6 +47,15 @@ public class Product {
 
         this.name = name;
         this.barcode = barcode;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", barcode='" + barcode + '\'' +
+                '}';
     }
 
     public void setId(Integer id) {
