@@ -3,17 +3,15 @@ package chat;
 import java.io.*;
 import java.net.Socket;
 
-public class Client extends Thread {
+public class Client {
 	public final int PORT = 3043;
 	private Socket sock;
 	private ClientReader reader;
 	private ClientWriter writer;
 	private File file;
 	private BufferedReader buffRead;
-
-	@Override
-	public void run() {
-		
+	
+	public Client() {
 		try {
 			sock = new Socket("localhost", PORT);
 			System.out.println("Created new client");
