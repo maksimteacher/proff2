@@ -1,4 +1,4 @@
-package AndreyKukuruzaHomeWork.HomeWork5.Client;
+package AndreyKukuruzaHomeWork.Homework5.Client;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

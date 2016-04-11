@@ -1,10 +1,9 @@
-package AndreyKukuruzaHomeWork.HomeWork5.Server;
+package AndreyKukuruzaHomeWork.Homework5.Server;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class MainServer extends Thread {
     public static int port = 3151;
