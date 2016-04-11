@@ -24,7 +24,7 @@ public class ServerWriter implements Runnable {
 			e.printStackTrace();
 		}
 		
-		thrd = new Thread(this);
+		thrd = new Thread(this, "ServerWriter");
 		thrd.setDaemon(true);
 		thrd.start();
 	}
@@ -59,8 +59,9 @@ public class ServerWriter implements Runnable {
 		isNewMessage = true;	
 	}
 	
-	public void stop() {
+	public void shutDown() {
 		stop = true;
+		System.out.println("ServerWriter daemons closed");
 	}
 
 	

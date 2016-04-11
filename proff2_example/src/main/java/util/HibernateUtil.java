@@ -10,6 +10,7 @@ import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
     private static final SessionFactory sessionFactory = buildSessionFactory();
+    
     private static SessionFactory buildSessionFactory() {
         try {
             Locale.setDefault(Locale.ENGLISH);
@@ -18,7 +19,8 @@ public class HibernateUtil {
             sb.applySettings(cfg.getProperties());
             StandardServiceRegistry standardServiceRegistry = sb.build();
            
-            return new Configuration().configure().buildSessionFactory(standardServiceRegistry);
+            return new Configuration().configure().
+            		buildSessionFactory(standardServiceRegistry);
         }
         catch (Throwable ex) {
             System.err.println("Initial SessionFactory creation failed." + ex);
