@@ -2,29 +2,29 @@ package Action11.dao;
 
 import java.util.List;
 
-import resourses.Product;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import resourses.Contructor;
 
 
-public class ProductDaoImpl implements ProductDao {
-    private static Logger log = Logger.getLogger(ProductDaoImpl.class);
+public class ContructorDaoImpl implements ContructorDao {
+    private static Logger log = Logger.getLogger(ContructorDaoImpl.class);
     private SessionFactory factory;
 
-    public ProductDaoImpl(SessionFactory factory) {
+    public ContructorDaoImpl(SessionFactory factory) {
         this.factory = factory;
     }
 
     @Override
-    public Integer create(Product product) {
+    public Long create(Contructor contructor) {
         Session session = factory.openSession();
-        Integer id = null;
+        Long id = null;
         try {
             session.beginTransaction();
-            id = (Integer) session.save(product);
+            id = (Long) session.save(contructor);
             session.getTransaction().commit();
         } catch (HibernateException e) {
             log.error("Transaction failed");
@@ -37,25 +37,25 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public Product read(Integer id) {
+    public Contructor read(Long id) {
         Session session = factory.openSession();
-        Product product = null;
+        Contructor contructor = null;
         try {
-            product = (Product) session.get(Product.class, id);
+            contructor = (Contructor) session.get(Contructor.class, id);
         } catch (HibernateException e) {
             log.error("Transaction failed");
         } finally {
             session.close();
         }
-        return product;
+        return contructor;
     }
 
     @Override
-    public void update(Product product) {
+    public void update(Contructor contructor) {
         Session session = factory.openSession();
         try {
             session.beginTransaction();
-            session.update(product);
+            session.update(contructor);
             session.getTransaction().commit();
         } catch (HibernateException e) {
             log.error("Transaction failed");
@@ -67,11 +67,11 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public void delete(Product product) {
+    public void delete(Contructor contructor) {
         Session session = factory.openSession();
         try {
             session.beginTransaction();
-            session.delete(product);
+            session.delete(contructor);
             session.getTransaction().commit();
         } catch (HibernateException e) {
             log.error("Transaction failed");
@@ -83,14 +83,13 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public List<Product> findAll() {
+    public List<Contructor> findAll() {
         Session session = factory.openSession();
         try {
-            Query query = session.createQuery("from Product");
+            Query query = session.createQuery("from Contructor ");
             return query.list();
         } finally {
             session.close();
         }
     }
-
 }
