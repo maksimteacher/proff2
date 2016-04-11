@@ -18,6 +18,7 @@ public class ThreadExample {
 		//obj1.stop();//deprecated
 		obj1.interrupt();
 		obj1.join(); // Waits for this thread to die
+		obj1.setDaemon(true);
 		obj1.setPriority(Thread.MAX_PRIORITY); // 10 
 		// Thread.MIN_PRIORITY = 1
 		// Thread.NORM_PRIORITY = 5
@@ -40,6 +41,8 @@ class MyThread2 implements Runnable{
 	public void run(){
 		for(int i=0;i<10000;i++) {
 			System.out.println(i);
+			//isInterrupted();
+			//Thread.currentThread().interrupt();
 			//if(isInterrupted())break;//error
 		}
 		System.out.println("done MyThread2");		
@@ -47,7 +50,7 @@ class MyThread2 implements Runnable{
 }
 
 class MyThread3 implements Runnable{
-	Thread obj = null;
+	private Thread obj = null;
 	
 	public MyThread3(){
 		obj = new Thread(this);
