@@ -27,5 +27,8 @@
 		<mapping class="domain.School" />
 		<mapping class="domain.Department" />
 		<mapping class="domain.Student" />
+		<mapping class="domain.Lecture" />
+		<mapping class="domain.Lesson" />
+		<mapping class="domain.Score" />
 	</session-factory>
 </hibernate-configuration>
