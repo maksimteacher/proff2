@@ -8,7 +8,6 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import domain.Product;
 import domain.School;
 import util.HibernateUtil;
 
@@ -34,11 +33,11 @@ public class SchoolDaoImpl implements SchoolDao {
 	}
 
 	@Override
-	public School read(Long id) {
+	public School read(Long idSchool) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		School school = null;
 		try {
-			school = (School)session.get(School.class, id);
+			school = (School)session.get(School.class, idSchool);
 		} catch (HibernateException e) {
 			log.error("Transaction failed");
 		} finally {
@@ -98,18 +97,20 @@ join schools on schools.id = departments.school_id
 where schools.id = 1;*/
 	
 	@Override
-	public List<School> findAllUsersForEachSchool(String search) {
+	public List<School> findAllUsersForEachSchool(Long idSchool) {
 		SessionFactory factory = HibernateUtil.getSessionFactory();
 		Session session = null;
 		Query query = null;
 		List<School> list = null;
 		try {
 			session = factory.openSession();
-			//HQL
-			query = session.createQuery("from School")
-					.setParameter("name", "user_");
+			query = session.createSQLQuery("select * from students join departments on students.department_id = departments.id " + 
+                    "join schools on schools.id = departments.school_id " + "where schools.id = :id " + "order by students.name")
+					.addEntity(School.class);
+			query.setLong("id", idSchool);
 			list = query.list();
-			System.out.println(list);
+			System.out.println("1="+list);
+			
 		} catch (HibernateException e) {
 			log.error("Open session failed", e);
 		} finally {
@@ -120,6 +121,8 @@ where schools.id = 1;*/
 				factory.close();
 			}
 		}
+		
 		log.info("session = " + session);
+		return list;
 	}
 }

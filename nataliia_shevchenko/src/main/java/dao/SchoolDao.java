@@ -5,10 +5,10 @@ import domain.School;
 
 public interface SchoolDao {
 	Long create(School school);
-	School read(Long id);
+	School read(Long idSchool);
     void update(School school);
     void delete(School school);
     List<School> findAll();
-    List<School> findAllUsersForEachSchool(String search);
+    List<School> findAllUsersForEachSchool(Long idSchool);
 
 }
