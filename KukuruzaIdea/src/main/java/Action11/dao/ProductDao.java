@@ -1,6 +1,6 @@
 package Action11.dao;
 
-import Action11.domain.Product;
+import resourses.Product;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import java.util.List;
 public interface ProductDao {
     Integer create(Product contructor);
 
-    Product read(Long id);
+    Product read(Integer id);
 
     void update(Product contructor);
 

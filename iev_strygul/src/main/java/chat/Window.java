@@ -21,7 +21,6 @@ public class Window extends Application {
 		server = Server.builder();
 		server.start();
 		client = new Client();
-		client.start();
 	}
 
 	@Override

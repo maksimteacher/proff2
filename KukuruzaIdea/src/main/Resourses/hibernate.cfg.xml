@@ -16,6 +16,7 @@
         <property name="hdm2ddl.auto">update</property>
         <property name="connection.pool_size">1</property>
         <property name="connection.characterEncoding">utf8</property>
-        <mapping class="Action11.domain.Product"/>
+        <mapping class="resourses.Product"/>
+        <mapping class="resourses.Contructor"/>
     </session-factory>
 </hibernate-configuration>

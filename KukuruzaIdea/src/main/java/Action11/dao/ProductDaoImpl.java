@@ -2,7 +2,7 @@ package Action11.dao;
 
 import java.util.List;
 
-import Action11.domain.Product;
+import resourses.Product;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -37,7 +37,7 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public Product read(Long id) {
+    public Product read(Integer id) {
         Session session = factory.openSession();
         Product product = null;
         try {
