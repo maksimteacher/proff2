@@ -9,8 +9,8 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name="schools")
-public class School {
+@Table(name="lectures")
+public class Lecture  {
 	
 	@Id
 	@GeneratedValue(generator = "increment2")
@@ -21,11 +21,15 @@ public class School {
 	@Column(name="name")
 	private String name;
 	
-	public School() {}
+	@Column(name="number_level")
+	private int numlev;
+	
+	public Lecture() {}
 
-	public School(Long id, String name) {
+	public Lecture(Long id, String name, int numlev) {
 		this.id = id;
 		this.name = name;
+		this.numlev = numlev;
 	}
 
 	public Long getId() {
@@ -44,10 +48,23 @@ public class School {
 		this.name = name;
 	}
 
+	public int getNumlev() {
+		return numlev;
+	}
+
+	public void setNumlev(int numlev) {
+		this.numlev = numlev;
+	}
+
 	@Override
 	public String toString() {
-		return "School [id=" + id + ", name=" + name + "]";
+		return "Lecture [id=" + id + ", name=" + name + ", numlev=" + numlev + "]";
 	}
+	
+	
+	
+	
+	
 	
 
 }

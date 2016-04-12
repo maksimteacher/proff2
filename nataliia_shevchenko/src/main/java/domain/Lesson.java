@@ -9,23 +9,26 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name="schools")
-public class School {
-	
+@Table(name="lessons")
+public class Lesson {
 	@Id
 	@GeneratedValue(generator = "increment2")
 	@GenericGenerator(name = "increment2", strategy = "increment")
 	@Column(name="id")
 	private Long id;
 	
-	@Column(name="name")
-	private String name;
+	@Column(name="lecture_id")
+	private int lectId;
 	
-	public School() {}
+	@Column(name="department_id")
+	private int depId;
+	
+	public Lesson() {}
 
-	public School(Long id, String name) {
+	public Lesson(Long id, int lectId, int depId) {
 		this.id = id;
-		this.name = name;
+		this.lectId = lectId;
+		this.depId = depId;
 	}
 
 	public Long getId() {
@@ -36,18 +39,27 @@ public class School {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public int getLectId() {
+		return lectId;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setLectId(int lectId) {
+		this.lectId = lectId;
+	}
+
+	public int getDepId() {
+		return depId;
+	}
+
+	public void setDepId(int depId) {
+		this.depId = depId;
 	}
 
 	@Override
 	public String toString() {
-		return "School [id=" + id + ", name=" + name + "]";
+		return "Lesson [id=" + id + ", lectId=" + lectId + ", depId=" + depId + "]";
 	}
+	
 	
 
 }

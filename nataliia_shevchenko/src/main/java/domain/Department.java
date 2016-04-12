@@ -22,7 +22,7 @@ public class Department {
 	private String name;
 	
 	@Column(name="number_level")
-	private int numlev = 0;
+	private int numlev;
 	
 
 	@Column(name="school_id")

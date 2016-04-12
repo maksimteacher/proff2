@@ -10,5 +10,6 @@ public interface SchoolDao {
     void delete(School school);
     List<School> findAll();
     List<School> findAllUsersForEachSchool(Long idSchool);
+    List<School> findAllDepartmentsForSchool(Long idSchool);
 
 }
