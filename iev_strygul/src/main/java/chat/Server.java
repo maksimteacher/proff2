@@ -21,7 +21,6 @@ public class Server extends Thread {
 
 	@Override
 	public void run() {
-		
 		try {
 			server = new ServerSocket(PORT);
 			System.out.println("ServerSocketCreated");
