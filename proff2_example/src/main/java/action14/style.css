@@ -1,0 +1,17 @@
+
+
+.myBlockCass {
+    display: inline-block;
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: beige;
+    border-color: aquamarine;
+    border-width: 2px;
+    color:yellow;
+    font-weight: bold; 
+}
+
+#block1 {
+    background-color: red;
+}
