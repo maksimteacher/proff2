@@ -27,6 +27,17 @@ public class Lesson {
 	inverseJoinColumns=@JoinColumn(name="lectures_id"))
 	private Lecture lecture;
 	
+	@Column(name="name")
+	private String name;
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public Lecture getLecture() {
 		return lecture;
 	}

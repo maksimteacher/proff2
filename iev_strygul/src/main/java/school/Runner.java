@@ -1,6 +1,13 @@
 package school;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import dao.LectureDaoImpl;
+import dao.LessonDaoImpl;
 import domain.Department;
+import domain.Lecture;
+import domain.Lesson;
 import domain.School;
 import domain.Student;
 import service.DepartmentServiceImpl;
@@ -34,11 +41,21 @@ public class Runner {
 			}
 		}
 */
+		List<Lecture> lectures = new ArrayList<>();
+		List<Department> departments = departmentService.getAllDepartments();
+		
+		LectureDaoImpl lectureDao = new LectureDaoImpl();
+		LessonDaoImpl lessonDao = new LessonDaoImpl();
+		
+		for(int i = 0; i < 3; i++) {
+			Lesson lesson = new Lesson();
+			lesson.setName("Lesson#" + i);
+			lesson.setLecture(lectureDao.read(new Long(1)));
+			lessonDao.create(lesson);
+		}
 		
 		
-		System.out.println(departmentService.getAllDepartmentsForSchool(Long.parseLong("5")));
-		System.out.println(studentService.getAllStudentsByDep(Long.parseLong("2")));
-		System.out.println(studentService.getAllStudFromSchoolSortedByName(new Long(6)));
+		
 
 	}
 

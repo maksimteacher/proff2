@@ -3,6 +3,7 @@ package dao;
 import java.util.List;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -45,38 +46,100 @@ public class LectureDaoImpl implements LectureDao {
 
 	@Override
 	public void update(Lecture lecture) {
-		// TODO Auto-generated method stub
-
+		Session session = HibernateUtil.getSession();
+		Long id = null;
+		try {
+			Transaction tx = session.beginTransaction();
+			session.update(lecture);
+			tx.commit();
+		} catch (HibernateException he) {
+			he.printStackTrace();
+			session.getTransaction().rollback();
+		} finally {
+			if(session != null && session.isOpen()) {
+				session.close();
+			}
+		}
 	}
 
 	@Override
 	public void delete(Lecture lecture) {
-		// TODO Auto-generated method stub
+		Session session = HibernateUtil.getSession();
+		Long id = null;
+		try {
+			Transaction tx = session.beginTransaction();
+			session.delete(lecture);
+			tx.commit();
+		} catch (HibernateException he) {
+			he.printStackTrace();
+			session.getTransaction().rollback();
+		} finally {
+			if(session != null && session.isOpen()) {
+				session.close();
+			}
+		}
 
 	}
 
 	@Override
 	public List<Lecture> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Lecture> lectures = null;
+		Session session = HibernateUtil.getSession();
+		try {
+			Query query = session.createQuery("from Lecture");
+			lectures = query.list();
+		} catch (HibernateException he) {
+			he.printStackTrace();
+		}
+		return lectures;
 	}
 
 	@Override
 	public List<Lecture> findByDep(Long depId) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Lecture> lectures = null;
+		Session session = HibernateUtil.getSession();
+		try {
+			Query query = session.createSQLQuery("SELECT * FROM lectures " +
+					"JOIN TABLE lectures_departments ON lectures_departments.lectures_id = lectures.id " +
+					"WHERE lectures_departments.departments_id = :id").addEntity(Lecture.class);
+			query.setLong("id", depId);
+			lectures = query.list();
+		} catch (HibernateException he) {
+			he.printStackTrace();
+		}
+		return lectures;
 	}
 
 	@Override
-	public List<Lecture> findByStud(Long studentIt) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Lecture> findByStud(Long studentId) {
+		List<Lecture> lectures = null;
+		Session session = HibernateUtil.getSession();
+		try {
+			Query query = session.createSQLQuery("SELECT * FROM lectures " +
+					"JOIN TABLE lectures_students ON lectures_students.lectures_id = lectures.id " +
+					"WHERE lectures_students.students_id = :id").addEntity(Lecture.class);
+			query.setLong("id", studentId);
+			lectures = query.list();
+		} catch (HibernateException he) {
+			he.printStackTrace();
+		}
+		return lectures;
 	}
 
 	@Override
 	public List<Lecture> findBySchool(Long schoolId) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Lecture> lectures = null;
+		Session session = HibernateUtil.getSession();
+		try {
+			Query query = session.createSQLQuery("SELECT * FROM lectures " +
+					"JOIN lectures_departments ON lectures_departments.lectures_id = lectures.id " +
+					"WHERE departments_id IN (SELECT id FROM departments WHERE schools_id = :id)").addEntity(Lecture.class);
+			query.setLong("id", schoolId);
+			lectures = query.list();
+		} catch (HibernateException he) {
+			he.printStackTrace();
+		}
+		return lectures;
 	}
 
 }

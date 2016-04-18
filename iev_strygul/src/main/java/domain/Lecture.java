@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -7,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -25,17 +28,24 @@ public class Lecture  {
 	@Column(name="name")
 	private String name;
 	
-	@ManyToOne(fetch=FetchType.EAGER)
+	@ManyToMany(fetch=FetchType.EAGER)
 	@JoinTable(name="lectures_departments", 
 	joinColumns=@JoinColumn(name="lectures_id"), 
 	inverseJoinColumns=@JoinColumn(name="departments_id"))
-	private Department dep;
+	private List<Department> dep;
 	
 	public Lecture() {}
 
-	public Lecture(Long id, String name, Department dep) {
+	public Lecture(Long id, String name) {
 		this.id = id;
 		this.name = name;
+	}
+
+	public List<Department> getDep() {
+		return dep;
+	}
+
+	public void setDep(List<Department> dep) {
 		this.dep = dep;
 	}
 

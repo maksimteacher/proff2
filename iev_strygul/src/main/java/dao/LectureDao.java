@@ -5,6 +5,7 @@ import java.util.List;
 import domain.Lecture;
 
 public interface LectureDao {
+	Long create(Lecture lecture);
 	Lecture read(Long id);
 	void update(Lecture lecture);
 	void delete(Lecture lecture);
