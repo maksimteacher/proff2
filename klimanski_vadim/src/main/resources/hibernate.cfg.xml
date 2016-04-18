@@ -7,7 +7,7 @@
  <session-factory>
   <!-- properties -->
   <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-  <property name="connection.url">jdbc:mysql://LocalRepository/proff2</property>
+  <property name="connection.url">jdbc:mysql://LocalHost/proff2</property>
   <property name="connection.username">root</property>
   <property name="connection.password">root</property>
 
@@ -23,6 +23,9 @@
   <mapping class="data.User" />
   <mapping class="data.Order_Position" />
   <mapping class="data.Orders" />
+  <mapping class="School.Departments" />
+  <mapping class="School.School" />
+  <mapping class="School.Students" />
   
  </session-factory>
 </hibernate-configuration>
