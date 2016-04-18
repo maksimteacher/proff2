@@ -14,7 +14,12 @@ public class SchoolServiceImpl implements SchoolService {
 	public SchoolServiceImpl() {
 		dao = new SchoolDaoImpl();
 	}
-
+	
+	public void addAll(List<School> list) {
+		for(School s : list) {
+			dao.addSchool(s);
+		}
+	}
 
 	@Override
 	public School getSchool(Long id) {
@@ -63,6 +68,13 @@ public class SchoolServiceImpl implements SchoolService {
 			e.printStackTrace();
 		}
 		return list;
+	}
+
+	public void deleteAll(List<School> listSchools) {
+		for (School s : listSchools) {
+			dao.delete(s);
+		}
+		
 	}
 
 }

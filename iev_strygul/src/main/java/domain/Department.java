@@ -1,9 +1,12 @@
 package domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -15,12 +18,13 @@ public class Department {
 	@Id
 	@GeneratedValue(generator ="increment")
 	@GenericGenerator(name = "increment", strategy = "increment")
-	private int id;
+	private Long id;
 	
 	@Column(name="name")
 	private String name;
 	
-	@Column(name="school_id")
+	@ManyToOne
+	@JoinColumn(name="schools_id")
 	private School school;
 	
 	public School getSchool() {
@@ -29,10 +33,10 @@ public class Department {
 	public void setSchool(School school) {
 		this.school = school;
 	}
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -40,6 +44,11 @@ public class Department {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return "[Id: " + id + ", name: " + name + "]";
 	}
 	
 }

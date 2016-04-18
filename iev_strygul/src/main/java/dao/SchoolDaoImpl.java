@@ -64,7 +64,6 @@ public class SchoolDaoImpl implements SchoolDao {
 		try {
 			Query query = session.createQuery("from School");
 			list = query.list();
-			System.out.println("Query executed!");
 		} catch (HibernateException he) {
 			log.error("Hibernate exception");
 			throw he;
