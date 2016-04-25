@@ -198,14 +198,6 @@
             <artifactId>json</artifactId>
             <version>20141113</version>
         </dependency>
-
-
-
-
-
-
-
-
 	</dependencies>
 
 	<build>

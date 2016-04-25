@@ -1,7 +1,6 @@
 package action13;
 
 import java.util.Locale;
-
 import dao.DepartmentDaoImpl;
 import dao.LectureDaoImpl;
 import dao.SchoolDaoImpl;
