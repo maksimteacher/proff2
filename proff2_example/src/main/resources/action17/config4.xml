@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="nameOperator" class="java.lang.String">
+		<constructor-arg value="Strelnikov Y.Y"/>
+	</bean>
+	
+	<context:property-placeholder location="classpath:action17/conf.properties"/>
+	
+	<bean id="nameOperator1" class="java.lang.String">
+		<constructor-arg value="${FIO_Operator}"/>
+	</bean>
+	
+	<bean id="lift">
+		<property name="operator" ref="nameOperator1"/>
+	</bean>
+</beans>
