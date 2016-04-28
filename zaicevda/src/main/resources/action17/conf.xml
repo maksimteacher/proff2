@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="idTrack" class="action17.Track">
+		<constructor-arg value="TR0001TR" />
+	</bean>
+
+	<bean id="idHuman" class="action17.Human">
+		<constructor-arg value="Pipkin" />
+	</bean>
+
+	<bean id="idCar" class="action17.Car">
+		<constructor-arg value="8888-8888" />
+		<constructor-arg ref="idTrack" />
+		<constructor-arg ref="idHuman" />
+	</bean>
+</beans>
