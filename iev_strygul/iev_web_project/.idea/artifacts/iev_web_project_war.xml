@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="iev_web_project:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="iev_web_project-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="iev_web_project:war exploded" />
+    </root>
+  </artifact>
+</component>
