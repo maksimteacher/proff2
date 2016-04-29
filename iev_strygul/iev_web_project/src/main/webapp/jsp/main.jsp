@@ -13,9 +13,8 @@
 <div align="center">
   <% String s = (String)request.getAttribute("loginError"); if(s != null)out.println(s); %>
   <br><br><br><br>
-  <form action="register" id="regForm" class="formMain regForm" method="post">
+  <form action="/register" id="regForm" class="formMain regForm" method="post">
     <h2>Регистрация оп-оп</h2>
-    <input type="text" name="nameReg" placeholder="Введите имя">
     <input type="text" name="loginReg" placeholder="Введите логин">
     <input type="text" name="passReg" placeholder="Введите пароль">
     <input type="submit" value="Зарегистрироваться">

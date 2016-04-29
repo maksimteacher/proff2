@@ -51,7 +51,7 @@ public class RegisterController extends HttpServlet {
         user.setLogin(login);
         user.setPassword(pass);
         Role roleUser = roleService.findRole("user");
-        if(!roleUser.equals(null)) {
+        if(roleUser != null) {
             user.setRole(roleUser);
         } else {
             throw new NoSuchElementException("Such role doesn't exist!");
@@ -61,7 +61,7 @@ public class RegisterController extends HttpServlet {
 
     private boolean isLoginOccupied(String login) {
              User user = new UserServiceImpl(User.class).findByLogin(login);
-        if(user.equals(null)) return false;
+        if(user == null) return false;
         else return true;
     }
 }

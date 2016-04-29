@@ -96,7 +96,11 @@ public class GenericDaoImpl<T, PK> implements GenericDao<T, PK> {
         return HibernateUtil.getSession().createCriteria(TYPE).list();
     }
 
-    public T findAllByRestrictionEq(String propertyName, String objectValue) {
+    public List<T> findAllByRestrictionEq(String propertyName, String objectValue) {
+        return HibernateUtil.getSession().createCriteria(TYPE).add(Restrictions.eq(propertyName, objectValue)).list();
+    }
+
+    public T findByRestrictionEq(String propertyName, String objectValue) {
         return (T) HibernateUtil.getSession().createCriteria(TYPE).add(Restrictions.eq(propertyName, objectValue)).uniqueResult();
     }
 }

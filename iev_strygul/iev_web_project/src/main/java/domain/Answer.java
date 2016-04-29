@@ -11,7 +11,7 @@ import javax.persistence.*;
 public class Answer {
     private Integer id;
     private String answerContent;
-    private User askedByUser;
+    private User answeredBy;
     private Question question;
 
     @Id
@@ -59,12 +59,12 @@ public class Answer {
 
     @ManyToOne
     @JoinColumn(name = "answered_by_id", referencedColumnName = "id")
-    public User getAskedByUser() {
-        return askedByUser;
+    public User getAnsweredBy() {
+        return answeredBy;
     }
 
-    public void setAskedByUser(User askedByUser) {
-        this.askedByUser = askedByUser;
+    public void setAnsweredBy(User answeredBy) {
+        this.answeredBy = answeredBy;
     }
 
     @ManyToOne

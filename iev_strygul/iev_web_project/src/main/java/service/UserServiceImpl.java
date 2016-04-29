@@ -9,6 +9,6 @@ public class UserServiceImpl extends ServiceImpl {
     }
 
     public User findByLogin(String login) {
-       return (User) dao.findAllByRestrictionEq("login", login);
+       return (User) dao.findByRestrictionEq("login", login);
     }
 }

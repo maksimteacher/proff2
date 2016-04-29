@@ -4,9 +4,6 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
-/**
- * Created by Notebook on 27.04.2016.
- */
 @Entity
 public class Question {
     private Integer id;
@@ -14,6 +11,7 @@ public class Question {
     private String question;
     private Status status;
     private Theme theme;
+    private User askedByUser;
 
     @Id
     @GeneratedValue(generator = "increment")
@@ -87,5 +85,15 @@ public class Question {
 
     public void setTheme(Theme theme) {
         this.theme = theme;
+    }
+
+    @OneToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    public User getAskedByUser() {
+        return askedByUser;
+    }
+
+    public void setAskedByUser(User askedByUser) {
+        this.askedByUser = askedByUser;
     }
 }

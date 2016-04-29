@@ -8,5 +8,5 @@ public interface GenericDao<T, PK> {
     void update(T transientObject);
     void delete(T persistentObject);
     List<T> findAll();
-    T findAllByRestrictionEq (String propertyName, String objectValue);
+    T findByRestrictionEq(String propertyName, String objectValue);
 }
