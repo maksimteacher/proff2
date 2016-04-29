@@ -3,49 +3,7 @@ package domain;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-@NamedNativeQueries({
-        @NamedNativeQuery(
-                name = "findUserByLogin",
-                query = "select * from user where login = :login",
-                resultClass = User.class
-        ),
 
-        @NamedNativeQuery(
-                name = "findAllUsers",
-                query = "select * from user",
-                resultClass = User.class
-        ),
-
-        @NamedNativeQuery(
-                name = "findAllThemes",
-                query = "select * from theme",
-                resultClass = Theme.class
-        ),
-
-        @NamedNativeQuery(
-                name = "findAllStatuses",
-                query = "select * from status",
-                resultClass = Status.class
-        ),
-
-        @NamedNativeQuery(
-                name = "findAllRoles",
-                query = "select * from role",
-                resultClass = Role.class
-        ),
-
-        @NamedNativeQuery(
-                name = "findAllQuestions",
-                query = "select * from question",
-                resultClass = Question.class
-        ),
-
-        @NamedNativeQuery(
-                name = "findAllAnswers",
-                query = "select * from answer",
-                resultClass = Answer.class
-        )
-})
 @Entity
 public class User {
     private Integer id;
@@ -115,5 +73,11 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public void setRole(String nameRole) {
+        switch(nameRole) {
+            case "user":
+        }
     }
 }

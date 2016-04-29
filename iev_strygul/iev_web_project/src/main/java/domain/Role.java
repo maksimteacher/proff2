@@ -4,9 +4,6 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
-/**
- * Created by Notebook on 27.04.2016.
- */
 @Entity
 public class Role {
     private Integer id;

@@ -39,6 +39,12 @@ public class MainController extends HttpServlet {
         }
     }
 
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        getCookie(req);
+        resp.sendRedirect("jsp/main.jsp");
+    }
+
     private User authorize(String login, String pass) {
         User user = findUser(login);
         if(user != null) {
@@ -51,12 +57,6 @@ public class MainController extends HttpServlet {
 
     private User findUser(String login) {
        return new UserServiceImpl(User.class).findByLogin(login);
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        getCookie(req);
-        resp.sendRedirect("jsp/main.jsp");
     }
 
     private void createCookie(HttpServletResponse resp, String name) throws IOException {
