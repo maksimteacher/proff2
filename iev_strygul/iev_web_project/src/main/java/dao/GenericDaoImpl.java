@@ -1,7 +1,5 @@
 package dao;
 
-import org.hibernate.criterion.Expression;
-import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
@@ -93,11 +91,17 @@ public class GenericDaoImpl<T, PK> implements GenericDao<T, PK> {
 
     public List<T> findAll() {
         //return HibernateUtil.getSession().getNamedQuery(namedQuery).list();
-        return HibernateUtil.getSession().createCriteria(TYPE).list();
+        return (List<T>)HibernateUtil.getSession().createCriteria(TYPE).list();
+    }
+
+    public List<T> findAllByForObRestrictionEq(String foreignOb, String foreignObProperty, String objectValue) {
+        return (List<T>) HibernateUtil.getSession().createCriteria(TYPE)
+                .createAlias(foreignOb, "fo")
+                .add(Restrictions.eq("fo." + foreignObProperty, objectValue)).list();
     }
 
     public List<T> findAllByRestrictionEq(String propertyName, String objectValue) {
-        return HibernateUtil.getSession().createCriteria(TYPE).add(Restrictions.eq(propertyName, objectValue)).list();
+        return (List<T>) HibernateUtil.getSession().createCriteria(TYPE).add(Restrictions.eq(propertyName, objectValue)).list();
     }
 
     public T findByRestrictionEq(String propertyName, String objectValue) {

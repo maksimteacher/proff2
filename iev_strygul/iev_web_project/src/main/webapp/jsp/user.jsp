@@ -11,15 +11,18 @@
 </head>
 <body id="center">
 <div align="center">
-  <% String s = (String)request.getAttribute("loginError"); if(s != null)out.println(s); %>
-  <br><br><br><br>
 
-  <form action="/question" name="newQuestion" method="post">
+  <% String st = (String)request.getAttribute("message"); if(st != null)out.println(st); %>
+
+  <form action="/questionAsk" method="post">
     <p><b>Enter your question:</b></p>
-    <p><textarea rows="10" cols="45" name="text"></textarea></p>
+    <p><input type="text" name="newQuestionTitle" placeholder="Title"></p>
+    <p><textarea rows="10" cols="45" name="newQuestionText" placeholder="Enter you question"></textarea></p>
+    <br>
     <p><input type="submit" value="Submit"></p>
   </form>
-
+  <br><br><br><br>
+  <% String s = (String)request.getAttribute("questionsTable"); if(s != null)out.println(s); %>
 </div>
 </body>
 </html>

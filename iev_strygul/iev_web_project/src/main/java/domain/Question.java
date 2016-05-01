@@ -1,6 +1,7 @@
 package domain;
 
 import org.hibernate.annotations.GenericGenerator;
+import service.StatusServiceImpl;
 
 import javax.persistence.*;
 
@@ -77,6 +78,18 @@ public class Question {
         this.status = status;
     }
 
+    public void setStatus(String statusValue) {
+        StatusServiceImpl statusService = new StatusServiceImpl(Status.class);
+        Status status = statusService.findStatus(statusValue);
+        if(status != null) {
+            setStatus(status);
+        } else {
+            Status newStatus = new Status();
+            newStatus.setStatus(statusValue);
+            setStatus(newStatus);
+        }
+    }
+
     @ManyToOne
     @JoinColumn(name = "theme_id", referencedColumnName = "id")
     public Theme getTheme() {
@@ -87,7 +100,7 @@ public class Question {
         this.theme = theme;
     }
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     public User getAskedByUser() {
         return askedByUser;

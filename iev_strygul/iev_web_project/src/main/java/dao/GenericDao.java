@@ -9,4 +9,6 @@ public interface GenericDao<T, PK> {
     void delete(T persistentObject);
     List<T> findAll();
     T findByRestrictionEq(String propertyName, String objectValue);
+    List<T> findAllByRestrictionEq(String propertyName, String objectValue);
+    List<T> findAllByForObRestrictionEq(String foreignOb, String foreignObProperty, String login1);
 }

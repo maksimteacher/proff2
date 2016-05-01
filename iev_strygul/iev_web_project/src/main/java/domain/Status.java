@@ -3,6 +3,7 @@ package domain;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 
 /**
  * Created by Notebook on 27.04.2016.

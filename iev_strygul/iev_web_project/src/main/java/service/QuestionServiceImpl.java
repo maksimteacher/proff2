@@ -2,7 +2,7 @@ package service;
 
 import domain.Question;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class QuestionServiceImpl extends ServiceImpl {
 
@@ -10,7 +10,7 @@ public class QuestionServiceImpl extends ServiceImpl {
         super(type);
     }
 
-    public ArrayList<Question> findAllQuestionsByUserLogin(String login) {
-        return (ArrayList<Question>) dao.findByRestrictionEq("user_id", login);
+    public List<Question> findAllQuestionsByUserLogin(String login) {
+       return (List<Question>) dao.findAllByForObRestrictionEq("askedByUser", "login", login);
     }
 }
