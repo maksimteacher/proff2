@@ -12,17 +12,19 @@
 <body id="center">
 <div align="center">
 
-  <% String st = (String)request.getAttribute("message"); if(st != null)out.println(st); %>
-
+  <% String st = (String)request.getSession().getAttribute("message"); if(st != null)out.println(st); %>
+  <br>
+  <br>
   <form action="/questionAsk" method="post">
     <p><b>Enter your question:</b></p>
-    <p><input type="text" name="newQuestionTitle" placeholder="Title"></p>
-    <p><textarea rows="10" cols="45" name="newQuestionText" placeholder="Enter you question"></textarea></p>
+    <p><input type="text" name="newQuestionTitle" placeholder="Title" size="43"></p>
+    <br>
+    <p><textarea rows="10" cols="45" name="newQuestionText" placeholder="Enter your question here"></textarea></p>
     <br>
     <p><input type="submit" value="Submit"></p>
   </form>
-  <br><br><br><br>
-  <% String s = (String)request.getAttribute("questionsTable"); if(s != null)out.println(s); %>
+  <br><br>
+  <% String s = (String)request.getSession().getAttribute("questionsTable"); if(s != null)out.println(s); %>
 </div>
 </body>
 </html>

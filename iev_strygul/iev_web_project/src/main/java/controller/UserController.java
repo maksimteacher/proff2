@@ -27,21 +27,22 @@ public class UserController extends HttpServlet {
     private String createQuestionsTable(String login) {
         List<Question> questions = questionService.findAllQuestionsByUserLogin(login);
         if(questions != null) {
-            StringBuilder sb = new StringBuilder("<br><br><br><table> <tr> <th> All Questions Asked by User </th>");
+            StringBuilder sb = new StringBuilder("<br><br><br><table> <th align=\"center\"> All Questions Asked by User </th>");
             for(int i = 0; i < questions.size(); i++) {
-                sb.append("<td>");
+                sb.append("<tr><td>");
                 sb.append(questions.get(i).getTitle());
                 sb.append("</td>");
                 sb.append("<td>");
-                sb.append("<form action = &ldquo;/questionEdit&rdquo; name = &ldquo;questionId&rdquo;><button value = "
-                        + questions.get(i).getId() + ">Edit question</button></form>");
+                sb.append("<form action = \"/questionEdit\" method=\"post\"><button type=\"submit\" name=\"questionId\" value=\"");
+                sb.append(questions.get(i).getId());
+                sb.append("\">Edit</button></form>");
                 sb.append("</td>");
                 sb.append("<td>");
-                sb.append("<form action = &ldquo;/questionDelete&rdquo; name = &ldquo;questionId&rdquo;><button value = "
+                sb.append("<form action = \"/questionDelete\"><button type=\"submit\" name=\"questionId\" value="
                         + questions.get(i).getId() + ">Delete question</button></form>");
-                sb.append("</td>");
+                sb.append("</td></tr>");
             }
-            sb.append("</tr></table>");
+            sb.append("</table>");
             return sb.toString();
         } else {
             String s = "";

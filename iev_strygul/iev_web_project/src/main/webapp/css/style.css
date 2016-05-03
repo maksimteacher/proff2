@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 .formMain {
     border: 2px solid rgb(120, 120, 120);
     display: inline-block;
@@ -13,7 +14,7 @@ input[type="text"]{
     color:black;
 }
 input[placeholder] {
-    color:darkgray;
+    color:black;
 }
 
 .formMain input {

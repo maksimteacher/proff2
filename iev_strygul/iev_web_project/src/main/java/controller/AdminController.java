@@ -19,7 +19,6 @@ public class AdminController extends HttpServlet{
         System.out.println("Admin_name="+name);
         req.setAttribute("atr", name);
         req.getRequestDispatcher("jsp/admin.jsp").forward(req, resp);
-
     }
 
     @Override

@@ -86,6 +86,7 @@ public class Question {
         } else {
             Status newStatus = new Status();
             newStatus.setStatus(statusValue);
+            statusService.add(newStatus);
             setStatus(newStatus);
         }
     }
