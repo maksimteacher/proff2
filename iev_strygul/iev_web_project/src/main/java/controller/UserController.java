@@ -19,13 +19,14 @@ public class UserController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = (User) req.getSession().getAttribute("user");
-        String questionsTable = createQuestionsTable(user.getLogin());
+        String questionsTable = createQuestionsTable(user.getLogin(), req);
         req.getSession().setAttribute("questionsTable", questionsTable);
         req.getRequestDispatcher("jsp/user.jsp").forward(req, resp);
     }
 
-    private String createQuestionsTable(String login) {
+    private String createQuestionsTable(String login, HttpServletRequest req) {
         List<Question> questions = questionService.findAllQuestionsByUserLogin(login);
+        req.getSession().setAttribute("questionsList", questions);
         if(questions != null) {
             StringBuilder sb = new StringBuilder("<br><br><br><table> <th align=\"center\"> All Questions Asked by User </th>");
             for(int i = 0; i < questions.size(); i++) {
@@ -38,7 +39,7 @@ public class UserController extends HttpServlet {
                 sb.append("\">Edit</button></form>");
                 sb.append("</td>");
                 sb.append("<td>");
-                sb.append("<form action = \"/questionDelete\"><button type=\"submit\" name=\"questionId\" value="
+                sb.append("<form action = \"/questionDelete\" method=\"post\"><button type=\"submit\" name=\"questionId\" value="
                         + questions.get(i).getId() + ">Delete question</button></form>");
                 sb.append("</td></tr>");
             }

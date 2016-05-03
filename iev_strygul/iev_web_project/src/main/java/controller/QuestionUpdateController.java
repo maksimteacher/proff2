@@ -19,10 +19,11 @@ public class QuestionUpdateController extends HttpServlet {
         String questionTitle = req.getParameter("questionTitle");
         String questionContent = req.getParameter("questionContent");
        Question question = (Question) req.getSession().getAttribute("questionEdit");
+        System.out.println(questionTitle + " " + questionContent);
         question.setTitle(questionTitle);
         question.setQuestion(questionContent);
         questionService.update(question);
         req.getSession().setAttribute("message", QUESTION_EDITED);
-        req.getRequestDispatcher("jsp/user.jsp");
+        req.getRequestDispatcher("/user").forward(req, resp);
     }
 }

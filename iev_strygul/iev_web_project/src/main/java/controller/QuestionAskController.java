@@ -24,10 +24,10 @@ public class QuestionAskController extends HttpServlet {
         String textOfNewQuestion = (String) req.getParameter("newQuestionText");
         if(titleOfNewQuestion.length() < 5) {
             req.getSession().setAttribute("message", QUESTION_TITLE_TOO_SHORT);
-            req.getRequestDispatcher("jsp/user.jsp").forward(req, resp);
+            req.getRequestDispatcher("/user").forward(req, resp);
         } else if(textOfNewQuestion.length() < 10) {
             req.getSession().setAttribute("message", QUESTION_TOO_SHORT);
-            req.getRequestDispatcher("jsp/user.jsp").forward(req, resp);
+            req.getRequestDispatcher("/user").forward(req, resp);
         } else {
             Question newQuestionInstance = new Question();
             newQuestionInstance.setQuestion(textOfNewQuestion);
@@ -36,7 +36,7 @@ public class QuestionAskController extends HttpServlet {
             newQuestionInstance.setTitle(titleOfNewQuestion);
             questionService.add(newQuestionInstance);
             req.getSession().setAttribute("message", QUESTION_CREATED_MESSAGE);
-            req.getRequestDispatcher("jsp/user.jsp").forward(req, resp);
+            req.getRequestDispatcher("/user").forward(req, resp);
         }
     }
 }
