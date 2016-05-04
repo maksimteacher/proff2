@@ -5,18 +5,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Insert title here</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
   <script type="text/javascript" src="../js/jquery.min.js"></script>
   <script type="text/javascript" src="../js/my.js"></script>
-</head>ow
-<body>
-admin ky
-Я [<% String n = (String)request.getAttribute("atr"); out.println(n);  %>]
-<input type="button" id="ajaxAction" value="ajaxAction">
-<table id="table" border="2">
-  <tr>
-    <td>Имя</td>
-    <td>Пароль</td>
-  </tr>
-</table>
+</head>
+<body id="center">
+<div align="center">
+<p>What's up dauwg?!</p>
+<p><% String s = (String)request.getSession().getAttribute("questionsTable"); if(s != null)out.println(s); %></p>
+  </div>
 </body>
 </html>

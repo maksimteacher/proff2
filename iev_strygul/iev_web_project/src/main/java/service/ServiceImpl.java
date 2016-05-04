@@ -35,7 +35,7 @@ public class ServiceImpl<T, PK> implements Service<T, PK> {
     }
 
     @Override
-    public List<T> getAll(String namedQuery) {
+    public List<T> getAll() {
         return dao.findAll();
     }
 

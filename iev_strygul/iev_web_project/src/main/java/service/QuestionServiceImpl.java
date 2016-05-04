@@ -13,4 +13,8 @@ public class QuestionServiceImpl extends ServiceImpl {
     public List<Question> findAllQuestionsByUserLogin(String login) {
        return (List<Question>) dao.findAllByForObRestrictionEq("askedByUser", "login", login);
     }
+
+    public List<Question> findAllQuestionsForReview() {
+        return (List<Question>) dao.findAllByForObRestrictionEq("status", "status", "needs approval");
+    }
 }

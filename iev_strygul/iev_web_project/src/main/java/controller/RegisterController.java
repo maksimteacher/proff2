@@ -16,10 +16,10 @@ import java.util.NoSuchElementException;
 
 @WebServlet("/register")
 public class RegisterController extends HttpServlet {
-    String LOGIN_OCCUPIED_ERROR = "Login is occupied. Please, try another login.";
-    String REGISTRATION_ERROR = "Some problem occurred. Please, try to register again.";
-    RoleServiceImpl roleService = new RoleServiceImpl(Role.class);
-    UserServiceImpl userService = new UserServiceImpl(User.class);
+    public final String LOGIN_OCCUPIED_ERROR = "Login is occupied. Please, try another login.";
+    public final  String REGISTRATION_ERROR = "Some problem occurred. Please, try to register again.";
+    private RoleServiceImpl roleService = new RoleServiceImpl(Role.class);
+    private UserServiceImpl userService = new UserServiceImpl(User.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {

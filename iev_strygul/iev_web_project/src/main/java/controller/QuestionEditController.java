@@ -15,7 +15,6 @@ public class QuestionEditController extends HttpServlet {
     QuestionServiceImpl questionService = new QuestionServiceImpl(Question.class);
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println(req.getParameter("questionId"));
        Integer questionId = Integer.parseInt(req.getParameter("questionId"));
        Question question = (Question) questionService.get(questionId);
        req.getSession().setAttribute("questionTitle", question.getTitle());

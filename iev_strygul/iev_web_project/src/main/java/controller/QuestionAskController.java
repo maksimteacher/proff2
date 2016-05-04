@@ -32,7 +32,7 @@ public class QuestionAskController extends HttpServlet {
             Question newQuestionInstance = new Question();
             newQuestionInstance.setQuestion(textOfNewQuestion);
             newQuestionInstance.setAskedByUser((User)req.getSession().getAttribute("user"));
-            newQuestionInstance.setStatus("not answered");
+            newQuestionInstance.setStatus("needs approval");
             newQuestionInstance.setTitle(titleOfNewQuestion);
             questionService.add(newQuestionInstance);
             req.getSession().setAttribute("message", QUESTION_CREATED_MESSAGE);

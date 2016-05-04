@@ -11,5 +11,5 @@ public interface Service<T, PK> {
     PK add(T newInstance);
     void update(T transientObject);
     void delete(T persistentObject);
-    public List<T> getAll(String namedQuery);
+    public List<T> getAll();
 }

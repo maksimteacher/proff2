@@ -13,6 +13,7 @@ import java.util.List;
 
 @WebServlet("/questionDelete")
 public class QuestionDeleteController extends HttpServlet {
+    public final String QUESTION_DELETED = "The question was deleted.";
     private QuestionServiceImpl questionService = new QuestionServiceImpl(Question.class);
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -25,6 +26,7 @@ public class QuestionDeleteController extends HttpServlet {
             }
         }
         questionService.delete(question);
+        req.getSession().setAttribute("message", QUESTION_DELETED);
         req.getRequestDispatcher("/user").forward(req, resp);
     }
 }

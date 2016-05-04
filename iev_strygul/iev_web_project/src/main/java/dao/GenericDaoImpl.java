@@ -90,7 +90,6 @@ public class GenericDaoImpl<T, PK> implements GenericDao<T, PK> {
     }
 
     public List<T> findAll() {
-        //return HibernateUtil.getSession().getNamedQuery(namedQuery).list();
         return (List<T>)HibernateUtil.getSession().createCriteria(TYPE).list();
     }
 
