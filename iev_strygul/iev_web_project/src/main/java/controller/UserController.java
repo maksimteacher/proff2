@@ -24,81 +24,15 @@ public class UserController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getParameter("submit") != null) {
-            System.out.println("we are in submit");
             submitNewQuestion(req, resp);
         } else if (req.getParameter("edit") != null) {
-            System.out.println("we are in edit");
             editQuestion(req, resp);
         } else if (req.getParameter("delete") != null) {
-            System.out.println("we are in delete");
             deleteQuestion(req, resp);
         } else if (req.getParameter("update") != null) {
-            System.out.println("we are in update");
             updateQuestion(req, resp);
         } else {
-            User user = (User) req.getSession().getAttribute("user");
-            createQuestionsTable(user.getLogin(), req);
-            req.getRequestDispatcher("jsp/user.jsp").forward(req, resp);
-        }
-    }
-
-    private void updateQuestion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String questionTitle = req.getParameter("questionTitle");
-        String questionContent = req.getParameter("questionContent");
-        Question question = (Question) req.getSession().getAttribute("questionEdit");
-        System.out.println(questionTitle + " " + questionContent);
-        question.setTitle(questionTitle);
-        question.setQuestion(questionContent);
-        questionService.update(question);
-        req.getSession().setAttribute("message", QUESTION_EDITED);
-        req.getRequestDispatcher("/user").forward(req, resp);
-    }
-
-    private void deleteQuestion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Integer questionID = Integer.parseInt(req.getParameter("delete"));
-        List<Question> questions = (List<Question>)req.getSession().getAttribute("questionsList");
-        Question question = null;
-        for(Question q : questions) {
-            if(q.getId().equals(questionID)) {
-                question = q;
-            }
-        }
-        questionService.delete(question);
-        req.getSession().setAttribute("message", QUESTION_DELETED);
-        User user = (User) req.getSession().getAttribute("user");
-        createQuestionsTable(user.getLogin(), req);
-        req.getRequestDispatcher("jsp/user.jsp").forward(req, resp);
-    }
-
-    private void editQuestion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Integer questionId = Integer.parseInt(req.getParameter("edit"));
-        Question question = (Question) questionService.get(questionId);
-        req.getSession().setAttribute("questionTitle", question.getTitle());
-        req.getSession().setAttribute("questionContent", question.getQuestion());
-        req.getSession().setAttribute("questionEdit", question);
-        req.getRequestDispatcher("jsp/editQuestion.jsp").forward(req, resp);
-    }
-
-    private void submitNewQuestion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String titleOfNewQuestion = (String) req.getParameter("newQuestionTitle");
-        String textOfNewQuestion = (String) req.getParameter("newQuestionText");
-        if(titleOfNewQuestion.length() < 5) {
-            req.getSession().setAttribute("message", QUESTION_TITLE_TOO_SHORT);
-            req.getRequestDispatcher("/user").forward(req, resp);
-        } else if(textOfNewQuestion.length() < 10) {
-            req.getSession().setAttribute("message", QUESTION_TOO_SHORT);
-            req.getRequestDispatcher("/user").forward(req, resp);
-        } else {
-            Question newQuestionInstance = new Question();
-            newQuestionInstance.setQuestion(textOfNewQuestion);
-            newQuestionInstance.setAskedByUser((User)req.getSession().getAttribute("user"));
-            newQuestionInstance.setStatus("needs approval");
-            newQuestionInstance.setTitle(titleOfNewQuestion);
-            questionService.add(newQuestionInstance);
-            req.getSession().setAttribute("message", QUESTION_CREATED_MESSAGE);
-            User user = (User) req.getSession().getAttribute("user");
-            createQuestionsTable(user.getLogin(), req);
-            req.getRequestDispatcher("jsp/user.jsp").forward(req, resp);
+            showUserCabinet(req, resp);
         }
     }
 
@@ -125,5 +59,66 @@ public class UserController extends HttpServlet {
             String questionsTable = sb.toString();
             req.getSession().setAttribute("questionsTable", questionsTable);
         }
+    }
+
+    private void deleteQuestion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Integer questionID = Integer.parseInt(req.getParameter("delete"));
+        List<Question> questions = (List<Question>)req.getSession().getAttribute("questionsList");
+        Question question = null;
+        for(Question q : questions) {
+            if(q.getId().equals(questionID)) {
+                question = q;
+            }
+        }
+        questionService.delete(question);
+        req.getSession().setAttribute("message", QUESTION_DELETED);
+        showUserCabinet(req, resp);
+    }
+
+    private void editQuestion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Integer questionId = Integer.parseInt(req.getParameter("edit"));
+        Question question = (Question) questionService.get(questionId);
+        req.getSession().setAttribute("questionTitle", question.getTitle());
+        req.getSession().setAttribute("questionContent", question.getQuestion());
+        req.getSession().setAttribute("questionEdit", question);
+        req.getRequestDispatcher("jsp/editQuestion.jsp").forward(req, resp);
+    }
+
+    private void showUserCabinet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        User user = (User) req.getSession().getAttribute("user");
+        createQuestionsTable(user.getLogin(), req);
+        req.getRequestDispatcher("jsp/user.jsp").forward(req, resp);
+    }
+
+    private void submitNewQuestion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String titleOfNewQuestion = (String) req.getParameter("newQuestionTitle");
+        String textOfNewQuestion = (String) req.getParameter("newQuestionText");
+        if(titleOfNewQuestion.length() < 5) {
+            req.getSession().setAttribute("message", QUESTION_TITLE_TOO_SHORT);
+            req.getRequestDispatcher("/user").forward(req, resp);
+        } else if(textOfNewQuestion.length() < 10) {
+            req.getSession().setAttribute("message", QUESTION_TOO_SHORT);
+            req.getRequestDispatcher("/user").forward(req, resp);
+        } else {
+            Question newQuestionInstance = new Question();
+            newQuestionInstance.setQuestion(textOfNewQuestion);
+            newQuestionInstance.setAskedByUser((User)req.getSession().getAttribute("user"));
+            newQuestionInstance.setStatus("needs approval");
+            newQuestionInstance.setTitle(titleOfNewQuestion);
+            questionService.add(newQuestionInstance);
+            req.getSession().setAttribute("message", QUESTION_CREATED_MESSAGE);
+            showUserCabinet(req, resp);
+        }
+    }
+
+    private void updateQuestion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String questionTitle = req.getParameter("questionTitle");
+        String questionContent = req.getParameter("questionContent");
+        Question question = (Question) req.getSession().getAttribute("questionEdit");
+        question.setTitle(questionTitle);
+        question.setQuestion(questionContent);
+        questionService.update(question);
+        req.getSession().setAttribute("message", QUESTION_EDITED);
+        showUserCabinet(req, resp);
     }
 }

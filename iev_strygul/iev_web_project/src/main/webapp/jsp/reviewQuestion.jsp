@@ -11,7 +11,7 @@
 </head>
 <body id="center">
 <div align="center">
-  <form action="/questionReviewPage" method="post">
+  <form action="/admin" method="post">
     <p><b>Edit your question:</b></p>
     <p><input type="text" name="questionTitle" size="43" value="<% String st = (String)request.getSession().getAttribute("questionTitle"); if(st != null)out.println(st); %>"></p>
     <br>
