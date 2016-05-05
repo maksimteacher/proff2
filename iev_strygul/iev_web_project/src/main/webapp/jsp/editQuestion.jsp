@@ -11,13 +11,13 @@
 </head>
 <body id="center">
 <div align="center">
-  <form action="/questionUpdate" method="post">
+  <form action="/user" method="post">
     <p><b>Edit your question:</b></p>
     <p><input type="text" name="questionTitle" size="43" value="<% String st = (String)request.getSession().getAttribute("questionTitle"); if(st != null)out.println(st); %>"></p>
     <br>
     <p><textarea rows="10" cols="45" name="questionContent"><% String str = (String)request.getSession().getAttribute("questionContent"); if(str != null)out.println(st); %></textarea></p>
     <br>
-    <p><input type="submit" value="Update"></p>
+    <p><input type="submit" name="update" value="Update"></p>
   </form>
 </div>
 </body>

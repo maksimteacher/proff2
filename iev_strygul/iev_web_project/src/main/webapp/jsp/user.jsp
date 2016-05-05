@@ -21,10 +21,10 @@
     <br>
     <p><textarea rows="10" cols="45" name="newQuestionText" placeholder="Enter your question here"></textarea></p>
     <br>
-    <p><input type="submit" value="Submit"></p>
+    <p><input type="submit" name="submit" value="Submit"></p>
+    <br><br>
+    <% String s = (String)request.getSession().getAttribute("questionsTable"); if(s != null)out.println(s); %>
   </form>
-  <br><br>
-  <% String s = (String)request.getSession().getAttribute("questionsTable"); if(s != null)out.println(s); %>
 </div>
 </body>
 </html>

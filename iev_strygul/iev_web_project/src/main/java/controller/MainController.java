@@ -10,6 +10,7 @@ import java.io.IOException;
 
 @WebServlet("/main")
 public class MainController extends HttpServlet {
+    public final String LOGIN_ERROR = "Incorrect username or password. Please, try again.";
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -32,10 +33,8 @@ public class MainController extends HttpServlet {
                     break;
             }
         } else {
-            String loginError = "Incorrect username or password. Please, try again.";
-            req.setAttribute("loginError", loginError);
+            req.setAttribute("loginError", LOGIN_ERROR);
             req.getRequestDispatcher("jsp/main.jsp").forward(req, resp);
-            //resp.sendRedirect("jsp/main.jsp");
         }
     }
 
