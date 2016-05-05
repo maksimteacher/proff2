@@ -11,15 +11,18 @@
 </head>
 <body id="center">
 <div align="center">
-  <form action="/questionReviewPageController" method="post">
+  <form action="/questionReviewPage" method="post">
     <p><b>Edit your question:</b></p>
     <p><input type="text" name="questionTitle" size="43" value="<% String st = (String)request.getSession().getAttribute("questionTitle"); if(st != null)out.println(st); %>"></p>
     <br>
     <p><textarea rows="10" cols="45" name="questionContent">
-      <% String str = (String)request.getSession().getAttribute("questionContent"); if(str != null)out.println(str); %></textarea></p>
+      <% String str = (String)request.getSession().getAttribute("questionContent"); if(str != null)out.println(str); %>
+    </textarea></p>
     <br>
     <p><% String strg = (String)request.getSession().getAttribute("droplist"); if(strg != null)out.println(strg); %></p>
-    <p><input type="submit" value="Update"></p>
+    <br>
+    <p><input type="submit" name="questionStatus" value="approved"></p>
+    <input type="submit" name="questionStatus" value="disapproved">
   </form>
 </div>
 </body>

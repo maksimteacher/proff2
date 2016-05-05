@@ -27,11 +27,12 @@ public class QuestionReviewController extends HttpServlet {
         req.getSession().setAttribute("questionContent", question.getQuestion());
         req.getSession().setAttribute("questionEdit", question);
         req.getSession().setAttribute("droplist", createDropList());
+        req.getRequestDispatcher("jsp/reviewQuestion.jsp").forward(req, resp);
     }
 
     private String createDropList() {
         ArrayList<Theme> themes = (ArrayList<Theme>)themeService.getAll();
-        StringBuilder sb = new StringBuilder("<select name=\"theme\">");
+        StringBuilder sb = new StringBuilder("<select name=\"theme\" required>");
         for(Theme th : themes) {
             String themeName = th.getTheme();
             Integer themeId = th.getId();
