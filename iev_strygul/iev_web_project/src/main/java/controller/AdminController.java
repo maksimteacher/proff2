@@ -31,48 +31,6 @@ public class AdminController extends HttpServlet{
         }
     }
 
-    private void showAdminCabinet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getSession().setAttribute("questionsTable", createQuestionsTable());
-        req.getRequestDispatcher("jsp/admin.jsp").forward(req, resp);
-    }
-
-    private void reviewQuestion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String questionStatus = req.getParameter("questionStatus");
-        Question question = (Question) req.getSession().getAttribute("questionEdit");
-        if(questionStatus.equals("approved")) {
-            String questionTitle = req.getParameter("questionTitle");
-            String questionContent = req.getParameter("questionContent");
-            if(questionTitle.equals(question.getTitle()) || questionContent.equals(question.getQuestion())) {
-                question.setTitle(questionTitle);
-                question.setQuestion(questionContent);
-            }
-            String questionTheme = req.getParameter("theme");
-            Theme questionThemeInstance = themeService.findTheme(questionTheme);
-            if(questionThemeInstance != null) {
-                question.setTheme(questionThemeInstance);
-            } else {
-                Theme newTheme = new Theme();
-                newTheme.setTheme(questionTheme);
-                question.setTheme(newTheme);
-            }
-            question.setStatus("approved");
-        } else {
-            question.setStatus("disapproved");
-        }
-        questionService.update(question);
-        showAdminCabinet(req, resp);
-    }
-
-    private void showReviewPage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Integer questionId = Integer.parseInt(req.getParameter("review"));
-        Question question = (Question) questionService.get(questionId);
-        req.getSession().setAttribute("questionTitle", question.getTitle());
-        req.getSession().setAttribute("questionContent", question.getQuestion());
-        req.getSession().setAttribute("questionEdit", question);
-        req.getSession().setAttribute("droplist", createDropList());
-        req.getRequestDispatcher("jsp/reviewQuestion.jsp").forward(req, resp);
-    }
-
     private String createDropList() {
         ArrayList<Theme> themes = (ArrayList<Theme>)themeService.getAll();
         StringBuilder sb = new StringBuilder("<select name=\"theme\" required>");
@@ -108,5 +66,41 @@ public class AdminController extends HttpServlet{
             String s = "";
             return s;
         }
+    }
+
+    private void reviewQuestion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String questionStatus = req.getParameter("questionStatus");
+        Question question = (Question) req.getSession().getAttribute("questionEdit");
+        if(questionStatus.equals("approved")) {
+            String questionTitle = req.getParameter("questionTitle");
+            String questionContent = req.getParameter("questionContent");
+            if(!questionTitle.equals(question.getTitle()) || !questionContent.equals(question.getQuestion())) {
+                question.setTitle(questionTitle);
+                question.setQuestion(questionContent);
+            }
+            Integer themeId = Integer.parseInt(req.getParameter("theme"));
+            Theme questionThemeInstance = (Theme) themeService.get(themeId);
+            question.setTheme(questionThemeInstance);
+            question.setStatus("approved");
+        } else {
+            question.setStatus("disapproved");
+        }
+        questionService.update(question);
+        showAdminCabinet(req, resp);
+    }
+
+    private void showAdminCabinet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getSession().setAttribute("questionsTable", createQuestionsTable());
+        req.getRequestDispatcher("jsp/admin.jsp").forward(req, resp);
+    }
+
+    private void showReviewPage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Integer questionId = Integer.parseInt(req.getParameter("review"));
+        Question question = (Question) questionService.get(questionId);
+        req.getSession().setAttribute("questionTitle", question.getTitle());
+        req.getSession().setAttribute("questionContent", question.getQuestion());
+        req.getSession().setAttribute("questionEdit", question);
+        req.getSession().setAttribute("droplist", createDropList());
+        req.getRequestDispatcher("jsp/reviewQuestion.jsp").forward(req, resp);
     }
 }

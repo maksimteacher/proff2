@@ -10,8 +10,4 @@ public class ThemeServiceImpl extends ServiceImpl {
         super(type);
     }
 
-
-    public Theme findTheme(String themeName) {
-        return dao.findByRestrictionEq("theme", themeName);
-    }
 }

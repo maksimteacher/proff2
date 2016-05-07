@@ -15,7 +15,7 @@
   <% String st = (String)request.getSession().getAttribute("message"); if(st != null)out.println(st); %>
   <br>
   <br>
-  <form action="/questionAsk" method="post">
+  <form action="/user" method="post">
     <p><b>Enter your question:</b></p>
     <p><input type="text" name="newQuestionTitle" placeholder="Title" size="43"></p>
     <br>

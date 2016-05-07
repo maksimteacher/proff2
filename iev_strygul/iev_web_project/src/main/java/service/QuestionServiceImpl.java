@@ -17,4 +17,8 @@ public class QuestionServiceImpl extends ServiceImpl {
     public List<Question> findAllQuestionsForReview() {
         return (List<Question>) dao.findAllByForObRestrictionEq("status", "status", "needs approval");
     }
+
+    public List<Question> findAllQuestionsForAnswering() {
+        return (List<Question>) dao.findAllByForObRestrictionEq("status", "status", "approved");
+    }
 }
