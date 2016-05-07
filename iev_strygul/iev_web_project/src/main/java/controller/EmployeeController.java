@@ -1,6 +1,9 @@
 package controller;
 
+import domain.Answer;
 import domain.Question;
+import domain.User;
+import service.AnswerServiceImpl;
 import service.QuestionServiceImpl;
 
 import javax.servlet.ServletException;
@@ -13,21 +16,48 @@ import java.util.ArrayList;
 
 @WebServlet("/employee")
 public class EmployeeController extends HttpServlet {
+    private final String ANSWER_TOO_SHORT = "The answer should be at least 10 characters";
+    private final String ANSWER_CREATED = "The answer was published";
     private QuestionServiceImpl questionService = new QuestionServiceImpl(Question.class);
+    private AnswerServiceImpl answerService = new AnswerServiceImpl(Answer.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getParameter("answer") != null) {
             answerQuestion(req, resp);
+        } else if (req.getParameter("submitAnswer") != null) {
+            createNewAnswer(req, resp);
         } else {
             req.getSession().setAttribute("questionsTable", createQuestionsTable());
             req.getRequestDispatcher("jsp/employee.jsp").forward(req, resp);
         }
     }
 
+    private void createNewAnswer(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String answer = req.getParameter("newAnswerText");
+        if (answer.length() > 10) {
+            Answer newAnswer = new Answer();
+            newAnswer.setAnswerContent(answer);
+            User user = (User)req.getSession().getAttribute("user");
+            newAnswer.setAnsweredBy(user);
+            Question question = (Question) req.getSession().getAttribute("question");
+            newAnswer.setQuestion(question);
+            question.setStatus("answered");
+            answerService.add(newAnswer);
+            questionService.update(question);
+            req.getSession().setAttribute("message", ANSWER_CREATED);
+            req.getSession().setAttribute("questionsTable", createQuestionsTable());
+            req.getRequestDispatcher("jsp/employee.jsp").forward(req, resp);
+        } else {
+            req.getSession().setAttribute("message", ANSWER_TOO_SHORT);
+            req.getRequestDispatcher("jsp/answerQuestion.jsp").forward(req, resp);
+        }
+    }
+
     private void answerQuestion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Integer questionId = Integer.parseInt(req.getParameter("answer"));
         Question question = (Question) questionService.get(questionId);
+        req.getSession().setAttribute("question", question);
         req.getSession().setAttribute("questionTitle", question.getTitle());
         req.getSession().setAttribute("questionTheme", question.getTheme().getTheme());
         req.getSession().setAttribute("questionAskedBy", question.getAskedByUser().getLogin());

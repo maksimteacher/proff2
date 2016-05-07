@@ -40,10 +40,12 @@ public class UserController extends HttpServlet {
         List<Question> questions = questionService.findAllQuestionsByUserLogin(login);
         req.getSession().setAttribute("questionsList", questions);
         if(questions != null) {
-            StringBuilder sb = new StringBuilder("<br><br><br><table> <th align=\"center\"> All Questions Asked by User </th>");
+            StringBuilder sb = new StringBuilder("<br><br><br><table> <h1> All Questions Asked by User </h1>");
             for(int i = 0; i < questions.size(); i++) {
                 sb.append("<tr><td>");
                 sb.append(questions.get(i).getTitle());
+                sb.append(". <b>Status:</b> ");
+                sb.append(questions.get(i).getStatus().getStatus());
                 sb.append("</td>");
                 sb.append("<td>");
                 sb.append("<button type=\"submit\" name=\"edit\" value=\"");
