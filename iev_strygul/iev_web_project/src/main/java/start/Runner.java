@@ -1,7 +1,7 @@
 package start;
 
 import domain.Theme;
-import service.ThemeServiceImpl;
+import service.ThemeServiceAbstract;
 
 public class Runner {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class Runner {
         Theme theme3 = new Theme();
         theme3.setTheme("Third Theme");
 
-        ThemeServiceImpl themeService = new ThemeServiceImpl(Theme.class);
+        ThemeServiceAbstract themeService = new ThemeServiceAbstract(Theme.class);
         themeService.add(theme);
         themeService.add(theme2);
         themeService.add(theme3);

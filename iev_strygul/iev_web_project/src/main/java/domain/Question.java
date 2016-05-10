@@ -1,7 +1,7 @@
 package domain;
 
 import org.hibernate.annotations.GenericGenerator;
-import service.StatusServiceImpl;
+import service.StatusServiceAbstract;
 
 import javax.persistence.*;
 
@@ -79,7 +79,7 @@ public class Question {
     }
 
     public void setStatus(String statusValue) {
-        StatusServiceImpl statusService = new StatusServiceImpl(Status.class);
+        StatusServiceAbstract statusService = new StatusServiceAbstract(Status.class);
         Status status = statusService.findStatus(statusValue);
         if(status != null) {
             setStatus(status);

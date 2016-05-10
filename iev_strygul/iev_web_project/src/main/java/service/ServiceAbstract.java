@@ -5,11 +5,11 @@ import dao.GenericDaoImpl;
 
 import java.util.List;
 
-public class ServiceImpl<T, PK> implements Service<T, PK> {
+abstract class ServiceAbstract<T, PK> implements Service<T, PK> {
     private final Class TYPE;
     protected GenericDao dao;
 
-    public ServiceImpl(Class type) {
+    public ServiceAbstract(Class type) {
         TYPE = type;
         dao = new GenericDaoImpl(type);
     }

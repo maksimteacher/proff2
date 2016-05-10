@@ -3,8 +3,8 @@ package controller;
 import domain.Answer;
 import domain.Question;
 import domain.User;
-import service.AnswerServiceImpl;
-import service.QuestionServiceImpl;
+import service.AnswerServiceAbstract;
+import service.QuestionServiceAbstract;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,8 +18,8 @@ import java.util.ArrayList;
 public class EmployeeController extends HttpServlet {
     private final String ANSWER_TOO_SHORT = "The answer should be at least 10 characters";
     private final String ANSWER_CREATED = "The answer was published";
-    private QuestionServiceImpl questionService = new QuestionServiceImpl(Question.class);
-    private AnswerServiceImpl answerService = new AnswerServiceImpl(Answer.class);
+    private QuestionServiceAbstract questionService = new QuestionServiceAbstract(Question.class);
+    private AnswerServiceAbstract answerService = new AnswerServiceAbstract(Answer.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -2,9 +2,9 @@ package service;
 
 import domain.Role;
 
-public class RoleServiceImpl extends ServiceImpl {
+public class RoleServiceAbstract extends ServiceAbstract {
 
-    public RoleServiceImpl(Class type) { super(type); }
+    public RoleServiceAbstract(Class type) { super(type); }
 
     public Role findRole (String roleName) {
         return (Role) dao.findByRestrictionEq("role", roleName);

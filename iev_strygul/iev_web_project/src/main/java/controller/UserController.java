@@ -2,7 +2,7 @@ package controller;
 
 import domain.Question;
 import domain.User;
-import service.QuestionServiceImpl;
+import service.QuestionServiceAbstract;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +19,7 @@ public class UserController extends HttpServlet {
     public final String QUESTION_TOO_SHORT = "Your question is too short.";
     public final String QUESTION_DELETED = "The question was deleted.";
     public final String QUESTION_EDITED = "Your question was edited.";
-    private QuestionServiceImpl questionService = new QuestionServiceImpl(Question.class);
+    private QuestionServiceAbstract questionService = new QuestionServiceAbstract(Question.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

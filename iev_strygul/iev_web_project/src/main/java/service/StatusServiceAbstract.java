@@ -2,9 +2,9 @@ package service;
 
 import domain.Status;
 
-public class StatusServiceImpl extends ServiceImpl {
+public class StatusServiceAbstract extends ServiceAbstract {
 
-    public StatusServiceImpl(Class type) {
+    public StatusServiceAbstract(Class type) {
         super(type);
     }
     public Status findStatus (String statusValue) {

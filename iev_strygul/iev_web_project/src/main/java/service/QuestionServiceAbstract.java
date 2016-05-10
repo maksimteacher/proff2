@@ -4,9 +4,9 @@ import domain.Question;
 
 import java.util.List;
 
-public class QuestionServiceImpl extends ServiceImpl {
+public class QuestionServiceAbstract extends ServiceAbstract {
 
-    public QuestionServiceImpl(Class type) {
+    public QuestionServiceAbstract(Class type) {
         super(type);
     }
 

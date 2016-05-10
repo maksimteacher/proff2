@@ -2,8 +2,8 @@ package controller;
 
 import domain.Question;
 import domain.Theme;
-import service.QuestionServiceImpl;
-import service.ThemeServiceImpl;
+import service.QuestionServiceAbstract;
+import service.ThemeServiceAbstract;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,12 +13,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 @WebServlet("/admin")
 public class AdminController extends HttpServlet{
-    private ThemeServiceImpl themeService = new ThemeServiceImpl(Theme.class);
-    private QuestionServiceImpl questionService = new QuestionServiceImpl(Question.class);
+    private ThemeServiceAbstract themeService = new ThemeServiceAbstract(Theme.class);
+    private QuestionServiceAbstract questionService = new QuestionServiceAbstract(Question.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

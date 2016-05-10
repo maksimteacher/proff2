@@ -1,7 +1,7 @@
 package controller;
 
 import domain.User;
-import service.UserServiceImpl;
+import service.UserServiceAbstract;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -55,7 +55,7 @@ public class MainController extends HttpServlet {
     }
 
     private User findUser(String login) {
-       return new UserServiceImpl(User.class).findByLogin(login);
+       return new UserServiceAbstract(User.class).findByLogin(login);
     }
 
     private void createCookie(HttpServletResponse resp, String name) throws IOException {

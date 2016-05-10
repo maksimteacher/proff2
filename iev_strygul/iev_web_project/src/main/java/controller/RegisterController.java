@@ -2,8 +2,8 @@ package controller;
 
 import domain.Role;
 import domain.User;
-import service.RoleServiceImpl;
-import service.UserServiceImpl;
+import service.RoleServiceAbstract;
+import service.UserServiceAbstract;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,8 +18,8 @@ import java.util.NoSuchElementException;
 public class RegisterController extends HttpServlet {
     public final String LOGIN_OCCUPIED_ERROR = "Login is occupied. Please, try another login.";
     public final  String REGISTRATION_ERROR = "Some problem occurred. Please, try to register again.";
-    private RoleServiceImpl roleService = new RoleServiceImpl(Role.class);
-    private UserServiceImpl userService = new UserServiceImpl(User.class);
+    private RoleServiceAbstract roleService = new RoleServiceAbstract(Role.class);
+    private UserServiceAbstract userService = new UserServiceAbstract(User.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -60,7 +60,7 @@ public class RegisterController extends HttpServlet {
     }
 
     private boolean isLoginOccupied(String login) {
-             User user = new UserServiceImpl(User.class).findByLogin(login);
+             User user = new UserServiceAbstract(User.class).findByLogin(login);
         if(user == null) return false;
         else return true;
     }

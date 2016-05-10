@@ -2,9 +2,9 @@ package service;
 
 import domain.User;
 
-public class UserServiceImpl extends ServiceImpl {
+public class UserServiceAbstract extends ServiceAbstract {
 
-    public UserServiceImpl(Class type) {
+    public UserServiceAbstract(Class type) {
         super(type);
     }
 

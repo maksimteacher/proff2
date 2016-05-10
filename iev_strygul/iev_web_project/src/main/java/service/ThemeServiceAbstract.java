@@ -3,10 +3,10 @@ package service;
 import dao.GenericDaoImpl;
 import domain.Theme;
 
-public class ThemeServiceImpl extends ServiceImpl {
+public class ThemeServiceAbstract extends ServiceAbstract {
     GenericDaoImpl<Theme, Integer> dao = new GenericDaoImpl<>(Theme.class);
 
-    public ThemeServiceImpl(Class type) {
+    public ThemeServiceAbstract(Class type) {
         super(type);
     }
 
