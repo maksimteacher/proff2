@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.formMain {
+    border: 2px solid rgb(120, 120, 120);
+    display: inline-block;
+    width: 250px;
+    padding:10px;
+}
+
+input[type="text"]{
+    color:black;
+}
+input[placeholder] {
+    color:black;
+}
+
+.formMain input {
+    display: block;
+    margin-top: 10px;
+    width: 100px;
+    padding: 8px 10px;
+}
+
+.regForm {
+    margin: 0 auto ;
+    display:none;
+}
+#authForm{
+    display:inline-block;
+}
+.MiniButton {
+    font-size: 10px;
+    padding: 2px 8px;
+}
+#center{
+    padding: 40px; /* Поля вокруг текста */
+    background: lightblue;
+}
