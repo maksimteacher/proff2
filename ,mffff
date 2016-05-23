@@ -1,0 +1,496 @@
+* 4333500 2016-04-04 | added start of the threads to main (HEAD -> master) [strygul]
+* 752e0d7 2016-04-04 | changed client side [strygul]
+* 2ac7028 2016-04-03 | chat v1.0 [strygul]
+* ada2b74 2016-04-02 | Scanner (origin/master) [strygul]
+* 7663feb 2016-04-02 | Delete MainServer.java [Klimanski]
+*   1c534b7 2016-04-01 | Server [Klim]
+[32m|[m[33m\[m  
+[32m|[m * 541715f 2016-03-30 | Update MyScanner.java [Klimanski]
+[32m|[m * 2743bf8 2016-03-30 | Update MyScanner.java [Klimanski]
+* [33m|[m 538cf9e 2016-04-01 | Server [Klim]
+* [33m|[m e9ff94d 2016-04-01 | Server [Klim]
+* [33m|[m a95ee53 2016-04-01 | Serv [Klim]
+* [33m|[m 9249bdf 2016-04-01 | Server [Klim]
+[33m|[m[33m/[m  
+* a2c5107 2016-03-30 | 	modified:   main/java/Action9/MyScanner.java [Klim]
+*   f485411 2016-03-30 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Klim]
+[34m|[m[35m\[m  
+[34m|[m * 2fec219 2016-03-29 | sockets [strygul]
+* [35m|[m 0068349 2016-03-30 | My [Klim]
+[35m|[m[35m/[m  
+* 6298412 2016-03-29 | jdbc example [Maks Coach]
+*   313ed72 2016-03-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Maks Coach]
+[36m|[m[1;31m\[m  
+[36m|[m * 3db082e 2016-03-29 | Sockets [zaicevda]
+[36m|[m * b1a2559 2016-03-29 | action09 [Miesianinov]
+[36m|[m *   3cc7df4 2016-03-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Miesianinov]
+[36m|[m [1;32m|[m[1;33m\[m  
+[36m|[m [1;32m|[m * ab45321 2016-03-28 | sssssss [natasur]
+[36m|[m * [1;33m|[m 750c76e 2016-03-29 | action09 commit [Miesianinov]
+[36m|[m * [1;33m|[m eb09721 2016-03-29 | action09 commit [Miesianinov]
+[36m|[m * [1;33m|[m 7d82426 2016-03-29 | action06 commit [Miesianinov]
+[36m|[m * [1;33m|[m 1c7b410 2016-03-29 | action09 commit [Miesianinov]
+* [1;33m|[m [1;33m|[m bfc52ec 2016-03-29 | server sockets and jdbc [Maks Coach]
+[1;33m|[m [1;33m|[m[1;33m/[m  
+[1;33m|[m[1;33m/[m[1;33m|[m   
+* [1;33m|[m   c82d472 2016-03-28 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Maks Coach]
+[1;34m|[m[1;35m\[m [1;33m\[m  
+[1;34m|[m * [1;33m|[m bf52279 2016-03-28 | action9 [natasur]
+[1;34m|[m [1;33m|[m[1;33m/[m  
+* [1;33m|[m a9d70ee 2016-03-28 | serverMultiClient [Maks Coach]
+[1;33m|[m[1;33m/[m  
+* ae67312 2016-03-28 | example Sockets and socket [Maks Coach]
+* ee0ff7a 2016-03-28 | example MyScanner [Maks Coach]
+*   fb1c6d4 2016-03-28 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Maks Coach]
+[1;36m|[m[31m\[m  
+[1;36m|[m *   2dc34e7 2016-03-22 | correct typeproduct [Klim]
+[1;36m|[m [32m|[m[33m\[m  
+[1;36m|[m [32m|[m *   88bf7f7 2016-03-22 | Merge branch 'master' of https://github.com/maksimteacher/proff2 [strygul]
+[1;36m|[m [32m|[m [34m|[m[35m\[m  
+[1;36m|[m [32m|[m [34m|[m *   de5c536 2016-03-22 | Merge remote-tracking branch 'origin/master' [KukuruzaAndrey]
+[1;36m|[m [32m|[m [34m|[m [36m|[m[1;31m\[m  
+[1;36m|[m [32m|[m [34m|[m [36m|[m * 4ccdbe4 2016-03-21 | Added files via upload [Klimanski]
+[1;36m|[m [32m|[m [34m|[m * [1;31m|[m cc9f5f1 2016-03-22 | Add HashMap Add Tringletone(Client) and his test [KukuruzaAndrey]
+[1;36m|[m [32m|[m [34m|[m * [1;31m|[m   0012ce3 2016-03-21 | Merge remote-tracking branch 'origin/master' [KukuruzaAndrey]
+[1;36m|[m [32m|[m [34m|[m [1;32m|[m[1;31m\[m [1;31m\[m  
+[1;36m|[m [32m|[m [34m|[m [1;32m|[m [1;31m|[m[1;31m/[m  
+[1;36m|[m [32m|[m [34m|[m * [1;31m|[m   6e05901 2016-03-15 | Merge remote-tracking branch 'origin/master' [KukuruzaAndrey]
+[1;36m|[m [32m|[m [34m|[m [1;34m|[m[1;35m\[m [1;31m\[m  
+[1;36m|[m [32m|[m [34m|[m * [1;35m\[m [1;31m\[m   036d0e1 2016-03-15 | Merge remote-tracking branch 'origin/master' [KukuruzaAndrey]
+[1;36m|[m [32m|[m [34m|[m [1;36m|[m[31m\[m [1;35m\[m [1;31m\[m  
+[1;36m|[m [32m|[m [34m|[m * [31m|[m [1;35m|[m [1;31m|[m d0ad9e4 2016-03-15 | test git [KukuruzaAndrey]
+[1;36m|[m [32m|[m * [31m|[m [31m|[m [1;35m|[m [1;31m|[m 0cda250 2016-03-22 | Homework. Threads [strygul]
+[1;36m|[m [32m|[m [1;31m|[m [31m|[m[1;31m_[m[31m|[m[1;31m_[m[1;35m|[m[1;31m/[m  
+[1;36m|[m [32m|[m [1;31m|[m[1;31m/[m[31m|[m [31m|[m [1;35m|[m   
+[1;36m|[m [32m|[m * [31m|[m [31m|[m [1;35m|[m   63648f6 2016-03-19 | Merge branch 'master' of https://github.com/maksimteacher/proff2 (tag: v1.2) [strygul]
+[1;36m|[m [32m|[m [32m|[m[33m\[m [31m\[m [31m\[m [1;35m\[m  
+[1;36m|[m [32m|[m [32m|[m * [31m|[m [31m|[m [1;35m|[m ca4d291 2016-03-16 | reinit [romanelo]
+[1;36m|[m [32m|[m [32m|[m * [31m|[m [31m|[m [1;35m|[m 277d212 2016-03-15 | last changes [Alexandr]
+[1;36m|[m [32m|[m [32m|[m [1;35m|[m [31m|[m[1;35m_[m[31m|[m[1;35m/[m  
+[1;36m|[m [32m|[m [32m|[m [1;35m|[m[1;35m/[m[31m|[m [31m|[m   
+[1;36m|[m [32m|[m [32m|[m * [31m|[m [31m|[m 647834d 2016-03-15 | new Threads [Alexandr]
+[1;36m|[m [32m|[m [32m|[m [31m|[m [31m|[m[31m/[m  
+[1;36m|[m [32m|[m [32m|[m [31m|[m[31m/[m[31m|[m   
+[1;36m|[m [32m|[m * [31m|[m [31m|[m 8e3dd39 2016-03-19 | Improved Calculator [strygul]
+[1;36m|[m [32m|[m [31m|[m[31m/[m [31m/[m  
+[1;36m|[m [32m|[m * [31m|[m   500c7ed 2016-03-15 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [bernak]
+[1;36m|[m [32m|[m [34m|[m[35m\[m [31m\[m  
+[1;36m|[m [32m|[m [34m|[m * [31m\[m   7f4efce 2016-03-15 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Alexandr]
+[1;36m|[m [32m|[m [34m|[m [36m|[m[1;31m\[m [31m\[m  
+[1;36m|[m [32m|[m [34m|[m * [1;31m|[m [31m|[m 9ae4609 2016-03-15 | first shape [Alexandr]
+[1;36m|[m [32m|[m * [1;31m|[m [1;31m|[m [31m|[m a8e1c06 2016-03-15 | monitor [bernak]
+[1;36m|[m [32m|[m [1;31m|[m [1;31m|[m[1;31m/[m [31m/[m  
+[1;36m|[m [32m|[m [1;31m|[m[1;31m/[m[1;31m|[m [31m|[m   
+[1;36m|[m * [1;31m|[m [1;31m|[m [31m|[m 5ce9f44 2016-03-22 | correct [Klim]
+[1;36m|[m * [1;31m|[m [1;31m|[m [31m|[m 84aef79 2016-03-21 | My [Klim]
+[1;36m|[m * [1;31m|[m [1;31m|[m [31m|[m 52a85c4 2016-03-21 | MyCom [Klim]
+[1;36m|[m * [1;31m|[m [1;31m|[m [31m|[m 0556ccf 2016-03-10 | test [klimanski]
+[1;36m|[m * [1;31m|[m [1;31m|[m [31m|[m e80bbf7 2016-03-04 | mini [klimanski]
+[1;36m|[m * [1;31m|[m [1;31m|[m [31m|[m 429c6b2 2016-03-04 | TypeOfProducts [klimanski]
+[1;36m|[m * [1;31m|[m [1;31m|[m [31m|[m a1659f3 2016-03-04 | calc [klimanski]
+[1;36m|[m * [1;31m|[m [1;31m|[m [31m|[m 63978d5 2016-03-04 | TypeOfProduct [klimanski]
+* [1;31m|[m [1;31m|[m [1;31m|[m [31m|[m 9be5512 2016-03-28 | examples Monitor [Maks Coach]
+[1;31m|[m [1;31m|[m[1;31m/[m [1;31m/[m [31m/[m  
+[1;31m|[m[1;31m/[m[1;31m|[m [1;31m|[m [31m|[m   
+* [1;31m|[m [1;31m|[m [31m|[m   f11b77d 2016-03-14 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Name1]
+[1;32m|[m[31m\[m [1;31m\[m [1;31m\[m [31m\[m  
+[1;32m|[m [31m|[m [1;31m|[m[31m_[m[1;31m|[m[31m/[m  
+[1;32m|[m [31m|[m[31m/[m[1;31m|[m [1;31m|[m   
+[1;32m|[m * [1;31m|[m [1;31m|[m 551f88e 2016-03-14 | delete [bernak]
+[1;32m|[m * [1;31m|[m [1;31m|[m   2f7b85a 2016-03-14 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [bernak]
+[1;32m|[m [1;34m|[m[1;35m\[m [1;31m\[m [1;31m\[m  
+[1;32m|[m [1;34m|[m * [1;31m\[m [1;31m\[m   68f61ee 2016-03-14 | Merge remote-tracking branch 'origin/master' [Andrey Kukuruza]
+[1;32m|[m [1;34m|[m [1;36m|[m[31m\[m [1;31m\[m [1;31m\[m  
+[1;32m|[m [1;34m|[m * [31m|[m [1;31m|[m [1;31m|[m 641b7b1 2016-03-14 | CrazyCalc test [Andrey Kukuruza]
+[1;32m|[m * [31m|[m [31m|[m [1;31m|[m [1;31m|[m cbac09a 2016-03-14 | action06 [bernak]
+[1;32m|[m [31m|[m [31m|[m[31m/[m [1;31m/[m [1;31m/[m  
+[1;32m|[m [31m|[m[31m/[m[31m|[m [1;31m|[m [1;31m|[m   
+[1;32m|[m * [31m|[m [1;31m|[m [1;31m|[m 8d3aa0d 2016-03-14 | update [bernak]
+[1;32m|[m * [31m|[m [1;31m|[m [1;31m|[m a338db5 2016-03-14 | update [bernak]
+[1;32m|[m * [31m|[m [1;31m|[m [1;31m|[m   15de288 2016-03-14 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Nataly]
+[1;32m|[m [32m|[m[31m\[m [31m\[m [1;31m\[m [1;31m\[m  
+[1;32m|[m [32m|[m [31m|[m[31m/[m [1;31m/[m [1;31m/[m  
+[1;32m|[m [32m|[m * [1;31m|[m [1;31m|[m d6f5944 2016-03-14 | CrazyCalc test [Andrey Kukuruza]
+[1;32m|[m [32m|[m [1;31m|[m [1;31m|[m[1;31m/[m  
+[1;32m|[m [32m|[m [1;31m|[m[1;31m/[m[1;31m|[m   
+[1;32m|[m * [1;31m|[m [1;31m|[m 497a205 2016-03-14 | new updates(it includes homeworks and work at the lessons) [Nataly]
+[1;32m|[m [1;31m|[m[1;31m/[m [1;31m/[m  
+* [1;31m|[m [1;31m|[m f30c090 2016-03-14 | ThreadExample [Name1]
+[1;31m|[m[1;31m/[m [1;31m/[m  
+* [1;31m|[m   a2ee84e 2016-03-14 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Name1]
+[34m|[m[35m\[m [1;31m\[m  
+[34m|[m * [1;31m\[m   ec8fb39 2016-03-14 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [artem_mieisianinov]
+[34m|[m [36m|[m[1;31m\[m [1;31m\[m  
+[34m|[m [36m|[m * [1;31m\[m   1e48839 2016-03-14 | Merge remote-tracking branch 'origin/master' [Andrey Kukuruza]
+[34m|[m [36m|[m [1;32m|[m[1;33m\[m [1;31m\[m  
+[34m|[m [36m|[m [1;32m|[m * [1;31m\[m   08700ec 2016-03-14 | Merge branch 'master' of https://github.com/maksimteacher/proff2 [Iev Strygul]
+[34m|[m [36m|[m [1;32m|[m [1;34m|[m[1;35m\[m [1;31m\[m  
+[34m|[m [36m|[m [1;32m|[m * [1;35m|[m [1;31m|[m 9505f6c 2016-03-14 | Improved calculator [Iev Strygul]
+[34m|[m [36m|[m * [1;35m|[m [1;35m|[m [1;31m|[m b144652 2016-03-14 | Test for HashMap [Andrey Kukuruza]
+[34m|[m [36m|[m [1;35m|[m [1;35m|[m[1;35m/[m [1;31m/[m  
+[34m|[m [36m|[m [1;35m|[m[1;35m/[m[1;35m|[m [1;31m|[m   
+[34m|[m [36m|[m * [1;35m|[m [1;31m|[m 6c9f14a 2016-03-14 | Test for proff calc [Andrey Kukuruza]
+[34m|[m * [1;35m|[m [1;35m|[m [1;31m|[m c3713dc 2016-03-14 | init [artem_mieisianinov]
+[34m|[m * [1;35m|[m [1;35m|[m [1;31m|[m 1721b4f 2016-03-14 | commit [artem_mieisianinov]
+[34m|[m [1;31m|[m [1;35m|[m[1;31m_[m[1;35m|[m[1;31m/[m  
+[34m|[m [1;31m|[m[1;31m/[m[1;35m|[m [1;35m|[m   
+* [1;31m|[m [1;35m|[m [1;35m|[m e85a636 2016-03-14 | CrazyCalc [Name1]
+[1;35m|[m [1;31m|[m[1;35m/[m [1;35m/[m  
+[1;35m|[m[1;35m/[m[1;31m|[m [1;35m|[m   
+* [1;31m|[m [1;35m|[m   b115608 2016-03-14 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Name1]
+[1;36m|[m[31m\[m [1;31m\[m [1;35m\[m  
+[1;36m|[m * [1;31m|[m [1;35m|[m 98e64ae 2016-03-14 | Create TestServer [Klimanski]
+[1;36m|[m * [1;31m|[m [1;35m|[m b0df4ed 2016-03-14 | Test 4 calc [Andrey Kukuruza]
+[1;36m|[m [1;35m|[m [1;31m|[m[1;35m/[m  
+[1;36m|[m [1;35m|[m[1;35m/[m[1;31m|[m   
+[1;36m|[m * [1;31m|[m dcc7767 2016-03-13 | Finally commit from Idea works [Andrey Kukuruza]
+[1;36m|[m * [1;31m|[m c60b885 2016-03-13 | Finally commit from Idea works [Andrey Kukuruza]
+[1;36m|[m * [1;31m|[m 7b07c3e 2016-03-13 | Finally commit from Idea works [Andrey Kukuruza]
+[1;36m|[m * [1;31m|[m df2dd98 2016-03-12 | tripleton update [Alexandr]
+[1;36m|[m * [1;31m|[m   097e645 2016-03-12 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Alexandr]
+[1;36m|[m [32m|[m[33m\[m [1;31m\[m  
+[1;36m|[m [32m|[m * [1;31m|[m c1c4a5e 2016-03-12 | Create Client [Klimanski]
+[1;36m|[m [32m|[m * [1;31m|[m 9705794 2016-03-12 | classwork [bernak]
+[1;36m|[m * [33m|[m [1;31m|[m d83a905 2016-03-12 | hashmap tests [Alexandr]
+[1;36m|[m [33m|[m[33m/[m [1;31m/[m  
+[1;36m|[m * [1;31m|[m   2fb6fb7 2016-03-11 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Eleonora]
+[1;36m|[m [34m|[m[35m\[m [1;31m\[m  
+[1;36m|[m [34m|[m * [1;31m|[m 85f0b6f 2016-03-11 | Builder [Iev Strygul]
+[1;36m|[m [34m|[m * [1;31m|[m c31d2fe 2016-03-11 | Test for Tripletone [Iev Strygul]
+[1;36m|[m [34m|[m * [1;31m|[m 207b012 2016-03-11 | Tripletone [Iev Strygul]
+[1;36m|[m [34m|[m * [1;31m|[m 4e1764c 2016-03-11 | Tripltone [Iev Strygul]
+[1;36m|[m [34m|[m * [1;31m|[m   81ab264 2016-03-11 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Alexandr]
+[1;36m|[m [34m|[m [36m|[m[1;31m\[m [1;31m\[m  
+[1;36m|[m [34m|[m [36m|[m * [1;31m|[m e79a3e5 2016-03-10 | sadfghj [natasur]
+[1;36m|[m [34m|[m * [1;31m|[m [1;31m|[m 6b983e0 2016-03-11 | new code [Alexandr]
+[1;36m|[m [34m|[m [1;31m|[m[1;31m/[m [1;31m/[m  
+[1;36m|[m * [1;31m|[m [1;31m|[m 9467ed5 2016-03-11 | 777 [Eleonora]
+* [1;31m|[m [1;31m|[m [1;31m|[m 7f330fb 2016-03-14 | Calc1 and TestCalc [Name1]
+[1;31m|[m [1;31m|[m[1;31m/[m [1;31m/[m  
+[1;31m|[m[1;31m/[m[1;31m|[m [1;31m|[m   
+* [1;31m|[m [1;31m|[m   fa5db9e 2016-03-10 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Name1]
+[1;32m|[m[1;33m\[m [1;31m\[m [1;31m\[m  
+[1;32m|[m * [1;31m\[m [1;31m\[m   3f480c3 2016-03-10 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [bernak]
+[1;32m|[m [1;34m|[m[1;31m\[m [1;31m\[m [1;31m\[m  
+[1;32m|[m [1;34m|[m [1;31m|[m[1;31m/[m [1;31m/[m  
+[1;32m|[m [1;34m|[m * [1;31m|[m   bbb8038 2016-03-10 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [natasur]
+[1;32m|[m [1;34m|[m [1;36m|[m[31m\[m [1;31m\[m  
+[1;32m|[m [1;34m|[m [1;36m|[m * [1;31m|[m fc4841e 2016-03-10 | TestIdea [Andrey Kukuruza]
+[1;32m|[m [1;34m|[m * [31m|[m [1;31m|[m a43a278 2016-03-10 | lesson [natasur]
+[1;32m|[m [1;34m|[m [31m|[m[31m/[m [1;31m/[m  
+[1;32m|[m [1;34m|[m * [1;31m|[m   ad1db70 2016-03-10 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Alexandr]
+[1;32m|[m [1;34m|[m [32m|[m[33m\[m [1;31m\[m  
+[1;32m|[m [1;34m|[m [32m|[m * [1;31m|[m 6121b62 2016-03-10 | qqq [Eleonora]
+[1;32m|[m [1;34m|[m [32m|[m * [1;31m|[m   20a48e8 2016-03-10 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Eleonora]
+[1;32m|[m [1;34m|[m [32m|[m [34m|[m[35m\[m [1;31m\[m  
+[1;32m|[m [1;34m|[m [32m|[m * [35m|[m [1;31m|[m 86162f0 2016-03-10 | qqq [Eleonora]
+[1;32m|[m [1;34m|[m [32m|[m * [35m|[m [1;31m|[m   711375c 2016-03-10 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Eleonora]
+[1;32m|[m [1;34m|[m [32m|[m [36m|[m[1;31m\[m [35m\[m [1;31m\[m  
+[1;32m|[m [1;34m|[m [32m|[m * [1;31m\[m [35m\[m [1;31m\[m   c864fa5 2016-03-10 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Eleonora]
+[1;32m|[m [1;34m|[m [32m|[m [1;32m|[m[1;33m\[m [1;31m\[m [35m\[m [1;31m\[m  
+[1;32m|[m [1;34m|[m [32m|[m * [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m   8cf025a 2016-03-07 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Eleonora]
+[1;32m|[m [1;34m|[m [32m|[m [1;34m|[m[1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m  
+[1;32m|[m [1;34m|[m [32m|[m * [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m   441b889 2016-03-03 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Eleonora]
+[1;32m|[m [1;34m|[m [32m|[m [1;36m|[m[31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m  
+[1;32m|[m [1;34m|[m [32m|[m * [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m   04c9f57 2016-03-01 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Eleonora]
+[1;32m|[m [1;34m|[m [32m|[m [32m|[m[1;31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m  
+[1;32m|[m [1;34m|[m [32m|[m [32m|[m [1;31m|[m [31m|[m[1;31m_[m[1;35m|[m[1;31m_[m[1;33m|[m[1;31m_[m[1;31m|[m[1;31m_[m[35m|[m[1;31m/[m  
+[1;32m|[m [1;34m|[m [32m|[m [32m|[m [1;31m|[m[1;31m/[m[31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m   
+[1;32m|[m [1;34m|[m [32m|[m * [1;31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m   835ed15 2016-03-01 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Eleonora]
+[1;32m|[m [1;34m|[m [32m|[m [34m|[m[35m\[m [1;31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m  
+[1;32m|[m [1;34m|[m [32m|[m * [35m\[m [1;31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m   becdae7 2016-03-01 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Eleonora]
+[1;32m|[m [1;34m|[m [32m|[m [36m|[m[1;31m\[m [35m\[m [1;31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m  
+[1;32m|[m [1;34m|[m [32m|[m * [1;31m\[m [35m\[m [1;31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m   8d519a9 2016-03-01 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Eleonora]
+[1;32m|[m [1;34m|[m [32m|[m [1;32m|[m[1;33m\[m [1;31m\[m [35m\[m [1;31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m  
+[1;32m|[m [1;34m|[m [32m|[m * [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m   5e0ec37 2016-03-01 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Eleonora]
+[1;32m|[m [1;34m|[m [32m|[m [1;34m|[m[1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m  
+[1;32m|[m [1;34m|[m [32m|[m * [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m   95e4418 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Eleonora]
+[1;32m|[m [1;34m|[m [32m|[m [1;36m|[m[31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m  
+[1;32m|[m [1;34m|[m [32m|[m * [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m e040084 2016-02-29 | 2 [Eleonora]
+[1;32m|[m [1;34m|[m * [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m 4a0338d 2016-03-10 | builder [Alexandr]
+[1;32m|[m [1;34m|[m [35m|[m [31m|[m[35m_[m[31m|[m[35m_[m[1;35m|[m[35m_[m[1;33m|[m[35m_[m[1;31m|[m[35m_[m[35m|[m[35m_[m[1;31m|[m[35m_[m[31m|[m[35m_[m[1;35m|[m[35m_[m[1;33m|[m[35m_[m[1;31m|[m[35m/[m  
+[1;32m|[m [1;34m|[m [35m|[m[35m/[m[31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m   
+[1;32m|[m [1;34m|[m * [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m   d8f6772 2016-03-10 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Alexandr]
+[1;32m|[m [1;34m|[m [32m|[m[33m\[m [31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m  
+[1;32m|[m [1;34m|[m * [33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m 16f75d8 2016-03-10 | singlton [Alexandr]
+[1;32m|[m [1;34m|[m [1;33m|[m [33m|[m[1;33m_[m[31m|[m[1;33m_[m[31m|[m[1;33m_[m[1;35m|[m[1;33m_[m[1;33m|[m[1;33m_[m[1;31m|[m[1;33m_[m[35m|[m[1;33m_[m[1;31m|[m[1;33m_[m[31m|[m[1;33m_[m[1;35m|[m[1;33m/[m [1;31m/[m  
+[1;32m|[m [1;34m|[m [1;33m|[m[1;33m/[m[33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m [1;31m|[m   
+[1;32m|[m * [1;33m|[m [33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m [1;31m|[m 18859dd 2016-03-10 | Singleton, BuilderCar [bernak]
+[1;32m|[m [33m|[m [1;33m|[m[33m/[m [31m/[m [31m/[m [1;35m/[m [1;33m/[m [1;31m/[m [35m/[m [1;31m/[m [31m/[m [1;35m/[m [1;31m/[m  
+[1;32m|[m [33m|[m[33m/[m[1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m [1;31m|[m   
+[1;32m|[m * [1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m [1;31m|[m   b9ec4f2 2016-03-10 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [bernak]
+[1;32m|[m [34m|[m[35m\[m [1;33m\[m [31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m [31m\[m [1;35m\[m [1;31m\[m  
+[1;32m|[m * [35m|[m [1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m [1;31m|[m c8f01e5 2016-03-10 | update [bernak]
+[1;32m|[m * [35m|[m [1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m [1;31m|[m 51ae64b 2016-03-10 | action05 [bernak]
+[1;32m|[m [1;31m|[m [35m|[m[1;31m_[m[1;33m|[m[1;31m_[m[31m|[m[1;31m_[m[31m|[m[1;31m_[m[1;35m|[m[1;31m_[m[1;33m|[m[1;31m_[m[1;31m|[m[1;31m_[m[35m|[m[1;31m_[m[1;31m|[m[1;31m_[m[31m|[m[1;31m_[m[1;35m|[m[1;31m/[m  
+[1;32m|[m [1;31m|[m[1;31m/[m[35m|[m [1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m   
+* [1;31m|[m [35m|[m [1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m a6d14cf 2016-03-10 | paterns [Name1]
+[35m|[m [1;31m|[m[35m/[m [1;33m/[m [31m/[m [31m/[m [1;35m/[m [1;33m/[m [1;31m/[m [35m/[m [1;31m/[m [31m/[m [1;35m/[m  
+[35m|[m[35m/[m[1;31m|[m [1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m   
+* [1;31m|[m [1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m   5872e24 2016-03-10 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Name1]
+[36m|[m[1;31m\[m [1;31m\[m [1;33m\[m [31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m [31m\[m [1;35m\[m  
+[36m|[m [1;31m|[m[1;31m/[m [1;33m/[m [31m/[m [31m/[m [1;35m/[m [1;33m/[m [1;31m/[m [35m/[m [1;31m/[m [31m/[m [1;35m/[m  
+[36m|[m * [1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m   4778ede 2016-03-10 | Merge branch 'master' of https://github.com/maksimteacher/proff2 [Iev Strygul]
+[36m|[m [1;32m|[m[1;33m\[m [1;33m\[m [31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m [31m\[m [1;35m\[m  
+[36m|[m [1;32m|[m [1;33m|[m[1;33m/[m [31m/[m [31m/[m [1;35m/[m [1;33m/[m [1;31m/[m [35m/[m [1;31m/[m [31m/[m [1;35m/[m  
+[36m|[m [1;32m|[m * [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m 789cec4 2016-03-10 | new login [Alexandr]
+[36m|[m * [1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m 9381f96 2016-03-10 | test [Iev Strygul]
+[36m|[m * [1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m 0766114 2016-03-10 | Calculator [Iev Strygul]
+[36m|[m * [1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m   eacd529 2016-03-10 | Merge branch 'master' of https://github.com/maksimteacher/proff2 [Iev Strygul]
+[36m|[m [1;34m|[m[1;33m\[m [1;33m\[m [31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m [31m\[m [1;35m\[m  
+[36m|[m [1;34m|[m [1;33m|[m[1;33m/[m [31m/[m [31m/[m [1;35m/[m [1;33m/[m [1;31m/[m [35m/[m [1;31m/[m [31m/[m [1;35m/[m  
+[36m|[m * [1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [31m|[m [1;35m|[m 4f52971 2016-03-03 | Shop Assignment [Iev Strygul]
+[36m|[m [31m|[m [1;33m|[m[31m_[m[31m|[m[31m_[m[31m|[m[31m_[m[1;35m|[m[31m_[m[1;33m|[m[31m_[m[1;31m|[m[31m_[m[35m|[m[31m_[m[1;31m|[m[31m/[m [1;35m/[m  
+[36m|[m [31m|[m[31m/[m[1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [1;35m|[m   
+* [31m|[m [1;33m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [1;35m|[m aa3abaa 2016-03-10 | reflectionExample [Name1]
+[1;33m|[m [31m|[m[1;33m/[m [31m/[m [31m/[m [1;35m/[m [1;33m/[m [1;31m/[m [35m/[m [1;31m/[m [1;35m/[m  
+[1;33m|[m[1;33m/[m[31m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [1;35m|[m   
+* [31m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [1;35m|[m e3eeb66 2016-03-10 | hidden Calc and TestCalc [Name1]
+* [31m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [1;35m|[m 177daa6 2016-03-10 | correction absractCalc [Name1]
+* [31m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [1;35m|[m   f7a2f7e 2016-03-10 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Name1]
+[1;36m|[m[31m\[m [31m\[m [31m\[m [31m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;31m\[m [1;35m\[m  
+[1;36m|[m * [31m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [1;35m|[m 26ef097 2016-03-08 | login form [Alexandr]
+[1;36m|[m * [31m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [1;35m|[m 44d6bf8 2016-03-08 | shop [Alexandr]
+[1;36m|[m * [31m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [1;35m|[m 542c7d2 2016-03-07 | last Calculator [Alexandr]
+[1;36m|[m * [31m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m [1;35m|[m acd4ba3 2016-03-07 | new calculator [Alexandr]
+[1;36m|[m [1;35m|[m [31m|[m[1;35m_[m[31m|[m[1;35m_[m[31m|[m[1;35m_[m[1;35m|[m[1;35m_[m[1;33m|[m[1;35m_[m[1;31m|[m[1;35m_[m[35m|[m[1;35m_[m[1;31m|[m[1;35m/[m  
+[1;36m|[m [1;35m|[m[1;35m/[m[31m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m   
+[1;36m|[m * [31m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m 3680ec9 2016-03-07 | t [Koshel]
+[1;36m|[m * [31m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m aac8c72 2016-03-07 | comm [Koshel]
+[1;36m|[m * [31m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m c616bfd 2016-03-04 | Create TypeOfProducts [Klimanski]
+[1;36m|[m [31m|[m[31m/[m [31m/[m [31m/[m [1;35m/[m [1;33m/[m [1;31m/[m [35m/[m [1;31m/[m  
+* [31m|[m [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m 2b18ebc 2016-03-10 | calc and testCalc [Name1]
+[31m|[m[31m/[m [31m/[m [31m/[m [1;35m/[m [1;33m/[m [1;31m/[m [35m/[m [1;31m/[m  
+* [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m 4824a86 2016-03-01 | temporary commit [Name1]
+* [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m b538745 2016-03-01 | cancel warning to action03.MainBase [Name1]
+* [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;31m|[m ceafdbb 2016-03-01 | all examples by 2 week [Name1]
+[1;31m|[m [31m|[m[1;31m_[m[31m|[m[1;31m_[m[1;35m|[m[1;31m_[m[1;33m|[m[1;31m_[m[1;31m|[m[1;31m_[m[35m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m   
+* [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m 5a8bbe4 2016-03-01 | exampleJavaFx [Name1]
+[35m|[m [31m|[m[35m_[m[31m|[m[35m_[m[1;35m|[m[35m_[m[1;33m|[m[35m_[m[1;31m|[m[35m/[m  
+[35m|[m[35m/[m[31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m   
+* [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m 073abb4 2016-03-01 | testminicalc [Name1]
+* [31m|[m [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m b4fa40e 2016-03-01 | miniCalc [Name1]
+[1;31m|[m [31m|[m[1;31m_[m[31m|[m[1;31m_[m[1;35m|[m[1;31m_[m[1;33m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[31m|[m [31m|[m [1;35m|[m [1;33m|[m   
+* [31m|[m [31m|[m [1;35m|[m [1;33m|[m b57fbce 2016-03-01 | typeProduct [Name1]
+[1;33m|[m [31m|[m[1;33m_[m[31m|[m[1;33m_[m[1;35m|[m[1;33m/[m  
+[1;33m|[m[1;33m/[m[31m|[m [31m|[m [1;35m|[m   
+* [31m|[m [31m|[m [1;35m|[m   6bcfddb 2016-03-01 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Name1]
+[32m|[m[33m\[m [31m\[m [31m\[m [1;35m\[m  
+[32m|[m * [31m|[m [31m|[m [1;35m|[m ea36be3 2016-03-01 | rename class [bernak]
+[32m|[m * [31m|[m [31m|[m [1;35m|[m e9bdf40 2016-03-01 | action04 [bernak]
+* [33m|[m [31m|[m [31m|[m [1;35m|[m 8d54835 2016-03-01 | map example [Name1]
+[33m|[m[33m/[m [31m/[m [31m/[m [1;35m/[m  
+* [31m|[m [31m|[m [1;35m|[m 24bb80a 2016-03-01 | other commit [Name1]
+[1;35m|[m [31m|[m[1;35m_[m[31m|[m[1;35m/[m  
+[1;35m|[m[1;35m/[m[31m|[m [31m|[m   
+* [31m|[m [31m|[m   41ac3b0 2016-03-01 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Name1]
+[34m|[m[35m\[m [31m\[m [31m\[m  
+[34m|[m * [31m|[m [31m|[m 8d36632 2016-03-01 | 21212 [klimanski]
+[34m|[m * [31m|[m [31m|[m 8b93665 2016-03-01 | 111 [klimanski]
+* [35m|[m [31m|[m [31m|[m 3cb4496 2016-03-01 | commit example [Name1]
+* [35m|[m [31m|[m [31m|[m 1884c13 2016-03-01 | normal App.java [Name1]
+* [35m|[m [31m|[m [31m|[m 82a5795 2016-03-01 | commit App.java [Name1]
+[35m|[m[35m/[m [31m/[m [31m/[m  
+* [31m|[m [31m|[m   809fe17 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Name1]
+[36m|[m[1;31m\[m [31m\[m [31m\[m  
+[36m|[m * [31m|[m [31m|[m fab4d31 2016-02-29 | O-lo-lo [Iev Strygul]
+[36m|[m * [31m|[m [31m|[m   c2fd49a 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2 [Iev Strygul]
+[36m|[m [1;32m|[m[31m\[m [31m\[m [31m\[m  
+[36m|[m [1;32m|[m [31m|[m [31m|[m[31m/[m  
+[36m|[m [1;32m|[m [31m|[m[31m/[m[31m|[m   
+[36m|[m [1;32m|[m * [31m|[m   45197e8 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [zaicevda]
+[36m|[m [1;32m|[m [1;34m|[m[1;35m\[m [31m\[m  
+[36m|[m [1;32m|[m * [1;35m\[m [31m\[m   ad4b36e 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [zaicevda]
+[36m|[m [1;32m|[m [1;36m|[m[31m\[m [1;35m\[m [31m\[m  
+[36m|[m [1;32m|[m * [31m|[m [1;35m|[m [31m|[m b9fc87a 2016-02-29 | Second Commit [zaicevda]
+[36m|[m * [31m|[m [31m|[m [1;35m|[m [31m|[m 59e5034 2016-02-29 | O-lo-lo [Iev Strygul]
+[36m|[m * [31m|[m [31m|[m [1;35m|[m [31m|[m c5229a3 2016-02-29 | O-lo-lo [Iev Strygul]
+* [31m|[m [31m|[m [31m|[m [1;35m|[m [31m|[m 91daa6c 2016-02-29 | 89 [Name1]
+[1;35m|[m [31m|[m[1;35m_[m[31m|[m[1;35m_[m[31m|[m[1;35m/[m [31m/[m  
+[1;35m|[m[1;35m/[m[31m|[m [31m|[m [31m|[m [31m|[m   
+* [31m|[m [31m|[m [31m|[m [31m|[m   aff4779 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Name1]
+[32m|[m[31m\[m [31m\[m [31m\[m [31m\[m [31m\[m  
+[32m|[m [31m|[m [31m|[m[31m_[m[31m|[m[31m/[m [31m/[m  
+[32m|[m [31m|[m[31m/[m[31m|[m [31m|[m [31m|[m   
+[32m|[m * [31m|[m [31m|[m [31m|[m 5aca8d0 2016-02-29 | hg [Koshel]
+[32m|[m [31m|[m[31m/[m [31m/[m [31m/[m  
+[32m|[m * [31m|[m [31m|[m   39f2818 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Alexandr]
+[32m|[m [34m|[m[35m\[m [31m\[m [31m\[m  
+[32m|[m [34m|[m * [31m\[m [31m\[m   206acd9 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Nataly]
+[32m|[m [34m|[m [36m|[m[1;31m\[m [31m\[m [31m\[m  
+[32m|[m [34m|[m [36m|[m * [31m\[m [31m\[m   0a68892 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Andrey Kukuruza]
+[32m|[m [34m|[m [36m|[m [1;32m|[m[1;33m\[m [31m\[m [31m\[m  
+[32m|[m [34m|[m [36m|[m [1;32m|[m * [31m\[m [31m\[m   be5e64e 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [v.pavlenko]
+[32m|[m [34m|[m [36m|[m [1;32m|[m [1;34m|[m[1;35m\[m [31m\[m [31m\[m  
+[32m|[m [34m|[m [36m|[m [1;32m|[m [1;34m|[m * [31m|[m [31m|[m 8bea152 2016-02-29 | The most important commit [Iev Strygul]
+[32m|[m [34m|[m [36m|[m [1;32m|[m [1;34m|[m * [31m|[m [31m|[m   edf84bc 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2 [Iev Strygul]
+[32m|[m [34m|[m [36m|[m [1;32m|[m [1;34m|[m [1;36m|[m[31m\[m [31m\[m [31m\[m  
+[32m|[m [34m|[m [36m|[m [1;32m|[m [1;34m|[m * [31m\[m [31m\[m [31m\[m   7106f69 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2 [Iev Strygul]
+[32m|[m [34m|[m [36m|[m [1;32m|[m [1;34m|[m [32m|[m[33m\[m [31m\[m [31m\[m [31m\[m  
+[32m|[m [34m|[m [36m|[m [1;32m|[m [1;34m|[m * [33m|[m [31m|[m [31m|[m [31m|[m 1ef2b5b 2016-02-29 | The most important commit [Iev Strygul]
+[32m|[m [34m|[m * [1;32m|[m [1;34m|[m [33m|[m [33m|[m [31m|[m [31m|[m [31m|[m   0e922b5 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Nataly]
+[32m|[m [34m|[m [34m|[m[1;32m\[m [1;32m\[m [1;34m\[m [33m\[m [33m\[m [31m\[m [31m\[m [31m\[m  
+[32m|[m [34m|[m [34m|[m [1;32m|[m[1;32m/[m [1;34m/[m [33m/[m [33m/[m [31m/[m [31m/[m [31m/[m  
+[32m|[m [34m|[m * [1;32m|[m [1;34m|[m [33m|[m [33m|[m [31m|[m [31m|[m [31m|[m   61a410b 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Nataly]
+[32m|[m [34m|[m [36m|[m[31m\[m [1;32m\[m [1;34m\[m [33m\[m [33m\[m [31m\[m [31m\[m [31m\[m  
+[32m|[m [34m|[m [36m|[m [31m|[m [1;32m|[m[31m_[m[1;34m|[m[31m_[m[33m|[m[31m_[m[33m|[m[31m/[m [31m/[m [31m/[m  
+[32m|[m [34m|[m [36m|[m [31m|[m[31m/[m[1;32m|[m [1;34m|[m [33m|[m [33m|[m [31m|[m [31m|[m   
+[32m|[m [34m|[m * [31m|[m [1;32m|[m [1;34m|[m [33m|[m [33m|[m [31m|[m [31m|[m 64bc145 2016-02-29 | First commit from Natalliia [Nataly]
+[32m|[m [34m|[m [33m|[m [31m|[m[33m_[m[1;32m|[m[33m_[m[1;34m|[m[33m/[m [33m/[m [31m/[m [31m/[m  
+[32m|[m [34m|[m [33m|[m[33m/[m[31m|[m [1;32m|[m [1;34m|[m [33m|[m [31m|[m [31m|[m   
+[32m|[m * [33m|[m [31m|[m [1;32m|[m [1;34m|[m [33m|[m [31m|[m [31m|[m 70cdfac 2016-02-29 | 1111 [Alexandr]
+[32m|[m * [33m|[m [31m|[m [1;32m|[m [1;34m|[m [33m|[m [31m|[m [31m|[m   5283432 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Alexandr]
+[32m|[m [1;32m|[m[31m\[m [33m\[m [31m\[m [1;32m\[m [1;34m\[m [33m\[m [31m\[m [31m\[m  
+[32m|[m [1;32m|[m [31m|[m [33m|[m[31m_[m[31m|[m[31m_[m[1;32m|[m[31m_[m[1;34m|[m[31m_[m[33m|[m[31m/[m [31m/[m  
+[32m|[m [1;32m|[m [31m|[m[31m/[m[33m|[m [31m|[m [1;32m|[m [1;34m|[m [33m|[m [31m|[m   
+[32m|[m [1;32m|[m * [33m|[m [31m|[m [1;32m|[m [1;34m|[m [33m|[m [31m|[m   cfd49ba 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Maxim Kizyun]
+[32m|[m [1;32m|[m [1;34m|[m[1;32m\[m [33m\[m [31m\[m [1;32m\[m [1;34m\[m [33m\[m [31m\[m  
+[32m|[m [1;32m|[m [1;34m|[m [1;32m|[m [33m|[m[1;32m_[m[31m|[m[1;32m/[m [1;34m/[m [33m/[m [31m/[m  
+[32m|[m [1;32m|[m [1;34m|[m [1;32m|[m[1;32m/[m[33m|[m [31m|[m [1;34m|[m [33m|[m [31m|[m   
+[32m|[m [1;32m|[m [1;34m|[m * [33m|[m [31m|[m [1;34m|[m [33m|[m [31m|[m   a1248ef 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Mike]
+[32m|[m [1;32m|[m [1;34m|[m [1;36m|[m[31m\[m [33m\[m [31m\[m [1;34m\[m [33m\[m [31m\[m  
+[32m|[m [1;32m|[m [1;34m|[m [1;36m|[m [31m|[m [33m|[m[31m_[m[31m|[m[31m_[m[1;34m|[m[31m_[m[33m|[m[31m/[m  
+[32m|[m [1;32m|[m [1;34m|[m [1;36m|[m [31m|[m[31m/[m[33m|[m [31m|[m [1;34m|[m [33m|[m   
+[32m|[m [1;32m|[m [1;34m|[m * [31m|[m [33m|[m [31m|[m [1;34m|[m [33m|[m 79d4f11 2016-02-29 | Test Commit [zaicevda]
+[32m|[m [1;32m|[m [1;34m|[m [33m|[m [31m|[m[33m/[m [31m/[m [1;34m/[m [33m/[m  
+[32m|[m [1;32m|[m [1;34m|[m [33m|[m[33m/[m[31m|[m [31m|[m [1;34m|[m [33m|[m   
+[32m|[m [1;32m|[m * [33m|[m [31m|[m [31m|[m [1;34m|[m [33m|[m   8ddb6fb 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Maxim Kizyun]
+[32m|[m [1;32m|[m [32m|[m[33m\[m [33m\[m [31m\[m [31m\[m [1;34m\[m [33m\[m  
+[32m|[m [1;32m|[m * [33m\[m [33m\[m [31m\[m [31m\[m [1;34m\[m [33m\[m   75849bc 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Maxim Kizyun]
+[32m|[m [1;32m|[m [34m|[m[31m\[m [33m\[m [33m\[m [31m\[m [31m\[m [1;34m\[m [33m\[m  
+[32m|[m [1;32m|[m [34m|[m [31m|[m [33m|[m[31m_[m[33m|[m[31m_[m[31m|[m[31m/[m [1;34m/[m [33m/[m  
+[32m|[m [1;32m|[m [34m|[m [31m|[m[31m/[m[33m|[m [33m|[m [31m|[m [1;34m|[m [33m|[m   
+[32m|[m [1;32m|[m * [31m|[m [33m|[m [33m|[m [31m|[m [1;34m|[m [33m|[m   0f5e8fd 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Maxim Kizyun]
+[32m|[m [1;32m|[m [36m|[m[1;31m\[m [31m\[m [33m\[m [33m\[m [31m\[m [1;34m\[m [33m\[m  
+[32m|[m [1;32m|[m * [1;31m|[m [31m|[m [33m|[m [33m|[m [31m|[m [1;34m|[m [33m|[m 97111b6 2016-02-29 | first commit of 29.02.2016 [Maxim Kizyun]
+[32m|[m [1;32m|[m [33m|[m [1;31m|[m[33m_[m[31m|[m[33m_[m[33m|[m[33m/[m [31m/[m [1;34m/[m [33m/[m  
+[32m|[m [1;32m|[m [33m|[m[33m/[m[1;31m|[m [31m|[m [33m|[m [31m|[m [1;34m|[m [33m|[m   
+[32m|[m * [33m|[m [1;31m|[m [31m|[m [33m|[m [31m|[m [1;34m|[m [33m|[m 744992a 2016-02-29 | 646446 [Alexandr]
+[32m|[m * [33m|[m [1;31m|[m [31m|[m [33m|[m [31m|[m [1;34m|[m [33m|[m   e61db4e 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Alexandr]
+[32m|[m [1;32m|[m[31m\[m [33m\[m [1;31m\[m [31m\[m [33m\[m [31m\[m [1;34m\[m [33m\[m  
+[32m|[m [1;32m|[m [31m|[m [33m|[m[31m_[m[1;31m|[m[31m_[m[31m|[m[31m_[m[33m|[m[31m/[m [1;34m/[m [33m/[m  
+[32m|[m [1;32m|[m [31m|[m[31m/[m[33m|[m [1;31m|[m [31m|[m [33m|[m [1;34m|[m [33m|[m   
+[32m|[m [1;32m|[m * [33m|[m [1;31m|[m [31m|[m [33m|[m [1;34m|[m [33m|[m   8d85a55 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Tata]
+[32m|[m [1;32m|[m [1;34m|[m[33m\[m [33m\[m [1;31m\[m [31m\[m [33m\[m [1;34m\[m [33m\[m  
+[32m|[m [1;32m|[m [1;34m|[m [33m|[m [33m|[m[33m_[m[1;31m|[m[33m_[m[31m|[m[33m/[m [1;34m/[m [33m/[m  
+[32m|[m [1;32m|[m [1;34m|[m [33m|[m[33m/[m[33m|[m [1;31m|[m [31m|[m [1;34m|[m [33m|[m   
+[32m|[m [1;32m|[m [1;34m|[m * [33m|[m [1;31m|[m [31m|[m [1;34m|[m [33m|[m   f8a3453 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Andrey Kukuruza]
+[32m|[m [1;32m|[m [1;34m|[m [1;36m|[m[1;34m\[m [33m\[m [1;31m\[m [31m\[m [1;34m\[m [33m\[m  
+[32m|[m [1;32m|[m [1;34m|[m [1;36m|[m [1;34m|[m [33m|[m[1;34m_[m[1;31m|[m[1;34m_[m[31m|[m[1;34m/[m [33m/[m  
+[32m|[m [1;32m|[m [1;34m|[m [1;36m|[m [1;34m|[m[1;34m/[m[33m|[m [1;31m|[m [31m|[m [33m|[m   
+[32m|[m [1;32m|[m [1;34m|[m * [1;34m|[m [33m|[m [1;31m|[m [31m|[m [33m|[m 313241b 2016-02-29 | QuickFix [Andrey Kukuruza]
+[32m|[m [1;32m|[m * [31m|[m [1;34m|[m [33m|[m [1;31m|[m [31m|[m [33m|[m   afb8bd6 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Tata]
+[32m|[m [1;32m|[m [32m|[m[1;34m\[m [31m\[m [1;34m\[m [33m\[m [1;31m\[m [31m\[m [33m\[m  
+[32m|[m [1;32m|[m [32m|[m [1;34m|[m [31m|[m[1;34m/[m [33m/[m [1;31m/[m [31m/[m [33m/[m  
+[32m|[m [1;32m|[m [32m|[m [1;34m|[m[1;34m/[m[31m|[m [33m|[m [1;31m|[m [31m|[m [33m|[m   
+[32m|[m [1;32m|[m [32m|[m * [31m|[m [33m|[m [1;31m|[m [31m|[m [33m|[m   75a8a03 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [v.pavlenko]
+[32m|[m [1;32m|[m [32m|[m [34m|[m[31m\[m [31m\[m [33m\[m [1;31m\[m [31m\[m [33m\[m  
+[32m|[m [1;32m|[m [32m|[m [34m|[m [31m|[m[31m/[m [33m/[m [1;31m/[m [31m/[m [33m/[m  
+[32m|[m [1;32m|[m [32m|[m * [31m|[m [33m|[m [1;31m|[m [31m|[m [33m|[m   74e234f 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [v.pavlenko]
+[32m|[m [1;32m|[m [32m|[m [36m|[m[1;31m\[m [31m\[m [33m\[m [1;31m\[m [31m\[m [33m\[m  
+[32m|[m [1;32m|[m [32m|[m * [1;31m\[m [31m\[m [33m\[m [1;31m\[m [31m\[m [33m\[m   90b7fa4 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [v.pavlenko]
+[32m|[m [1;32m|[m [32m|[m [1;32m|[m[1;31m\[m [1;31m\[m [31m\[m [33m\[m [1;31m\[m [31m\[m [33m\[m  
+[32m|[m [1;32m|[m [32m|[m [1;32m|[m [1;31m|[m [1;31m|[m[1;31m_[m[31m|[m[1;31m_[m[33m|[m[1;31m/[m [31m/[m [33m/[m  
+[32m|[m [1;32m|[m [32m|[m [1;32m|[m [1;31m|[m[1;31m/[m[1;31m|[m [31m|[m [33m|[m [31m|[m [33m|[m   
+[32m|[m [1;32m|[m [32m|[m * [1;31m|[m [1;31m|[m [31m|[m [33m|[m [31m|[m [33m|[m   e304666 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [v.pavlenko]
+[32m|[m [1;32m|[m [32m|[m [1;34m|[m[1;35m\[m [1;31m\[m [1;31m\[m [31m\[m [33m\[m [31m\[m [33m\[m  
+[32m|[m [1;32m|[m [32m|[m * [1;35m|[m [1;31m|[m [1;31m|[m [31m|[m [33m|[m [31m|[m [33m|[m 343e191 2016-02-29 | First commit (V. Pavenko) [v.pavlenko]
+[32m|[m [1;32m|[m [32m|[m [33m|[m [1;35m|[m[33m_[m[1;31m|[m[33m_[m[1;31m|[m[33m_[m[31m|[m[33m/[m [31m/[m [33m/[m  
+[32m|[m [1;32m|[m [32m|[m [33m|[m[33m/[m[1;35m|[m [1;31m|[m [1;31m|[m [31m|[m [31m|[m [33m|[m   
+[32m|[m [1;32m|[m * [33m|[m [1;35m|[m [1;31m|[m [1;31m|[m [31m|[m [31m|[m [33m|[m   c522a60 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Tata]
+[32m|[m [1;32m|[m [1;36m|[m[1;31m\[m [33m\[m [1;35m\[m [1;31m\[m [1;31m\[m [31m\[m [31m\[m [33m\[m  
+[32m|[m [1;32m|[m [1;36m|[m [1;31m|[m [33m|[m[1;31m_[m[1;35m|[m[1;31m_[m[1;31m|[m[1;31m/[m [31m/[m [31m/[m [33m/[m  
+[32m|[m [1;32m|[m [1;36m|[m [1;31m|[m[1;31m/[m[33m|[m [1;35m|[m [1;31m|[m [31m|[m [31m|[m [33m|[m   
+[32m|[m [1;32m|[m * [1;31m|[m [33m|[m [1;35m|[m [1;31m|[m [31m|[m [31m|[m [33m|[m   d9d99f1 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Tata]
+[32m|[m [1;32m|[m [32m|[m[33m\[m [1;31m\[m [33m\[m [1;35m\[m [1;31m\[m [31m\[m [31m\[m [33m\[m  
+[32m|[m [1;32m|[m [32m|[m [33m|[m [1;31m|[m[33m_[m[33m|[m[33m_[m[1;35m|[m[33m_[m[1;31m|[m[33m_[m[31m|[m[33m_[m[31m|[m[33m/[m  
+[32m|[m [1;32m|[m [32m|[m [33m|[m[33m/[m[1;31m|[m [33m|[m [1;35m|[m [1;31m|[m [31m|[m [31m|[m   
+[32m|[m [1;32m|[m * [33m|[m [1;31m|[m [33m|[m [1;35m|[m [1;31m|[m [31m|[m [31m|[m ef6f754 2016-02-29 | First commit [Tatka]
+[32m|[m [1;32m|[m [33m|[m [33m|[m[33m_[m[1;31m|[m[33m/[m [1;35m/[m [1;31m/[m [31m/[m [31m/[m  
+[32m|[m [1;32m|[m [33m|[m[33m/[m[33m|[m [1;31m|[m [1;35m|[m [1;31m|[m [31m|[m [31m|[m   
+[32m|[m * [33m|[m [33m|[m [1;31m|[m [1;35m|[m [1;31m|[m [31m|[m [31m|[m d8ce4ef 2016-02-29 | 123 [Alexandr]
+[32m|[m * [33m|[m [33m|[m [1;31m|[m [1;35m|[m [1;31m|[m [31m|[m [31m|[m   f56834e 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Alexandr]
+[32m|[m [34m|[m[31m\[m [33m\[m [33m\[m [1;31m\[m [1;35m\[m [1;31m\[m [31m\[m [31m\[m  
+[32m|[m [34m|[m [31m|[m [33m|[m[31m_[m[33m|[m[31m_[m[1;31m|[m[31m_[m[1;35m|[m[31m_[m[1;31m|[m[31m/[m [31m/[m  
+[32m|[m [34m|[m [31m|[m[31m/[m[33m|[m [33m|[m [1;31m|[m [1;35m|[m [1;31m|[m [31m|[m   
+[32m|[m [34m|[m * [33m|[m [33m|[m [1;31m|[m [1;35m|[m [1;31m|[m [31m|[m   7ad0614 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [romanelo]
+[32m|[m [34m|[m [36m|[m[1;31m\[m [33m\[m [33m\[m [1;31m\[m [1;35m\[m [1;31m\[m [31m\[m  
+[32m|[m [34m|[m [36m|[m [1;31m|[m [33m|[m[1;31m_[m[33m|[m[1;31m/[m [1;35m/[m [1;31m/[m [31m/[m  
+[32m|[m [34m|[m [36m|[m [1;31m|[m[1;31m/[m[33m|[m [33m|[m [1;35m|[m [1;31m|[m [31m|[m   
+[32m|[m [34m|[m * [1;31m|[m [33m|[m [33m|[m [1;35m|[m [1;31m|[m [31m|[m   973b97d 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [romanelo]
+[32m|[m [34m|[m [1;32m|[m[1;35m\[m [1;31m\[m [33m\[m [33m\[m [1;35m\[m [1;31m\[m [31m\[m  
+[32m|[m [34m|[m [1;32m|[m [1;35m|[m [1;31m|[m[1;35m_[m[33m|[m[1;35m_[m[33m|[m[1;35m/[m [1;31m/[m [31m/[m  
+[32m|[m [34m|[m [1;32m|[m [1;35m|[m[1;35m/[m[1;31m|[m [33m|[m [33m|[m [1;31m|[m [31m|[m   
+[32m|[m [34m|[m * [1;35m|[m [1;31m|[m [33m|[m [33m|[m [1;31m|[m [31m|[m d26c5ec 2016-02-29 | first commit [romanelo]
+[32m|[m [34m|[m [33m|[m [1;35m|[m[33m_[m[1;31m|[m[33m/[m [33m/[m [1;31m/[m [31m/[m  
+[32m|[m [34m|[m [33m|[m[33m/[m[1;35m|[m [1;31m|[m [33m|[m [1;31m|[m [31m|[m   
+[32m|[m * [33m|[m [1;35m|[m [1;31m|[m [33m|[m [1;31m|[m [31m|[m   e25864a 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Alexandr]
+[32m|[m [1;34m|[m[1;31m\[m [33m\[m [1;35m\[m [1;31m\[m [33m\[m [1;31m\[m [31m\[m  
+[32m|[m [1;34m|[m [1;31m|[m [33m|[m[1;31m_[m[1;35m|[m[1;31m/[m [33m/[m [1;31m/[m [31m/[m  
+[32m|[m [1;34m|[m [1;31m|[m[1;31m/[m[33m|[m [1;35m|[m [33m|[m [1;31m|[m [31m|[m   
+[32m|[m [1;34m|[m * [33m|[m [1;35m|[m [33m|[m [1;31m|[m [31m|[m   5f3a023 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Bernak]
+[32m|[m [1;34m|[m [1;36m|[m[31m\[m [33m\[m [1;35m\[m [33m\[m [1;31m\[m [31m\[m  
+[32m|[m [1;34m|[m [1;36m|[m [31m|[m [33m|[m[31m_[m[1;35m|[m[31m_[m[33m|[m[31m_[m[1;31m|[m[31m/[m  
+[32m|[m [1;34m|[m [1;36m|[m [31m|[m[31m/[m[33m|[m [1;35m|[m [33m|[m [1;31m|[m   
+[32m|[m [1;34m|[m * [31m|[m [33m|[m [1;35m|[m [33m|[m [1;31m|[m   ec6c03f 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Bernak]
+[32m|[m [1;34m|[m [32m|[m[1;31m\[m [31m\[m [33m\[m [1;35m\[m [33m\[m [1;31m\[m  
+[32m|[m [1;34m|[m [32m|[m [1;31m|[m [31m|[m[1;31m_[m[33m|[m[1;31m_[m[1;35m|[m[1;31m_[m[33m|[m[1;31m/[m  
+[32m|[m [1;34m|[m [32m|[m [1;31m|[m[1;31m/[m[31m|[m [33m|[m [1;35m|[m [33m|[m   
+[32m|[m [1;34m|[m * [1;31m|[m [31m|[m [33m|[m [1;35m|[m [33m|[m   9d71b10 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Bernak]
+[32m|[m [1;34m|[m [34m|[m[33m\[m [1;31m\[m [31m\[m [33m\[m [1;35m\[m [33m\[m  
+[32m|[m [1;34m|[m [34m|[m [33m|[m [1;31m|[m[33m_[m[31m|[m[33m_[m[33m|[m[33m_[m[1;35m|[m[33m/[m  
+[32m|[m [1;34m|[m [34m|[m [33m|[m[33m/[m[1;31m|[m [31m|[m [33m|[m [1;35m|[m   
+[32m|[m [1;34m|[m * [33m|[m [1;31m|[m [31m|[m [33m|[m [1;35m|[m   c9053c3 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Bernak]
+[32m|[m [1;34m|[m [36m|[m[1;35m\[m [33m\[m [1;31m\[m [31m\[m [33m\[m [1;35m\[m  
+[32m|[m [1;34m|[m [36m|[m [1;35m|[m [33m|[m[1;35m_[m[1;31m|[m[1;35m_[m[31m|[m[1;35m_[m[33m|[m[1;35m/[m  
+[32m|[m [1;34m|[m [36m|[m [1;35m|[m[1;35m/[m[33m|[m [1;31m|[m [31m|[m [33m|[m   
+[32m|[m [1;34m|[m * [1;35m|[m [33m|[m [1;31m|[m [31m|[m [33m|[m 29e01eb 2016-02-29 | first commit [Bernak]
+[32m|[m [1;34m|[m [33m|[m [1;35m|[m[33m_[m[33m|[m[33m_[m[1;31m|[m[33m_[m[31m|[m[33m/[m  
+[32m|[m [1;34m|[m [33m|[m[33m/[m[1;35m|[m [33m|[m [1;31m|[m [31m|[m   
+[32m|[m * [33m|[m [1;35m|[m [33m|[m [1;31m|[m [31m|[m   d028513 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Alexandr]
+[32m|[m [1;32m|[m[31m\[m [33m\[m [1;35m\[m [33m\[m [1;31m\[m [31m\[m  
+[32m|[m [1;32m|[m [31m|[m [33m|[m[31m_[m[1;35m|[m[31m_[m[33m|[m[31m_[m[1;31m|[m[31m/[m  
+[32m|[m [1;32m|[m [31m|[m[31m/[m[33m|[m [1;35m|[m [33m|[m [1;31m|[m   
+[32m|[m [1;32m|[m * [33m|[m [1;35m|[m [33m|[m [1;31m|[m   4230a1a 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Andrey Kukuruza]
+[32m|[m [1;32m|[m [1;34m|[m[1;31m\[m [33m\[m [1;35m\[m [33m\[m [1;31m\[m  
+[32m|[m [1;32m|[m [1;34m|[m [1;31m|[m [33m|[m[1;31m_[m[1;35m|[m[1;31m_[m[33m|[m[1;31m/[m  
+[32m|[m [1;32m|[m [1;34m|[m [1;31m|[m[1;31m/[m[33m|[m [1;35m|[m [33m|[m   
+[32m|[m [1;32m|[m * [1;31m|[m [33m|[m [1;35m|[m [33m|[m   d2d0990 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Andrey Kukuruza]
+[32m|[m [1;32m|[m [1;36m|[m[1;35m\[m [1;31m\[m [33m\[m [1;35m\[m [33m\[m  
+[32m|[m [1;32m|[m [1;36m|[m [1;35m|[m [1;31m|[m[1;35m_[m[33m|[m[1;35m/[m [33m/[m  
+[32m|[m [1;32m|[m [1;36m|[m [1;35m|[m[1;35m/[m[1;31m|[m [33m|[m [33m|[m   
+[32m|[m [1;32m|[m * [1;35m|[m [1;31m|[m [33m|[m [33m|[m 7ecd767 2016-02-29 | First commit [Andrey Kukuruza]
+[32m|[m [1;32m|[m [33m|[m [1;35m|[m[33m_[m[1;31m|[m[33m/[m [33m/[m  
+[32m|[m [1;32m|[m [33m|[m[33m/[m[1;35m|[m [1;31m|[m [33m|[m   
+[32m|[m * [33m|[m [1;35m|[m [1;31m|[m [33m|[m   19957f1 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Alexandr]
+[32m|[m [32m|[m[1;31m\[m [33m\[m [1;35m\[m [1;31m\[m [33m\[m  
+[32m|[m [32m|[m [1;31m|[m [33m|[m[1;31m_[m[1;35m|[m[1;31m/[m [33m/[m  
+[32m|[m [32m|[m [1;31m|[m[1;31m/[m[33m|[m [1;35m|[m [33m|[m   
+[32m|[m [32m|[m * [33m|[m [1;35m|[m [33m|[m   cbe0977 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Koshel]
+[32m|[m [32m|[m [34m|[m[33m\[m [33m\[m [1;35m\[m [33m\[m  
+[32m|[m [32m|[m [34m|[m [33m|[m [33m|[m[33m_[m[1;35m|[m[33m/[m  
+[32m|[m [32m|[m [34m|[m [33m|[m[33m/[m[33m|[m [1;35m|[m   
+[32m|[m [32m|[m * [33m|[m [33m|[m [1;35m|[m 8a5f416 2016-02-29 | first comit [Koshel]
+[32m|[m [32m|[m [33m|[m [33m|[m[33m/[m [1;35m/[m  
+[32m|[m [32m|[m [33m|[m[33m/[m[33m|[m [1;35m|[m   
+[32m|[m * [33m|[m [33m|[m [1;35m|[m   f11bd7d 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Alexandr]
+[32m|[m [36m|[m[33m\[m [33m\[m [33m\[m [1;35m\[m  
+[32m|[m [36m|[m [33m|[m [33m|[m[33m/[m [1;35m/[m  
+[32m|[m [36m|[m [33m|[m[33m/[m[33m|[m [1;35m|[m   
+[32m|[m * [33m|[m [33m|[m [1;35m|[m 0771c8c 2016-02-29 | Hi... [Alexandr]
+[32m|[m [33m|[m [33m|[m[33m/[m [1;35m/[m  
+[32m|[m [33m|[m[33m/[m[33m|[m [1;35m|[m   
+* [33m|[m [33m|[m [1;35m|[m c7efb4c 2016-02-29 | my commit [Name1]
+[33m|[m [33m|[m[33m/[m [1;35m/[m  
+[33m|[m[33m/[m[33m|[m [1;35m|[m   
+* [33m|[m [1;35m|[m   2d886dc 2016-02-29 | Merge branch 'master' of https://github.com/maksimteacher/proff2.git [Name1]
+[1;32m|[m[1;35m\[m [33m\[m [1;35m\[m  
+[1;32m|[m [1;35m|[m [33m|[m[1;35m/[m  
+[1;32m|[m [1;35m|[m[1;35m/[m[33m|[m   
+[1;32m|[m * [33m|[m a8e26bf 2016-02-29 | firsttt commit [natasur]
+[1;32m|[m [33m|[m[33m/[m  
+* [33m|[m 54ba341 2016-02-29 | first proff2_example [Name1]
+[33m|[m[33m/[m  
+* f750a19 2016-02-29 | Initial commit [maksimteacher]

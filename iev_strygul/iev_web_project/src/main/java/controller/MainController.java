@@ -67,9 +67,11 @@ public class MainController extends HttpServlet {
 
     private void getCookie(HttpServletRequest req) {
         Cookie[] arrCook = req.getCookies();
-        for (Cookie cook : arrCook) {
-            if (cook.getName().equals("cook")) {
-                req.setAttribute("name", cook.getValue());
+        if(arrCook != null) {
+            for (Cookie cook : arrCook) {
+                if (cook.getName().equals("cook")) {
+                    req.setAttribute("name", cook.getValue());
+                }
             }
         }
     }
