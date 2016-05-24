@@ -4,63 +4,85 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Rect;
 import android.os.Bundle;
-import android.view.View;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
 
 public class CanvasActivity3 extends Activity {
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(new DrawView(this));
-	}
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(new DrawView(this));
+  }
 
-	class DrawView extends View {
+  class DrawView extends SurfaceView implements SurfaceHolder.Callback {
 
-		Paint paint;
-		Rect rect;
+    private DrawThread drawThread;
 
-		public DrawView(Context context) {
-			super(context);
-			paint = new Paint();
-			rect = new Rect();
-		}
+    public DrawView(Context context) {
+      super(context);
+      getHolder().addCallback(this);
+    }
 
-		@Override
-		protected void onDraw(Canvas canvas) {
-			// fill canvas color
-			canvas.drawARGB(80, 102, 204, 255);
+    @Override
+    public void surfaceChanged(SurfaceHolder holder, int format, int width,
+        int height) {
 
-			// set color and width
-			paint.setColor(Color.RED);
-			paint.setStrokeWidth(10);
+    }
 
+    @Override
+    public void surfaceCreated(SurfaceHolder holder) {
+      drawThread = new DrawThread(getHolder());
+      drawThread.setRunning(true);
+      drawThread.start();
+    }
 
-			// point (50,50)
-			canvas.drawPoint(50, 50, paint);
+    @Override
+    public void surfaceDestroyed(SurfaceHolder holder) {
+      boolean retry = true;
+      drawThread.setRunning(false);
+      while (retry) {
+        try {
+          drawThread.join();
+          retry = false;
+        } catch (InterruptedException e) {
+        }
+      }
+    }
 
-			// line from (100,100) to (500,50)
-			canvas.drawLine(100, 100, 500, 50, paint);
+    class DrawThread extends Thread {
 
-			// circle (100,200), raduis = 50
-			canvas.drawCircle(100, 200, 50, paint);
+      private boolean running = false;
+      private SurfaceHolder surfaceHolder;
 
-			// rectangle, point up-left(200,150), point down-right (400,200)
-			canvas.drawRect(200, 150, 400, 200, paint);
+      public DrawThread(SurfaceHolder surfaceHolder) {
+        this.surfaceHolder = surfaceHolder;
+      }
 
-			// rectangle, point up-left(250,300), point down-right (350,500)
-			rect.set(250, 300, 350, 500);
-			canvas.drawRect(rect, paint);
-			
-			paint.setColor(Color.RED);
-			float[] points = new float[]{100,50,150,100,150,200,50,200,50,100};
-			canvas.drawPoints(points,paint);
-			
-			//invalidate();
-		}
+      public void setRunning(boolean running) {
+        this.running = running;
+      }
 
-	}
+      @Override
+      public void run() {
+        Canvas canvas;
+        while (running) {
+          canvas = null;
+          try {
+            canvas = surfaceHolder.lockCanvas(null);
+            if (canvas == null)
+              continue;
+            canvas.drawColor(Color.GREEN);
+          } finally {
+            if (canvas != null) {
+              surfaceHolder.unlockCanvasAndPost(canvas);
+            }
+          }
+        }
+      }
+    }
+
+  }
 
 }
