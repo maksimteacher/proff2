@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-public class CanvasActivity3 extends Activity {
+public class CanvasActivity4 extends Activity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class CanvasActivity3 extends Activity {
   }
 
   class DrawView extends SurfaceView implements SurfaceHolder.Callback {
-
+	  
     private DrawThread drawThread;
 
     public DrawView(Context context) {

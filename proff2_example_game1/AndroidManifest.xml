@@ -21,6 +21,7 @@
         <activity android:name="org.start.CanvasActivity1"/>
         <activity android:name="org.start.CanvasActivity2"/>
         <activity android:name="org.start.CanvasActivity3"/>
+        <activity android:name="org.start.CanvasActivity4"/>
         
     </application>
 
