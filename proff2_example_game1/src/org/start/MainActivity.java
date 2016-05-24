@@ -50,7 +50,11 @@ public class MainActivity  extends Activity{
 			}			
 		}		
 	}
-	public void redirectToOtherActivity(View view){
+	public void redirectToCanvasActivity2(View view){
+		Intent intent = new Intent(this,CanvasActivity2.class);
+		startActivity(intent);
+	}
+	public void redirectToCanvasActivity3(View view){
 		Intent intent = new Intent(this,CanvasActivity3.class);
 		startActivity(intent);
 	}
