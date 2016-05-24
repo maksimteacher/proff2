@@ -45,8 +45,8 @@ public class MainActivity  extends Activity{
 			for(int j = 0; j<btns[i].length; j++){
 				LayoutParams params = new LayoutParams(GridLayout.spec(i), GridLayout.spec(j));
 				gridLayout.addView(btns[i][j], params);
-				//btns[i][j].setWidth(200);
-				//btns[i][j].setHeight(100);
+				btns[i][j].setWidth(200);
+				btns[i][j].setHeight(100);
 			}			
 		}		
 	}
