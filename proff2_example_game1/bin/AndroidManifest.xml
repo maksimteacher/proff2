@@ -18,8 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="org.start.CanvasActivity1"/>
         <activity android:name="org.start.CanvasActivity2"/>
         <activity android:name="org.start.CanvasActivity3"/>
+        
     </application>
 
 </manifest>
