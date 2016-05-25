@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -67,13 +68,21 @@ public class CanvasActivity3 extends Activity {
       @Override
       public void run() {
         Canvas canvas;
+        Paint paint = new Paint();
+        paint.setColor(Color.MAGENTA);
+		paint.setStrokeWidth(8);
+		int xPos = 100;
+		int deltaX = 1;
         while (running) {
           canvas = null;
+          if(xPos >800)xPos = 1;
+          xPos += deltaX;
           try {
             canvas = surfaceHolder.lockCanvas(null);
             if (canvas == null)
               continue;
             canvas.drawColor(Color.GREEN);
+            canvas.drawPoint(xPos,200, paint);
           } finally {
             if (canvas != null) {
               surfaceHolder.unlockCanvasAndPost(canvas);

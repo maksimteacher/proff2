@@ -45,12 +45,16 @@ import android.widget.GridLayout.Spec;
 			for(int j = 0; j<btns[i].length; j++){
 				LayoutParams params = new LayoutParams(GridLayout.spec(i), GridLayout.spec(j));
 				gridLayout.addView(btns[i][j], params);
-				//btns[i][j].setWidth(200);
-				//btns[i][j].setHeight(100);
+				btns[i][j].setWidth(200);
+				btns[i][j].setHeight(100);
 			}			
 		}		
 	}
-	public void redirectToOtherActivity(View view){
+	public void redirectToCanvasActivity2(View view){
+		Intent intent = new Intent(this,CanvasActivity2.class);
+		startActivity(intent);
+	}
+	public void redirectToCanvasActivity3(View view){
 		Intent intent = new Intent(this,CanvasActivity3.class);
 		startActivity(intent);
 	}

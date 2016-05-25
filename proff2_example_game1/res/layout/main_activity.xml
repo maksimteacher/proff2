@@ -9,8 +9,15 @@
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="redirect to canvas"
-        android:onClick="redirectToOtherActivity"
+        android:text="redirect to canvas2"
+        android:onClick="redirectToCanvasActivity2"
+        />
+       <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="redirect to canvas3"
+        android:onClick="redirectToCanvasActivity3"
         />
     
     <GridLayout
