@@ -12,7 +12,7 @@ import android.widget.GridLayout;
 import android.widget.GridLayout.LayoutParams;
 import android.widget.GridLayout.Spec;
 
-public class MainActivity  extends Activity{
+ public class MainActivity  extends Activity{
 	private GridLayout gridLayout;
 	private Button[][] btns;
 
