@@ -12,6 +12,7 @@
 <body>
 	Main page
 	<% List<Product> list = (List<Product>)request.getAttribute("prods"); %>
-		<% list.forEach(product->out.println(product)); %>
+		<% /* list.forEach(product->out.println(product)); */ %>
+		<% for(Product product:list) out.println(product); %>
 </body>
 </html>

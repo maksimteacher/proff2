@@ -10,8 +10,7 @@
 	http://www.springframework.org/schema/tx
  	http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <context:component-scan base-package="service" />
-    <context:component-scan base-package="dao" />
+
 
     <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -45,6 +44,9 @@
     </bean>   
     -->
     
+    <context:component-scan base-package="service" />
+    <context:component-scan base-package="dao" />
+        
     <bean id="myTransactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="mySessionFactory"/>
     </bean>

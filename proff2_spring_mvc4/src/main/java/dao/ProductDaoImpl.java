@@ -20,7 +20,7 @@ public class ProductDaoImpl implements ProductDao {
 	
 	private SessionFactory sessionFactory;
 	
-	@Autowired(required=true)
+	@Autowired//(required=true)
 	@Qualifier(value="mySessionFactory")
 	public void setSessionFactory(SessionFactory sf){
 		this.sessionFactory = sf;
